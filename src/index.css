@@ -1,16 +1,257 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif; */
+  font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.hide-scrollbar {
+  width: 300px;
+  height: 200px;
+  overflow: auto;
+  scrollbar-width: none; /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+/* .wow {
+  animation: wowEffect 1s ease-in-out forwards;
+} */
+
+/* Loading Screen */
+.loading-container {
+  width: 100vw;
+  height: 100vh;
+  transition: 0.5s;
+  background-color: #0a4c7e;
+  justify-content: center;
+  /* animation: moveToTop 3s 3s forwards; */
+}
+
+.loading-wrapper {
+  animation: shrinkDiv 3s forwards;
+}
+
+.loading-text-child h1 {
+  font-family: "Gruppo", sans-serif;
+  /* font-family: "Bodoni Moda SC", serif; */
+  /* font-family: "Orbitron", sans-serif; */
+  font-size: 6rem;
+  font-weight: bold;
+  color: white;
+  /* animation: shrinkText 2s forwards; */
+}
+
+.loading-text-header {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: white;
+}
+
+.loading-text-child-one {
+  padding-right: 3rem;
+  transform: rotate(340deg);
+}
+
+.loading-text-child-two {
+  /* background-color: white; */
+  border: 1px solid #fe3c66;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  /* padding-left: 2rem;
+  padding-right: 2rem; */
+  transform: rotate(25deg);
+  margin-top: -40px;
+  margin-right: -80px;
+  /* margin-top: 2rem;
+  margin-bottom: 2rem; */
+}
+
+.loading-text-child-two h1 {
+  color: #fe3c66;
+  display: inline-block;
+  line-height: 6rem;
+}
+
+.loading-text-child-three {
+  padding-left: 3rem;
+  transform: rotate(340deg);
+  margin-top: -45px;
+  margin-left: -90px;
+}
+
+/* Header */
+.header-right-image {
+  animation: fadeInRightToLeft 2s forwards;
+}
+
+/* Navigation */
+.navbar-container {
+  transition: 0.5s;
+  display: flex;
+}
+/* .navbar-brand {
+  background-color: #fe3c66;
+} */
+
+/* Clients */
+.clients-container {
+  background-color: #fe3c66;
+}
+
+.clients-container-left {
+  width: 35%;
+  height: 60vh;
+}
+
+.clients-container-right {
+  width: 65%;
+  height: 60vh;
+}
+
+.clients-container-right h1 {
+  font-size: 3rem;
+  text-align: start;
+  color: white;
+}
+
+.clients-container-right p {
+  width: 95%;
+  font-size: 1rem;
+  text-align: start;
+  color: white;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  transform: translateX(100%);
+}
+
+.slide.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide.sliding {
+  transform: translateX(-100%);
+}
+
+/* Past Clients */
+.carousel-container {
+  width: 100%;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  cursor: grab;
+}
+
+.carousel-container.dragging {
+  cursor: grabbing;
+}
+
+.carousel {
+  display: flex;
+  width: max-content;
+  scroll-behavior: smooth;
+  gap: 20px;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  width: 350px;
+  margin-right: 10px;
+  scroll-snap-align: start;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.carousel-item p {
+  font-size: 0.9rem;
+}
+
+.carousel-item h1 {
+  font-size: 1rem;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* FAQ */
+.faq-container {
+  width: 100%;
+  height: auto;
+}
+
+.faq-wrapper {
+  width: 100%;
+  min-width: 300px;
+}
+
+.faq-wrapper h1 {
+  color: #0a4c7e;
+  font-size: 2.5rem;
+}
+
+.faq-wrapper p {
+  max-width: 60%;
+  /* color: #fe3c66; */
+  font-size: 1rem;
+}
+
+/* .carousel-container {
+  width: 100%;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.carousel {
+  display: flex;
+  width: max-content;
+  scroll-behavior: smooth;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  width: 300px;
+  margin-right: 10px;
+  scroll-snap-align: start;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+} */
 
 /* Footer styles */
 footer {
@@ -71,16 +312,16 @@ footer {
 /* Responsive styles */
 @media (max-width: 768px) {
   .footer-container {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .footer-section {
-      text-align: center;
+    text-align: center;
   }
 
   .social-icons {
-      justify-content: center;
+    justify-content: center;
   }
 }
 
@@ -122,13 +363,39 @@ footer {
   display: block !important;
 }
 
+/* Media Querry */
+@media screen and(max-width:1120px) {
+  #home {
+    margin-top: 5vh !important;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .clients-container {
+    flex-direction: column !important;
+    align-items: center;
+    height: auto;
+  }
+
+  .clients-container-left {
+    width: 70%;
+    height: 85vh;
+  }
+
+  .clients-container-right {
+    width: 70%;
+    margin-top: 40px;
+    padding: 0% !important;
+    height: auto;
+  }
+}
+
 @media (min-width: 375px) {
   .show {
     display: block;
     margin-left: 13%;
   }
 }
-
 
 @media (min-width: 425px) {
   .show {
@@ -146,3 +413,52 @@ footer {
   }
 }
 
+/* Key frames */
+@keyframes shrinkText {
+  0% {
+    font-size: 6rem;
+  }
+  100% {
+    font-size: 4.5rem;
+  }
+}
+
+@keyframes shrinkDiv {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
+
+@keyframes moveToTop {
+  0% {
+    justify-content: center;
+  }
+  100% {
+    justify-content: start;
+  }
+}
+
+@keyframes fadeInRightToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes wowEffect {
+  0% {
+    opacity: 0;
+    transform: translateY(150px); /* Move the image from 150px below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Move the image back to its original position */
+  }
+}
