@@ -8,6 +8,13 @@ import Faq from "../components/Faq";
 import ConfettiComponent from "../components/ConfettiComponent";
 import Confetti from "react-confetti";
 import iconImage from "../images/mortarboard.png";
+import TrackRecord from "../components/TrackRecord";
+import {
+  faEarthAmericas,
+  faLightbulb,
+  faPlaneDeparture,
+  faUserGraduate,
+} from "@fortawesome/free-solid-svg-icons";
 
 const clients = [
   { active: true, image: "img/255.jpg" },
@@ -19,7 +26,7 @@ const faqs = [
   {
     question: "Course/Career Counselling for You",
     answer:
-      "At BMW Educational Consultancy Sri Lanka, we offer invaluable expertise to help you navigate the vast landscape of study options and select the most suitable universities and institutes that align with your academic and career aspirations. Our guidance is tailored to empower you with the knowledge and resources needed to make informed decisions, ensuring that your educational journey is both fulfilling and successful.",
+      "At VXL Educational Consultancy Sri Lanka, we offer invaluable expertise to help you navigate the vast landscape of study options and select the most suitable universities and institutes that align with your academic and career aspirations. Our guidance is tailored to empower you with the knowledge and resources needed to make informed decisions, ensuring that your educational journey is both fulfilling and successful.",
   },
   {
     question: "Your University Applications",
@@ -34,38 +41,38 @@ const faqs = [
   {
     question: "IELTS/PTE for You",
     answer:
-      "Come on board with us and dive into our regular workshops and convenient online classes, tailored to give your EPT test preparations a significant boost. At BMW Educational Consultancy, we provide a complete package of services, ensuring you’re well-prepared for success, from in-house IELTS/PTE training sessions to comprehensive support along every step of your journey.",
+      "Come on board with us and dive into our regular workshops and convenient online classes, tailored to give your EPT test preparations a significant boost. At VXL Educational Consultancy, we provide a complete package of services, ensuring you’re well-prepared for success, from in-house IELTS/PTE training sessions to comprehensive support along every step of your journey.",
   },
   {
     question: "Your OSHC/Insurance",
     answer:
-      "Navigating the complexities of student health insurance can indeed be a costly affair. However, the good news is, as a trusted partner of not just one, but two of the largest OSHC providers, we’ve got your back. This means that when you choose BMW Educational Consultancy Sri Lanka, you’re not only getting access to expert guidance but also exclusive access to the best rates and the utmost value for every hard-earned buck you invest in your health and well-being during your academic journey.",
+      "Navigating the complexities of student health insurance can indeed be a costly affair. However, the good news is, as a trusted partner of not just one, but two of the largest OSHC providers, we’ve got your back. This means that when you choose VXL Educational Consultancy Sri Lanka, you’re not only getting access to expert guidance but also exclusive access to the best rates and the utmost value for every hard-earned buck you invest in your health and well-being during your academic journey.",
   },
 ];
 
 const items = [
   {
-    text: "Applied for student subsequent entrant visa through BMW Educational Consultancy Sri Lanka. From the very beginning everything in the process was well exaplained and clarified all my doubts. Thank you Mr Ayodhya for guiding from the first stage and for encouraging me to apply. Also many thanks to Ms Surani for advising and correcting all my documents and for lodging my visa at the end. Was able to communication and to contact throughout the lodging procedure easily. Thank you so much BMW Educational Consultancy Sri Lanka.",
+    text: "Applied for student subsequent entrant visa through VXL Educational Consultancy Sri Lanka. From the very beginning everything in the process was well exaplained and clarified all my doubts. Thank you Mr Ayodhya for guiding from the first stage and for encouraging me to apply. Also many thanks to Ms Surani for advising and correcting all my documents and for lodging my visa at the end. Was able to communication and to contact throughout the lodging procedure easily. Thank you so much VXL Educational Consultancy Sri Lanka.",
     name: "Hashini Loluwagodage",
   },
   {
-    text: "Applied for student subsequent entrant visa through BMW Educational Consultancy Sri Lanka. From the very beginning everything in the process was well exaplained and clarified all my doubts. Thank you Mr Ayodhya for guiding from the first stage and for encouraging me to apply. Also many thanks to Ms Surani for advising and correcting all my documents and for lodging my visa at the end. Was able to communication and to contact throughout the lodging procedure easily. Thank you so much BMW Educational Consultancy Sri Lanka.",
+    text: "Applied for student subsequent entrant visa through VXL Educational Consultancy Sri Lanka. From the very beginning everything in the process was well exaplained and clarified all my doubts. Thank you Mr Ayodhya for guiding from the first stage and for encouraging me to apply. Also many thanks to Ms Surani for advising and correcting all my documents and for lodging my visa at the end. Was able to communication and to contact throughout the lodging procedure easily. Thank you so much VXL Educational Consultancy Sri Lanka.",
     name: "Hashini Loluwagodage",
   },
   {
-    text: "Applied for student subsequent entrant visa through BMW Educational Consultancy Sri Lanka. From the very beginning everything in the process was well exaplained and clarified all my doubts. Thank you Mr Ayodhya for guiding from the first stage and for encouraging me to apply. Also many thanks to Ms Surani for advising and correcting all my documents and for lodging my visa at the end. Was able to communication and to contact throughout the lodging procedure easily. Thank you so much BMW Educational Consultancy Sri Lanka.",
+    text: "Applied for student subsequent entrant visa through VXL Educational Consultancy Sri Lanka. From the very beginning everything in the process was well exaplained and clarified all my doubts. Thank you Mr Ayodhya for guiding from the first stage and for encouraging me to apply. Also many thanks to Ms Surani for advising and correcting all my documents and for lodging my visa at the end. Was able to communication and to contact throughout the lodging procedure easily. Thank you so much VXL Educational Consultancy Sri Lanka.",
     name: "Hashini Loluwagodage",
   },
   {
-    text: "Applied for student subsequent entrant visa through BMW Educational Consultancy Sri Lanka. From the very beginning everything in the process was well exaplained and clarified all my doubts. Thank you Mr Ayodhya for guiding from the first stage and for encouraging me to apply. Also many thanks to Ms Surani for advising and correcting all my documents and for lodging my visa at the end. Was able to communication and to contact throughout the lodging procedure easily. Thank you so much BMW Educational Consultancy Sri Lanka.",
+    text: "Applied for student subsequent entrant visa through VXL Educational Consultancy Sri Lanka. From the very beginning everything in the process was well exaplained and clarified all my doubts. Thank you Mr Ayodhya for guiding from the first stage and for encouraging me to apply. Also many thanks to Ms Surani for advising and correcting all my documents and for lodging my visa at the end. Was able to communication and to contact throughout the lodging procedure easily. Thank you so much VXL Educational Consultancy Sri Lanka.",
     name: "Hashini Loluwagodage",
   },
   {
-    text: "Applied for student subsequent entrant visa through BMW Educational Consultancy Sri Lanka. From the very beginning everything in the process was well exaplained and clarified all my doubts. Thank you Mr Ayodhya for guiding from the first stage and for encouraging me to apply. Also many thanks to Ms Surani for advising and correcting all my documents and for lodging my visa at the end. Was able to communication and to contact throughout the lodging procedure easily. Thank you so much BMW Educational Consultancy Sri Lanka.",
+    text: "Applied for student subsequent entrant visa through VXL Educational Consultancy Sri Lanka. From the very beginning everything in the process was well exaplained and clarified all my doubts. Thank you Mr Ayodhya for guiding from the first stage and for encouraging me to apply. Also many thanks to Ms Surani for advising and correcting all my documents and for lodging my visa at the end. Was able to communication and to contact throughout the lodging procedure easily. Thank you so much VXL Educational Consultancy Sri Lanka.",
     name: "Hashini Loluwagodage",
   },
   {
-    text: "Applied for student subsequent entrant visa through BMW Educational Consultancy Sri Lanka. From the very beginning everything in the process was well exaplained and clarified all my doubts. Thank you Mr Ayodhya for guiding from the first stage and for encouraging me to apply. Also many thanks to Ms Surani for advising and correcting all my documents and for lodging my visa at the end. Was able to communication and to contact throughout the lodging procedure easily. Thank you so much BMW Educational Consultancy Sri Lanka.",
+    text: "Applied for student subsequent entrant visa through VXL Educational Consultancy Sri Lanka. From the very beginning everything in the process was well exaplained and clarified all my doubts. Thank you Mr Ayodhya for guiding from the first stage and for encouraging me to apply. Also many thanks to Ms Surani for advising and correcting all my documents and for lodging my visa at the end. Was able to communication and to contact throughout the lodging procedure easily. Thank you so much VXL Educational Consultancy Sri Lanka.",
     name: "Hashini Loluwagodage",
   },
 ];
@@ -386,7 +393,7 @@ const Home = () => {
                   </h1>
                   <p className="text-start">
                     Unlock boundless opportunities for higher studies and
-                    skilled migration with BMW Educational Consultancy Sri
+                    skilled migration with VXL Educational Consultancy Sri
                     Lanka, your trusted partner in excellence.{" "}
                   </p>
                   <h2 class="typed-text-output d-inline"></h2>
@@ -753,6 +760,154 @@ const Home = () => {
             </div>
           </div> */}
 
+          <div className="track-record-wrapper d-flex flex-column">
+            <h1>
+              Our Global Track <span style={{ color: "#fe3c66" }}>Record</span>
+            </h1>
+            <div className="track-record-container d-flex flex-row container-fluid mt-5">
+              <TrackRecord
+                icon={faLightbulb}
+                color={"#0a4c7e"}
+                count={2009}
+                heading={"Established"}
+              />
+              <TrackRecord
+                icon={faUserGraduate}
+                color={"#fe3c66"}
+                count={25000}
+                heading={"Satisfied Clients"}
+              />
+              <TrackRecord
+                icon={faPlaneDeparture}
+                color={"#0a4c7e"}
+                count={23000}
+                heading={"Visas"}
+              />
+              <TrackRecord
+                icon={faEarthAmericas}
+                color={"#fe3c66"}
+                count={14}
+                heading={"Global Offices"}
+              />
+            </div>
+            <div className="d-flex flex-row mind-map-container">
+              <div className="mind-map-item" style={{ marginTop: "8px" }}>
+                <div className="d-flex flex-row" style={{ width: "100%" }}>
+                  <div
+                    style={{
+                      backgroundColor: "#0a4c7e",
+                      height: "1px",
+                      width: "100%",
+                    }}
+                  ></div>
+                </div>
+              </div>
+              <div className="mind-map-item">
+                <div
+                  className="d-flex flex-row align-items-center"
+                  style={{ width: "100%" }}
+                >
+                  <div
+                    style={{
+                      backgroundColor: "#0a4c7e",
+                      height: "1px",
+                      width: "50%",
+                    }}
+                  ></div>
+                  <div className="milestone-border">
+                    <div
+                      style={{
+                        backgroundColor: "#fe3c66",
+                        width: "11px",
+                        height: "11px",
+                        borderRadius: "50%",
+                      }}
+                    ></div>
+                  </div>
+                  <div
+                    style={{
+                      backgroundColor: "#0a4c7e",
+                      height: "1px",
+                      width: "50%",
+                    }}
+                  ></div>
+                </div>
+                <p className="text-center">
+                  We are willing to go the additional mile for our clients, and
+                  provide the greatest service.
+                </p>
+              </div>
+              <div className="mind-map-item" style={{ marginTop: "8px" }}>
+                <div className="d-flex flex-row" style={{ width: "100%" }}>
+                  <div
+                    style={{
+                      backgroundColor: "#0a4c7e",
+                      height: "1px",
+                      width: "100%",
+                    }}
+                  ></div>
+                </div>
+              </div>
+              <div className="mind-map-item">
+                <div
+                  className="d-flex flex-row align-items-center"
+                  style={{ width: "100%" }}
+                >
+                  <div
+                    style={{
+                      backgroundColor: "#0a4c7e",
+                      height: "1px",
+                      width: "50%",
+                    }}
+                  ></div>
+                  <div className="milestone-border">
+                    <div
+                      style={{
+                        backgroundColor: "#fe3c66",
+                        width: "11px",
+                        height: "11px",
+                        borderRadius: "50%",
+                      }}
+                    ></div>
+                  </div>
+                  <div
+                    style={{
+                      backgroundColor: "#0a4c7e",
+                      height: "1px",
+                      width: "50%",
+                    }}
+                  ></div>
+                </div>
+                <p className="text-center">
+                  We promise 100% client satisfaction and understand that the
+                  contentment of our clients is the most critical indicator of
+                  our company's success.
+                </p>
+              </div>
+              <div className="mind-map-item" style={{ marginTop: "8px" }}>
+                <div className="d-flex flex-row" style={{ width: "100%" }}>
+                  <div
+                    style={{
+                      backgroundColor: "#0a4c7e",
+                      height: "1px",
+                      width: "100%",
+                    }}
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* <div class="video-background-container">
+            <video autoplay muted loop class="video-background">
+              <source src="your-video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div class="content">
+              <h1>Your Text Here</h1>
+            </div>
+          </div> */}
+
           <div className="d-flex flex-column faq-container p-5">
             <div className="faq-wrapper d-flex flex-column align-items-center">
               <h1>
@@ -779,8 +934,6 @@ const Home = () => {
               </div>
             </div>
           </div>
-
-          <div className="track-record-container d-flex flex-row"></div>
 
           {/* <!-- Service Start --> */}
           <div class="container-fluid bg-light my-5 py-6" id="service">

@@ -9,7 +9,7 @@ export default function Faq({ question, answer }) {
 
   return (
     <>
-      <div className="faq-item px-3 pt-3">
+      <div className="faq-item px-3 py-3">
         <div
           className="d-flex flex-row faq-clicker justify-content-between"
           onClick={() => setIsOpen(!isOpen)}
@@ -20,8 +20,12 @@ export default function Faq({ question, answer }) {
             style={{ color: "#0a4c7e", width: "25px", height: "25px" }}
           ></i>
         </div>
+        {/* <span
+          className={`d-flex faq-space-holder ${isOpen ? `unWrap` : `wrap`}`}
+          style={{ width: "100%" }}
+        ></span> */}
         <div
-          className={`text-start mt-3 faq-answer ${
+          className={`text-start faq-answer ${
             isOpen ? `d-flex unWrap` : `wrap`
           }`}
         >
