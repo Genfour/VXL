@@ -15,10 +15,11 @@ import {
   faPlaneDeparture,
   faUserGraduate,
 } from "@fortawesome/free-solid-svg-icons";
+import logo from "../images/VXL_new_logo.png";
 
 const clients = [
-  { active: true, image: "img/255.jpg" },
-  { active: false, image: "img/8104.jpg" },
+  { active: true, image: "img/family.jpg" },
+  { active: false, image: "img/couple.jpg" },
   { active: false, image: "img/6515.jpg" },
 ];
 
@@ -47,6 +48,11 @@ const faqs = [
     question: "Your OSHC/Insurance",
     answer:
       "Navigating the complexities of student health insurance can indeed be a costly affair. However, the good news is, as a trusted partner of not just one, but two of the largest OSHC providers, we’ve got your back. This means that when you choose VXL Educational Consultancy Sri Lanka, you’re not only getting access to expert guidance but also exclusive access to the best rates and the utmost value for every hard-earned buck you invest in your health and well-being during your academic journey.",
+  },
+  {
+    question: "Accommodation",
+    answer:
+      "At BMW Educational Consultancy Sri Lanka, our commitment to providing the most comprehensive and long-term support for our clients is unwavering. One prime example is our unique access to an extensive network of student accommodation properties spanning across Australia, courtesy of our esteemed partner providers. This means that when you partner with us, you’re not only securing competitive rental rates but also gaining access to a vast selection of accommodations tailored to your preferences. From prime locations to unparalleled facilities, we’re dedicated to ensuring that your accommodation needs are met with excellence throughout your academic journey. Your comfort and convenience are our priorities.",
   },
 ];
 
@@ -243,9 +249,9 @@ const Home = () => {
             className="navbar-expand-lg navbar-container navbar-light fixed-top shadow py-lg-0 px-4 px-lg-5 wow fadeIn"
             data-wow-delay="0.1s"
           >
-            <a href="/" className="navbar-brand d-block d-lg-none">
+            {/* <a href="/" className="navbar-brand d-block d-lg-none">
               <h1 className="text-primary fw-bold m-0">VXL</h1>
-            </a>
+            </a> */}
             <button
               type="button"
               className="navbar-toggler"
@@ -321,12 +327,18 @@ const Home = () => {
                   )}
                 </div>
               </div>
-              <a
+              <img
+                className="m-3"
+                src={logo}
+                style={{ width: "auto", height: "50px" }}
+                alt="brand-logo"
+              />
+              {/* <a
                 href="/"
                 className="navbar-brand py-3 px-4 mx-3 d-none d-lg-block"
               >
                 <h1 className="text-primary fw-bold m-0">VXL</h1>
-              </a>
+              </a> */}
               <div className="navbar-nav me-auto py-0">
                 <a
                   href="#project"
@@ -493,7 +505,7 @@ const Home = () => {
                 <br />
                 <span style={{ color: "#0a4c7e" }}>Matters To Us</span>
               </h1>
-              <p lassName="wow fadeInUp" data-bs-wow-delay="0.2s">
+              <p lassName="wow fadeInUp" data-bs-wow-delay="0.5s">
                 At VXL Educational Consultancy Sri Lanka, we put your
                 satisfaction first, making your migration and higher studies
                 dreams a reality. We provide personalised guidance for accessing
@@ -761,7 +773,7 @@ const Home = () => {
           </div> */}
 
           <div className="track-record-wrapper d-flex flex-column">
-            <h1>
+            <h1 className="wow fadeInUp" data-bs-wow-delay="0.1s">
               Our Global Track <span style={{ color: "#fe3c66" }}>Record</span>
             </h1>
             <div className="track-record-container d-flex flex-row container-fluid mt-5">
@@ -863,7 +875,7 @@ const Home = () => {
                   <div className="milestone-border">
                     <div
                       style={{
-                        backgroundColor: "#fe3c66",
+                        backgroundColor: "#0a4c7e",
                         width: "11px",
                         height: "11px",
                         borderRadius: "50%",
@@ -910,10 +922,10 @@ const Home = () => {
 
           <div className="d-flex flex-column faq-container p-5">
             <div className="faq-wrapper d-flex flex-column align-items-center">
-              <h1>
+              <h1 className="wow fadeInUp" data-bs-wow-delay="0.1s">
                 How We Can <span style={{ color: "#fe3c66" }}>Assist</span>
               </h1>
-              <p className="mt-3">
+              <p className="mt-3 wow fadeInUp" data-bs-wow-delay="0.5s">
                 VXL Educational Consultancy Sri Lanka is your all-in-one partner
                 in your educational journey. From eligibility assessments to
                 course and university selection, we guide you. We prepare you
@@ -921,7 +933,10 @@ const Home = () => {
                 visa processes with expert support. Our vast network helps with
                 ticket bookings and accommodation.
               </p>
-              <div className="question-wrapper d-flex flex-column container justify-content-center mt-5">
+              <div
+                className="question-wrapper d-flex flex-column container justify-content-center mt-5 wow fadeInUp"
+                data-bs-wow-delay="0.8s"
+              >
                 {faqs.map((faq, index) => {
                   return (
                     <Faq
@@ -936,7 +951,7 @@ const Home = () => {
           </div>
 
           {/* <!-- Service Start --> */}
-          <div class="container-fluid bg-light my-5 py-6" id="service">
+          {/* <div class="container-fluid bg-light my-5 py-6" id="service">
             <div class="container">
               <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="col-lg-6">
@@ -1023,11 +1038,11 @@ const Home = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
           {/* <!-- Service End --> */}
 
           {/* <!-- Projects Start --> */}
-          <div class="container-xxl py-6 pt-5" id="project">
+          {/* <div class="container-xxl py-6 pt-5" id="project">
             <div class="container">
               <div
                 class="row g-5 mb-5 align-items-center wow fadeInUp"
@@ -1101,11 +1116,11 @@ const Home = () => {
                 </TransitionGroup>
               </div>
             </div>
-          </div>
+          </div> */}
           {/* <!-- Projects End --> */}
 
           {/* <!-- Team Start --> */}
-          <div class="container-xxl py-6 pb-5" id="team">
+          {/* <div class="container-xxl py-6 pb-5" id="team">
             <div class="container">
               <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="col-lg-6">
@@ -1165,7 +1180,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
           {/* <!-- Team End --> */}
 
           {/* <!-- Testimonial Start --> */}
@@ -1233,7 +1248,7 @@ const Home = () => {
           {/* <!-- Testimonial End --> */}
 
           {/* <!-- Contact Start --> */}
-          <div class="container-xxl pb-5" id="contact">
+          {/* <div class="container-xxl pb-5" id="contact">
             <div class="container py-5">
               <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="col-lg-6">
@@ -1316,11 +1331,11 @@ const Home = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
           {/* <!-- Contact End --> */}
 
           {/* <!-- Map Start --> */}
-          <div
+          {/* <div
             class="container-xxl pt-5 px-0 wow fadeInUp"
             data-wow-delay="0.1s"
           >
@@ -1340,7 +1355,7 @@ const Home = () => {
                 ></iframe>
               </div>
             </div>
-          </div>
+          </div> */}
           {/* Map Ends */}
 
           {/* <!-- Copyright Start --> */}
