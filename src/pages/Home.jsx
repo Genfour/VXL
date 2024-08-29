@@ -4,9 +4,10 @@ import "jquery";
 import "owl.carousel/dist/assets/owl.carousel.min.css";
 import "owl.carousel/dist/assets/owl.theme.default.min.css";
 import "owl.carousel";
-import CarouselItem from "../components/CarouselItem";
-import Flickity from "react-flickity-component";
 import Faq from "../components/Faq";
+import ConfettiComponent from "../components/ConfettiComponent";
+import Confetti from "react-confetti";
+import iconImage from "../images/mortarboard.png";
 
 const clients = [
   { active: true, image: "img/255.jpg" },
@@ -77,6 +78,8 @@ const Home = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+  const icon = new Image();
+  icon.src = iconImage;
   const [loading, setLoading] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const interval = 3000;
@@ -85,6 +88,7 @@ const Home = () => {
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
+  const [isRunning, setIsRunning] = useState(true);
 
   const handleMouseDown = (e) => {
     setIsDragging(true);
@@ -180,6 +184,11 @@ const Home = () => {
         },
       },
     });
+
+    const timer = setTimeout(() => {
+      setIsRunning(false);
+    }, 5000);
+    return () => clearTimeout(timer);
   }, []);
 
   const [filter, setFilter] = useState("*");
@@ -350,6 +359,22 @@ const Home = () => {
             <div class="p-3">
               <div class="row g-5 align-items-center p-5">
                 <div class="col-lg-6 py-6 pb-0 d-flex flex-column align-items-start pt-lg-0">
+                  {isRunning ? (
+                    <Confetti
+                      style={{
+                        position: "absolute",
+                        width: "100%",
+                        height: "100%",
+                      }}
+                      drawShape={(ctx) => {
+                        ctx.drawImage(icon, -10, -10, 30, 30);
+                      }}
+                      numberOfPieces={50}
+                    />
+                  ) : (
+                    <></>
+                  )}
+
                   <h3 class="mb-3" style={{ color: "#fe3c66" }}>
                     Realise your
                   </h3>
@@ -707,14 +732,13 @@ const Home = () => {
             </div> */}
           {/* <!-- Expertise End --> */}
 
-          <div
+          {/* <div
             className={`carousel-container ${isDragging ? "dragging" : ""} `}
             ref={carouselRef}
             onMouseDown={handleMouseDown}
             onMouseMove={handleMouseMove}
             onMouseUp={handleMouseUp}
             onMouseLeave={handleMouseLeave}
-            // className="carousel-container hide-scrollbar "
           >
             <div className="carousel p-3 mx-3">
               {items.map((item, index) => (
@@ -727,7 +751,7 @@ const Home = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
 
           <div className="d-flex flex-column faq-container p-5">
             <div className="faq-wrapper d-flex flex-column align-items-center">
@@ -742,13 +766,21 @@ const Home = () => {
                 visa processes with expert support. Our vast network helps with
                 ticket bookings and accommodation.
               </p>
-              <div className="question-wrapper d-flex flex-column">
-                {faqs.map(() => {
-                  return <Faq text={""} name={""} />;
+              <div className="question-wrapper d-flex flex-column container justify-content-center mt-5">
+                {faqs.map((faq, index) => {
+                  return (
+                    <Faq
+                      key={index}
+                      question={faq.question}
+                      answer={faq.answer}
+                    />
+                  );
                 })}
               </div>
             </div>
           </div>
+
+          <div className="track-record-container d-flex flex-row"></div>
 
           {/* <!-- Service Start --> */}
           <div class="container-fluid bg-light my-5 py-6" id="service">
