@@ -2,8 +2,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Navbar from "../components/Navbar";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import Footer from "../components/Footer";
+import { useEffect, useState } from "react";
 
 export default function About() {
+  const [side, setSide] = useState("left");
+
+  useEffect(() => {
+    console.log(side);
+  }, [side]);
   return (
     <>
       <div className="container-fluid d-flex flex-column about-container my-6 p-5">
@@ -30,33 +36,90 @@ export default function About() {
               VXL Education Consultants Pty. Ltd.
             </h2>
             <p className="text-start">
-              It gives us immense pleasure to introduce VXL Migration &
-              Education Consultants Pty. Ltd. We have assisted international
-              students within Australia and offshore students from the
-              Philippines, Sri Lanka, India, and Nepal to study in Australia.We
-              are an Australian-based business established with the primary
-              purpose of providing professional, transparent, and friendly
-              service to our client base. We have offices in Australia,
-              Philippines, Sri Lanka and Nepal. We strictly follow ESOS Act and
-              National Code of Practice to ensure transparent service to
-              international students and recruit genuine, high-quality students
-              to our partner education providers. Our aim is sustainable growth
-              through a symbiotic relationship with education providers in
-              Abroad. We assist genuine international students who intend to
-              attain internationally recognised degrees from Australia and have
-              the desire to achieve their dream careers. Our purpose is to
-              liaise a smooth transition of international students from their
-              home countries into the education providers. We guide them in
-              different aspects such as understanding the career outcomes of the
-              course they select, entry requirements, collecting required
-              documents, and preparing for the journey in a new country.
+              Established in 2009, VXL Educational Consultancy is a globally
+              recognized brand with a strong presence, including offices in
+              Australia, Nepal, and Sri Lanka. In 2022, we expanded our services
+              to Sri Lanka, with a mission to empower students to pursue higher
+              education in renowned institutions in Australia, the UK, Canada,
+              and Malaysia. Our commitment to excellence, personalized guidance,
+              and comprehensive support sets us apart.
+              <br />
+              <br />
+              At VXL Educational Consultancy Sri Lanka, our dedicated
+              professionals ensure a seamless journey for every student, from
+              initial consultations to application assistance. We are your
+              trusted partner in turning your aspirations into achievements.
+              Contact us today and let&apos;s embark on your educational journey
+              together.
             </p>
           </div>
 
-          <div className="d-flex flex-row about-mid-section">
-            <div className="about-mid-section-left"></div>
-            <div className="about-mid-section-right"></div>
+          <div
+            className="d-flex flex-row about-mid-section mt-5 wow fadeInUp"
+            data-bs-wow-delay="0.1s"
+          >
+            <div
+              className="about-mid-section-left p-5"
+              style={{
+                backgroundColor: side === "left" ? "#0a4c7e" : "white",
+                borderWidth: side === "left" ? "0px" : "0px 0px 5px 0px",
+              }}
+              onMouseEnter={() => setSide("left")}
+            >
+              <h1
+                style={{
+                  color: side === "left" ? "#fe3c66" : "	#474747",
+                }}
+              >
+                Vision
+              </h1>
+              <p
+                className="mt-3"
+                style={{ color: side === "left" ? "white" : "#5A5A5A" }}
+              >
+                Envisioning a future where every student achieves their full
+                potential, our consultancy is dedicated to guiding students
+                towards courses and institutions that best suit their long-term
+                interests. We are committed to delivering top-quality services
+                and upholding the highest standards of professionalism. Our aim
+                is to excel in higher education, forging robust partnerships
+                with students, global educational institutions, and affiliated
+                organizations to collectively achieve our common goals.
+              </p>
+            </div>
+            <div
+              className="about-mid-section-right p-5"
+              style={{
+                backgroundColor: side === "right" ? "#fe3c66" : "white",
+                borderWidth: side === "right" ? "0px" : "0px 0px 5px 0px",
+              }}
+              onMouseEnter={() => setSide("right")}
+            >
+              <h1
+                style={{
+                  color: side === "right" ? "#0a4c7e" : "	#474747",
+                }}
+              >
+                Mission
+              </h1>
+              <p
+                className="mt-3"
+                style={{ color: side === "right" ? "white" : "#5A5A5A" }}
+              >
+                Our mission is to match education-focused students with genuine
+                providers, setting industry standards with exceptional service.
+                We aim to promote excellence in higher education by providing
+                comprehensive, expert support to students and educational
+                institutions, ensuring a brighter future for all.
+              </p>
+            </div>
           </div>
+
+          {/* <div className="team-container d-flex flex-column">
+            <h1 className="wow fadeInUp" data-bs-wow-delay="0.1s">
+              Our <span style={{ color: "#fe3c66" }}>Team</span>
+            </h1>
+          </div> */}
         </div>
       </div>
       <Footer />

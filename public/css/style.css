@@ -292,6 +292,77 @@
   margin-right: -30px;
 }
 
+.about-mid-section {
+  width: 100%;
+  height: auto;
+}
+
+.about-mid-section-left,
+.about-mid-section-right {
+  width: 50%;
+  height: 500px;
+  border-style: solid;
+  transition: 1s;
+}
+
+.about-mid-section-left {
+  border-color: #0a4c7e;
+}
+
+.about-mid-section-right {
+  border-color: #fe3c66;
+}
+
+.about-mid-section-left h1 {
+  color: hsl(347, 99%, 62%);
+  background: linear-gradient(
+    to right,
+    hsl(347, 99%, 60%) 0,
+    hsl(0, 0%, 100%) 10%,
+    hsl(347, 99%, 60%) 20%
+  );
+}
+
+.about-mid-section-right h1 {
+  color: hsl(206, 85%, 27%);
+  background: linear-gradient(
+    to right,
+    hsl(206, 85%, 25%) 0,
+    hsl(0, 0%, 100%) 10%,
+    hsl(206, 85%, 25%) 20%
+  );
+}
+
+.about-mid-section-left h1,
+.about-mid-section-right h1 {
+  font-size: 50px !important;
+  font-weight: bold !important;
+  font-family: monospace;
+  letter-spacing: 7px !important;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.about-mid-section-left h1,
+.about-mid-section-right h1 {
+  padding: 64px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s infinite linear;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 600px;
+  }
+  100% {
+    background-position: 600px;
+  }
+}
+
 /*** Skills ***/
 #skill .progress {
   height: 5px;
@@ -400,6 +471,13 @@
 
 .team-item:hover .team-text div {
   margin-left: 30px;
+}
+
+.team-container {
+  width: 100%;
+  height: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 /*** Testimonial ***/

@@ -18,6 +18,7 @@ import {
 import logo from "../images/VXL_new_logo.png";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { TypeAnimation } from "react-type-animation";
 
 const clients = [
   { active: true, image: "img/family.jpg" },
