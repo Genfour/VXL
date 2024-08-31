@@ -152,7 +152,7 @@ export default function Navbar() {
             Team
           </a> */}
             <a
-              href="#contact"
+              href="/contact"
               className="nav-item nav-link"
               // style={{ color: "#fff" }}
             >
