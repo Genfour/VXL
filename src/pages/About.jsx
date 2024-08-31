@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import Footer from "../components/Footer";
 import { useEffect, useState } from "react";
+import team from "../images/cropped-team.png";
 
 export default function About() {
   const [side, setSide] = useState("left");
@@ -115,11 +116,58 @@ export default function About() {
             </div>
           </div>
 
-          {/* <div className="team-container d-flex flex-column">
+          {/* <div className="team-container d-flex flex-column align-items-center">
             <h1 className="wow fadeInUp" data-bs-wow-delay="0.1s">
-              Our <span style={{ color: "#fe3c66" }}>Team</span>
+              Meet <span style={{ color: "#fe3c66" }}>A Team</span>
             </h1>
+            <p className="mt-3">
+              Meet the VXL crew—your go-to squad for turning dreams into
+              degrees. We’re a bunch of pros who’ve got your back, every step of
+              your educational journey!
+            </p>
+            <div className="team-wrapper">
+              <img src={team} alt="team" />
+            </div>
           </div> */}
+          <div className="team-container d-flex flex-column align-items-center">
+            <h1 className="wow fadeInUp" data-bs-wow-delay="0.1s">
+              Meet <span style={{ color: "#fe3c66" }}>A Team</span>
+            </h1>
+            <p className="mt-3">
+              Meet the VXL crew—your go-to squad for turning dreams into
+              degrees. We&apos;re a bunch of pros who&apos;ve got your back,
+              every step of your educational journey!
+            </p>
+            <div
+              className="team-wrapper wow fadeIn"
+              data-bs-wow-delay="0.5s"
+              style={{ position: "relative" }}
+            >
+              <img src={team} alt="team" />
+
+              {/* Team Member 1 */}
+              <div className="team-member team-member-1">
+                <div className="popup-box popup-1">
+                  <h1>John Doe - Project Manager</h1>
+                  <p className="mt-1">
+                    John oversees all educational projects, ensuring everything
+                    runs smoothly.
+                  </p>
+                </div>
+              </div>
+
+              {/* Team Member 1 */}
+              <div className="team-member team-member-2">
+                <div className="popup-box popup-2">
+                  <h1>Jane Doe - Senior SE</h1>
+                  <p className="mt-1">
+                    Jane oversees all educational projects, ensuring everything
+                    runs smoothly.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <Footer />
