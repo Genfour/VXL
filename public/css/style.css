@@ -773,6 +773,9 @@
   width: 100%;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
+  border-width: 0px 1px 0px 0px;
+  border-style: solid;
+  border-color: #d1d8c5;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -791,6 +794,7 @@
   border: none;
   color: white;
   font-family: "Poppins", sans-serif;
+  font-weight: bold;
 }
 
 .contact-input-row {
@@ -825,40 +829,78 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* padding: 3rem; */
+  transition: 0.7s ease-in-out;
 }
 
 .office-container h1 {
   color: #fe3c66 !important;
   margin-bottom: 1rem;
   font-size: 2rem !important;
+  transition: 0.7s ease-in-out;
+}
+
+.office-container p {
+  transition: 0.7s ease-in-out;
 }
 
 .office-1 {
   background-color: #ffffff;
   border-top-right-radius: 15px;
-  border-width: 0px 0px 5px 0px;
+  border-width: 0px 0px 1px 0px;
   border-style: solid;
-  border-color: #0a4c7e;
+  border-color: #d1d8c5;
+}
+
+.office-1:hover {
+  background-color: #0a4c7e;
+}
+
+.office-1:hover h1 {
+  color: #ffffff !important;
+}
+
+.office-1:hover p {
+  color: white;
 }
 
 .office-2 {
   background-color: #ffffff;
-  border-width: 0px 0px 5px 0px;
+  border-width: 0px 0px 1px 0px;
   border-style: solid;
-  border-color: #fe3c66;
+  border-color: #d1d8c5;
 }
 
 .office-2 h1 {
   color: #0a4c7e !important;
 }
 
+.office-2:hover {
+  background-color: #fe3c66;
+}
+
+.office-2:hover h1 {
+  color: #ffffff !important;
+}
+
+.office-2:hover p {
+  color: white;
+}
+
 .office-3 {
   background-color: #ffffff;
   border-bottom-right-radius: 15px;
-  border-width: 0px 0px 5px 0px;
-  border-style: solid;
-  border-color: #0a4c7e;
+}
+
+.office-3:hover {
+  background-color: #0a4c7e;
+}
+
+.office-3:hover h1 {
+  color: #ffffff !important;
+}
+
+.office-3:hover p {
+  color: white;
 }
 
 .contact-map {

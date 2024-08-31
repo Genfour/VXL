@@ -9,8 +9,10 @@ import {
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
 import map from "../images/cropped-map.svg";
+import { useState } from "react";
 
 export default function Contact() {
+  const [section, setSection] = useState(0);
   return (
     <>
       <div className="container-fluid d-flex flex-column about-container my-6 p-5">
@@ -66,74 +68,131 @@ export default function Contact() {
               {/* <img src={map} alt="User Icon" /> */}
             </div>
             <div className="contact-map-right">
-              <div className="office-container office-1">
+              <div
+                className="office-container office-1"
+                onMouseEnter={() => setSection(1)}
+                onMouseLeave={() => setSection(0)}
+              >
                 <h1>Galle</h1>
                 <div className="d-flex flex-row align-items-center">
                   <FontAwesomeIcon
                     icon={faLocationDot}
-                    style={{ width: "20px", height: "20px" }}
+                    style={{
+                      width: "20px",
+                      height: "20px",
+                      transition: "0.7s ease-in-out",
+                      color: section === 1 ? "white" : "#5A5A5A",
+                    }}
                   />
                   <p className="p-0 m-0 ms-2">Galle, Sri Lanka.</p>
                 </div>
                 <div className="d-flex flex-row align-items-center mt-2">
                   <FontAwesomeIcon
                     icon={faPhone}
-                    style={{ width: "15px", height: "15px" }}
+                    style={{
+                      width: "15px",
+                      height: "15px",
+                      transition: "0.7s ease-in-out",
+                      color: section === 1 ? "white" : "#5A5A5A",
+                    }}
                   />
                   <p className="p-0 m-0 ms-2">+9477 123 1234</p>
                 </div>
                 <div className="d-flex flex-row align-items-center mt-2">
                   <FontAwesomeIcon
                     icon={faEnvelope}
-                    style={{ width: "15px", height: "15px" }}
+                    style={{
+                      width: "15px",
+                      height: "15px",
+                      transition: "0.7s ease-in-out",
+                      color: section === 1 ? "white" : "#5A5A5A",
+                    }}
                   />
                   <p className="p-0 m-0 ms-2">info@gmail.com</p>
                 </div>
               </div>
-              <div className="office-container office-2">
+              <div
+                className="office-container office-2"
+                onMouseEnter={() => setSection(2)}
+                onMouseLeave={() => setSection(0)}
+              >
                 <h1>Colombo</h1>
                 <div className="d-flex flex-row align-items-center">
                   <FontAwesomeIcon
                     icon={faLocationDot}
-                    style={{ width: "20px", height: "20px" }}
+                    style={{
+                      width: "20px",
+                      height: "20px",
+                      transition: "0.7s ease-in-out",
+                      color: section === 2 ? "white" : "#5A5A5A",
+                    }}
                   />
                   <p className="p-0 m-0 ms-2">Colombo, Sri Lanka.</p>
                 </div>
                 <div className="d-flex flex-row align-items-center mt-2">
                   <FontAwesomeIcon
                     icon={faPhone}
-                    style={{ width: "15px", height: "15px" }}
+                    style={{
+                      width: "15px",
+                      height: "15px",
+                      transition: "0.7s ease-in-out",
+                      color: section === 2 ? "white" : "#5A5A5A",
+                    }}
                   />
                   <p className="p-0 m-0 ms-2">+9477 123 1234</p>
                 </div>
                 <div className="d-flex flex-row align-items-center mt-2">
                   <FontAwesomeIcon
                     icon={faEnvelope}
-                    style={{ width: "15px", height: "15px" }}
+                    style={{
+                      width: "15px",
+                      height: "15px",
+                      transition: "0.7s ease-in-out",
+                      color: section === 2 ? "white" : "#5A5A5A",
+                    }}
                   />
                   <p className="p-0 m-0 ms-2">info@gmail.com</p>
                 </div>
               </div>
-              <div className="office-container office-3">
+              <div
+                className="office-container office-3"
+                onMouseEnter={() => setSection(3)}
+                onMouseLeave={() => setSection(0)}
+              >
                 <h1>Australia</h1>
                 <div className="d-flex flex-row align-items-center">
                   <FontAwesomeIcon
                     icon={faLocationDot}
-                    style={{ width: "20px", height: "20px" }}
+                    style={{
+                      width: "20px",
+                      height: "20px",
+                      transition: "0.7s ease-in-out",
+                      color: section === 3 ? "white" : "#5A5A5A",
+                    }}
                   />
                   <p className="p-0 m-0 ms-2">Melbourn, Australia.</p>
                 </div>
                 <div className="d-flex flex-row align-items-center mt-2">
                   <FontAwesomeIcon
                     icon={faPhone}
-                    style={{ width: "15px", height: "15px" }}
+                    style={{
+                      width: "15px",
+                      height: "15px",
+                      transition: "0.7s ease-in-out",
+                      color: section === 3 ? "white" : "#5A5A5A",
+                    }}
                   />
                   <p className="p-0 m-0 ms-2">+9477 123 1234</p>
                 </div>
                 <div className="d-flex flex-row align-items-center mt-2">
                   <FontAwesomeIcon
                     icon={faEnvelope}
-                    style={{ width: "15px", height: "15px" }}
+                    style={{
+                      width: "15px",
+                      height: "15px",
+                      transition: "0.7s ease-in-out",
+                      color: section === 3 ? "white" : "#5A5A5A",
+                    }}
                   />
                   <p className="p-0 m-0 ms-2">info@gmail.com</p>
                 </div>
