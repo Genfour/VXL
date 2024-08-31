@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import Footer from "../components/Footer";
 import { useEffect, useState } from "react";
-import team from "../images/cropped-team.png";
+import team from "../images/team-2.png";
 
 export default function About() {
   const [side, setSide] = useState("left");
@@ -156,10 +156,43 @@ export default function About() {
                 </div>
               </div>
 
-              {/* Team Member 1 */}
+              {/* Team Member 2 */}
               <div className="team-member team-member-2">
                 <div className="popup-box popup-2">
-                  <h1>Jane Doe - Senior SE</h1>
+                  <h1>Jane Doe - Senior Lecturer</h1>
+                  <p className="mt-1">
+                    Jane oversees all educational projects, ensuring everything
+                    runs smoothly.
+                  </p>
+                </div>
+              </div>
+
+              {/* Team Member 3 */}
+              <div className="team-member team-member-3">
+                <div className="popup-box popup-3">
+                  <h1>Mathew Perry - CEO</h1>
+                  <p className="mt-1">
+                    Jane oversees all educational projects, ensuring everything
+                    runs smoothly.
+                  </p>
+                </div>
+              </div>
+
+              {/* Team Member 4 */}
+              <div className="team-member team-member-4">
+                <div className="popup-box popup-4">
+                  <h1>Alicia Hudson - Marketing Manager</h1>
+                  <p className="mt-1">
+                    Jane oversees all educational projects, ensuring everything
+                    runs smoothly.
+                  </p>
+                </div>
+              </div>
+
+              {/* Team Member 5 */}
+              <div className="team-member team-member-5">
+                <div className="popup-box popup-5">
+                  <h1>Matt Murdok - Senior Lecturer</h1>
                   <p className="mt-1">
                     Jane oversees all educational projects, ensuring everything
                     runs smoothly.
