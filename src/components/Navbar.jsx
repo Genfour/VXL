@@ -117,10 +117,11 @@ export default function Navbar() {
             </div>
           </div>
           <img
-            className="m-3"
+            className="m-3 brand-logo"
             src={logo}
             style={{ width: "auto", height: "70px" }}
             alt="brand-logo"
+            loading="lazy"
           />
           {/* <a
           href="/"

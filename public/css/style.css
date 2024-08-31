@@ -178,6 +178,53 @@
 
 .fade-effect-blue,
 .fade-effect-pink {
+  position: relative;
+  /* width: 40px;
+  height: 40px; */
+  border-radius: 100%;
+}
+
+.fade-effect-blue:before,
+.fade-effect-pink:before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  animation: pulse-border 1500ms ease-out infinite;
+}
+
+.fade-effect-blue:after,
+.fade-effect-pink:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: block;
+  width: 11px;
+  height: 11px;
+  background: #ffffff;
+  border-radius: 100%;
+  transition: all 200ms;
+}
+
+.fade-effect-blue:before {
+  background: #0a4c7e; /* Blue background */
+}
+
+.fade-effect-pink:before {
+  background: #fe3c66; /* Pink background */
+}
+
+/* .fade-effect-blue,
+.fade-effect-pink {
   width: 40px;
   height: 40px;
 }
@@ -192,7 +239,6 @@
   display: block;
   width: 60px;
   height: 60px;
-  /* background: var(--primary); */
   background: #0a4c7e;
   border-radius: 100%;
   animation: pulse-border 1500ms ease-out infinite;
@@ -223,7 +269,6 @@
   display: block;
   width: 60px;
   height: 60px;
-  /* background: var(--primary); */
   background: #fe3c66;
   border-radius: 100%;
   animation: pulse-border 1500ms ease-out infinite;
@@ -242,7 +287,7 @@
   background: #ffffff;
   border-radius: 100%;
   transition: all 200ms;
-}
+} */
 
 @keyframes pulse-border {
   0% {

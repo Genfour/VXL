@@ -701,7 +701,23 @@ const Home = () => {
                       width: "50%",
                     }}
                   ></div>
+
                   <div className="milestone-border">
+                    <div className="fade-effect-pink">
+                      <div
+                        style={{
+                          backgroundColor: "#fe3c66",
+                          width: "11px",
+                          height: "11px",
+                          borderRadius: "50%",
+                          position: "relative",
+                          zIndex: 2 /* Ensure it stays on top */,
+                        }}
+                      ></div>
+                    </div>
+                  </div>
+
+                  {/* <div className="milestone-border">
                     <div
                       style={{
                         backgroundColor: "#fe3c66",
@@ -709,10 +725,8 @@ const Home = () => {
                         height: "11px",
                         borderRadius: "50%",
                       }}
-                    >
-                      {/* <span className="fade-effect-pink"></span> */}
-                    </div>
-                  </div>
+                    ></div>
+                  </div> */}
                   <div
                     style={{
                       backgroundColor: "#0a4c7e",
@@ -750,15 +764,17 @@ const Home = () => {
                     }}
                   ></div>
                   <div className="milestone-border">
-                    <div
-                      style={{
-                        backgroundColor: "#0a4c7e",
-                        width: "11px",
-                        height: "11px",
-                        borderRadius: "50%",
-                      }}
-                    >
-                      {/* <span className="fade-effect-blue"></span> */}
+                    <div className="fade-effect-blue">
+                      <div
+                        style={{
+                          backgroundColor: "#0a4c7e",
+                          width: "11px",
+                          height: "11px",
+                          borderRadius: "50%",
+                          position: "relative",
+                          zIndex: 2 /* Ensure it stays on top */,
+                        }}
+                      ></div>
                     </div>
                   </div>
                   <div
