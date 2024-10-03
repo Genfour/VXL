@@ -10,6 +10,8 @@ import Confetti from "react-confetti";
 import iconImage from "../images/mortarboard.png";
 import TrackRecord from "../components/TrackRecord";
 import {
+  faArrowRight,
+  faChevronRight,
   faEarthAmericas,
   faLightbulb,
   faPlaneDeparture,
@@ -19,6 +21,7 @@ import logo from "../images/VXL_new_logo.png";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { TypeAnimation } from "react-type-animation";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const clients = [
   { active: true, image: "img/family.jpg" },
@@ -249,7 +252,11 @@ const Home = () => {
           <Navbar />
 
           {/* <!-- Header Start --> */}
-          <div class="container-fluid bg-light my-6" id="home">
+          <div
+            class="container-fluid bg-light"
+            id="home"
+            style={{ marginTop: "70px" }}
+          >
             <div class="p-3">
               <div class="row g-5 align-items-center p-5">
                 <div class="col-lg-6 py-6 pb-0 d-flex flex-column align-items-start pt-lg-0">
@@ -269,37 +276,34 @@ const Home = () => {
                     <></>
                   )}
 
-                  <h3 class="mb-3" style={{ color: "#fe3c66" }}>
-                    Realise your
+                  <h3 class="mb-3 hero-sub-title" style={{ color: "#fe3c66" }}>
+                    VXL Education Sri Lanka
                   </h3>
                   <h1
-                    class="display-3 mb-3 text-start"
+                    class="display-3 mb-3 text-start hero-title"
                     style={{ color: "#0a4c7e" }}
                   >
-                    Higher Education Dreams
+                    You <span style={{ color: "#fe3c66" }}>Excel</span> With VXL
                   </h1>
-                  <p className="text-start">
-                    Unlock boundless opportunities for higher studies and
-                    skilled migration with VXL Educational Consultancy Sri
-                    Lanka, your trusted partner in excellence.{" "}
+                  <p className="text-start hero-para">
+                    Want to study abroad?{" "}
+                    <span style={{ color: "#fe3c66" }}>
+                      Having trouble deciding where or how?
+                    </span>{" "}
+                    We <span style={{ color: "#fe3c66" }}>excel</span> around
+                    the world in helping students achieve their higher education
+                    goals.
                   </p>
-                  <h2 class="typed-text-output d-inline"></h2>
-                  <div class="typed-text d-none">
-                    Web Designer, Web Developer, Front End Developer, Apps
-                    Designer, Apps Developer
-                  </div>
-                  <div class="d-flex align-items-center pt-5">
-                    <button
-                      type="button"
-                      class="btn-play"
-                      data-bs-toggle="modal"
-                      data-src="https://www.youtube.com/embed/DWRcNpR6Kdc"
-                      data-bs-target="#videoModal"
-                    >
-                      <span></span>
-                    </button>
-                    <h5 class="ms-4 mb-0 d-none d-sm-block">Play Video</h5>
-                  </div>
+                  <button className="hero-button py-2 px-3 mt-2">
+                    Book My Free Session
+                    <span className="bg-white rounded-circle ms-3 ">
+                      <FontAwesomeIcon
+                        icon={faChevronRight}
+                        color="#18548a"
+                        width={16}
+                      />
+                    </span>
+                  </button>
                 </div>
                 <div class="col-lg-6">
                   <img
@@ -313,79 +317,26 @@ const Home = () => {
           </div>
           {/* <!-- Header End --> */}
 
-          {/* <!-- Video Modal Start --> */}
-          <div
-            class="modal modal-video fade"
-            id="videoModal"
-            tabindex="-1"
-            aria-labelledby="exampleModalLabel"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog">
-              <div class="modal-content rounded-0">
-                <div class="modal-header">
-                  <h3 class="modal-title" id="exampleModalLabel">
-                    Youtube Video
-                  </h3>
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                <div class="modal-body">
-                  {/* <!-- 16:9 aspect ratio --> */}
-                  <div class="ratio ratio-16x9">
-                    <iframe
-                      class="embed-responsive-item"
-                      src=""
-                      id="video"
-                      allowfullscreen
-                      allowscriptaccess="always"
-                      allow="autoplay"
-                    ></iframe>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* <!-- Video Modal End --> */}
-
           {/* <!-- About Start --> */}
-          <div className="container-fluid clients-container d-flex flex-row p-5">
-            <div className="clients-container-left d-flex flex-row">
-              <div className="slider">
-                {clients.map((image, index) => (
-                  <div
-                    key={index}
-                    className={`slide ${
-                      index === currentIndex ? "active" : ""
-                    } ${isSliding ? "sliding" : ""}`}
-                    style={{
-                      backgroundImage: `url(${image.image})`,
-                      width: "100%",
-                      height: "100%",
-                      backgroundRepeat: "no-repeat",
-                      backgroundSize: "cover",
-                      backgroundPosition: "center",
-                    }}
-                  ></div>
-                ))}
-              </div>
-            </div>
-            <div className="clients-container-right ps-5 d-flex flex-column justify-content-center">
+          <div className="container-fluid clients-container p-0 m-0 d-flex flex-row">
+            <div className="clients-container-left m-0 p-0"></div>
+            <div className="clients-container-right m-0 d-flex flex-column justify-content-center">
               <h1 className="p-0 mb-3 wow fadeInUp" data-bs-wow-delay="0.1s">
-                Your Happiness
-                <br />
-                <span style={{ color: "#0a4c7e" }}>Matters To Us</span>
+                We Excel <span style={{ color: "#18548A" }}>When</span> You
+                Excel
               </h1>
               <p lassName="wow fadeInUp" data-bs-wow-delay="0.5s">
-                At VXL Educational Consultancy Sri Lanka, we put your
-                satisfaction first, making your migration and higher studies
-                dreams a reality. We provide personalised guidance for accessing
-                top universities, tailored solutions, and exceptional support
-                from our experienced team. Your success is our ultimate reward.
+                At VXL Education Sri Lanka, we put your dreams first. We want to
+                see you excel in turning your migration and higher studies
+                dreams into reality.
+                <br />
+                <br />
+                With personalized guidance for accessing top universities,
+                tailored solutions and exceptional visa and counselling support
+                from the VXL team, your success is our promise.
+                <br />
+                <br />
+                Our 99% visa success rate is a testament to our brand promise.
               </p>
               <p className="text-end mt-3">
                 Ayodhya Kodagoda (AK)
@@ -647,7 +598,7 @@ const Home = () => {
             </div>
           </div> */}
 
-          <div className="track-record-wrapper d-flex flex-column">
+          {/* <div className="track-record-wrapper d-flex flex-column">
             <h1 className="wow fadeInUp" data-bs-wow-delay="0.1s">
               Our Global Track <span style={{ color: "#fe3c66" }}>Record</span>
             </h1>
@@ -711,22 +662,12 @@ const Home = () => {
                           height: "11px",
                           borderRadius: "50%",
                           position: "relative",
-                          zIndex: 2 /* Ensure it stays on top */,
+                          zIndex: 2,
                         }}
                       ></div>
                     </div>
                   </div>
 
-                  {/* <div className="milestone-border">
-                    <div
-                      style={{
-                        backgroundColor: "#fe3c66",
-                        width: "11px",
-                        height: "11px",
-                        borderRadius: "50%",
-                      }}
-                    ></div>
-                  </div> */}
                   <div
                     style={{
                       backgroundColor: "#0a4c7e",
@@ -772,7 +713,7 @@ const Home = () => {
                           height: "11px",
                           borderRadius: "50%",
                           position: "relative",
-                          zIndex: 2 /* Ensure it stays on top */,
+                          zIndex: 2,
                         }}
                       ></div>
                     </div>
@@ -803,7 +744,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* <div class="video-background-container">
             <video autoplay muted loop class="video-background">
