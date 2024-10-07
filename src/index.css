@@ -129,6 +129,27 @@ textarea:focus {
   background-color: #fe3c66;
 } */
 
+/* Hero */
+.hero-container {
+  height: calc(100vh - 70px);
+}
+
+.hero-left {
+  padding: 80px 0px 80px 60px !important;
+}
+
+.hero-right {
+  width: 50%;
+  height: 100%;
+  flex-grow: 1;
+  min-width: 450px;
+  /* background-color: green; */
+  background-image: url(/public/img/graduates.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 /* Clients */
 .clients-container {
   background-color: #fe3c66;
@@ -343,12 +364,62 @@ textarea:focus {
 
 .testimonial-container h1 {
   color: #18548a;
+  font-size: 3rem;
+  text-align: start;
+  font-weight: 400 !important;
 }
 
 .testimonial-slider {
   width: 90%;
-  height: 300px;
+  height: 350px;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
   border: 1px solid #ee3457;
+}
+
+/* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+.testimonial-slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.testimonial-slider {
+  scrollbar-width: none; /* Firefox */
+}
+
+/* For other browsers */
+.testimonial-slider {
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
+}
+
+.testimonial-item {
+  min-width: 33.5%;
+  border-width: 0px 1px 0px 0px;
+  border-color: #ee3457;
+  border-style: solid;
+  background-color: white;
+}
+
+.testimonial-item .testimonial-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.testimonial-item h1 {
+  font-size: 1.5rem;
+  word-break: normal;
+}
+
+.testimonial-item p {
+  text-align: justify;
+  text-align-last: start;
+  font-weight: normal;
+  line-height: "1";
+  word-break: "break-word";
 }
 
 .testimonial-carousel button {
@@ -357,6 +428,21 @@ textarea:focus {
   border-radius: 50%;
   background-color: #ffefef;
   border: 3px solid #ffb1b1;
+  transition: transform 0.2s ease-in-out;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.testimonial-carousel button:focus {
+  border: 3px solid #ffb1b1 !important;
+}
+
+/* Track record */
+.track-record-container h1 {
+  color: #18548a;
+  font-size: 3rem;
+  text-align: start;
+  font-weight: 400 !important;
 }
 
 /* About */
@@ -537,6 +623,13 @@ footer {
   }
 }
 
+@media (max-width: 1068px) {
+  .testimonial-item {
+    min-width: 280px;
+    width: auto;
+  }
+}
+
 @media screen and (max-width: 1000px) {
   .clients-container {
     flex-direction: column !important;
@@ -554,6 +647,20 @@ footer {
     margin-top: 40px;
     padding: 0% !important;
     height: auto;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-container {
+    height: auto;
+  }
+
+  .hero-left {
+    padding: 80px 60px !important;
+  }
+
+  .hero-right {
+    height: 0px !important;
   }
 }
 

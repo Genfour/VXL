@@ -91,101 +91,82 @@ const items = [
   },
 ];
 
+const testimonials = [
+  {
+    image: "img/team1.png",
+    name: "John Doe",
+    description:
+      "VXL provided excellent guidance and resources, helping me achieve my career goals.",
+  },
+  {
+    image: "img/team2.png",
+    name: "Jane Smith",
+    description:
+      "The instructors at VXL were knowledgeable and supportive, creating a positive learning environment.",
+  },
+  {
+    image: "img/team3.png",
+    name: "Alice Johnson",
+    description:
+      "I highly recommend VXL for their comprehensive courses and personalized attention.",
+  },
+  {
+    image: "img/team4.png",
+    name: "Bob Brown",
+    description:
+      "VXL's flexible learning options and industry partnerships were invaluable to my professional development.",
+  },
+  {
+    image: "img/team5.png",
+    name: "Emily Davis",
+    description:
+      "The career counseling at VXL helped me identify the right path and land my dream job.",
+  },
+  {
+    image: "img/team6.png",
+    name: "Charlie Baker",
+    description:
+      "VXL's focus on practical skills and real-world experience prepared me for success in my field.",
+  },
+];
+
 const Home = () => {
-  var settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
   const icon = new Image();
   icon.src = iconImage;
   const [loading, setLoading] = useState(false);
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const interval = 3000;
-  const [isSliding, setIsSliding] = useState(false);
-  const carouselRef = useRef(null);
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
   const [isRunning, setIsRunning] = useState(true);
+  const scrollRef = useRef(null);
+  const [scrollInterval, setScrollInterval] = useState(null);
+  const [clickedLeft, setClickedLeft] = useState(false);
+  const [clickedRight, setClickedRight] = useState(false);
 
-  const handleMouseDown = (e) => {
-    setIsDragging(true);
-    setStartX(e.pageX - carouselRef.current.offsetLeft);
-    setScrollLeft(carouselRef.current.scrollLeft);
+  const scrollLeft = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollLeft -= 50;
+    }
   };
 
-  const handleMouseMove = (e) => {
-    if (!isDragging) return;
-    e.preventDefault();
-    const x = e.pageX - carouselRef.current.offsetLeft;
-    const walk = (x - startX) * 2; // Multiply by 2 for faster scrolling
-    carouselRef.current.scrollLeft = scrollLeft - walk;
+  const scrollRight = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollLeft += 50;
+    }
+  };
+
+  const handleMouseDown = (scrollFunc, dir) => {
+    dir === "left" ? setClickedLeft(true) : setClickedRight(true);
+    const interval = setInterval(scrollFunc, 50);
+    setScrollInterval(interval);
   };
 
   const handleMouseUp = () => {
-    setIsDragging(false);
-  };
-
-  const handleMouseUpLeave = () => {
-    setIsDragging(false);
+    setClickedLeft(false);
+    setClickedRight(false);
+    if (scrollInterval) {
+      clearInterval(scrollInterval);
+    }
   };
 
   useEffect(() => {
-    const slideInterval = setInterval(() => {
-      setIsSliding(true);
-      setTimeout(() => {
-        setCurrentIndex((prevIndex) =>
-          prevIndex === clients.length - 1 ? 0 : prevIndex + 1
-        );
-        setIsSliding(false);
-      }, 500); // Match this with the CSS transition duration
-    }, interval);
-
-    return () => clearInterval(slideInterval);
-  }, [clients.length, interval]);
-
-  // State to manage dropdown visibility
-  const [dropdownVisible, setDropdownVisible] = useState(false);
-
-  // State to manage mobile menu collapse
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  // Functions to handle mouse events for desktop
-  const handleMouseEnter = () => {
-    if (window.innerWidth > 992) {
-      // Only apply hover effect for desktop view
-      setDropdownVisible(true);
-    }
-  };
-
-  const handleMouseLeave = () => {
-    if (window.innerWidth > 992) {
-      // Only apply hover effect for desktop view
-      setDropdownVisible(false);
-    }
-  };
-
-  // Function to handle click for mobile
-  const handleDropdownClick = () => {
-    if (window.innerWidth <= 992) {
-      // Only toggle dropdown on click for mobile view
-      setDropdownVisible(!dropdownVisible);
-    }
-  };
-
-  // Function to handle mobile menu toggle
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
-
-  useEffect(() => {
-    // setTimeout(() => {
-    //   setLoading(false);
-    // }, 3500);
-
     window.$(".about_active").owlCarousel({
       loop: true,
       margin: 30,
@@ -212,26 +193,6 @@ const Home = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const [filter, setFilter] = useState("*");
-
-  const handleFilterChange = (newFilter) => {
-    setFilter(newFilter);
-  };
-
-  const portfolioItems = [
-    { id: 1, category: "Graphic Design", imgSrc: "img/proj.png" },
-    { id: 2, category: "UI/UX Design", imgSrc: "img/proj.png" },
-    { id: 3, category: "Graphic Design", imgSrc: "img/proj.png" },
-    { id: 4, category: "UI/UX Design", imgSrc: "img/proj.png" },
-    { id: 5, category: "Graphic Design", imgSrc: "img/proj.png" },
-    { id: 6, category: "UI/UX Design", imgSrc: "img/proj.png" },
-  ];
-
-  const filteredItems =
-    filter === "*"
-      ? portfolioItems
-      : portfolioItems.filter((item) => item.category === filter);
-
   return (
     <>
       {loading ? (
@@ -255,72 +216,70 @@ const Home = () => {
 
           {/* <!-- Header Start --> */}
           <div
-            class="container-fluid bg-light"
+            class="container-fluid bg-light user-select-none"
             id="home"
             style={{ marginTop: "70px" }}
           >
-            <div class="p-3">
-              <div class="row g-5 align-items-center p-5">
-                <div class="col-lg-6 py-6 pb-0 d-flex flex-column align-items-start pt-lg-0">
-                  {isRunning ? (
-                    <Confetti
-                      style={{
-                        position: "absolute",
-                        width: "100%",
-                        height: "100%",
-                      }}
-                      drawShape={(ctx) => {
-                        ctx.drawImage(icon, -10, -10, 30, 30);
-                      }}
-                      numberOfPieces={50}
-                    />
-                  ) : (
-                    <></>
-                  )}
-
-                  <h3 class="mb-3 hero-sub-title" style={{ color: "#fe3c66" }}>
-                    VXL Education Sri Lanka
-                  </h3>
-                  <h1
-                    class="display-3 mb-3 text-start hero-title"
-                    style={{ color: "#0a4c7e" }}
-                  >
-                    You <span style={{ color: "#fe3c66" }}>Excel</span> With VXL
-                  </h1>
-                  <p className="text-start hero-para">
-                    Want to study abroad?{" "}
-                    <span style={{ color: "#fe3c66" }}>
-                      Having trouble deciding where or how?
-                    </span>{" "}
-                    We <span style={{ color: "#fe3c66" }}>excel</span> around
-                    the world in helping students achieve their higher education
-                    goals.
-                  </p>
-                  <button className="hero-button py-2 px-3 mt-2">
-                    Book My Free Session
-                    <span className="bg-white rounded-circle ms-3 ">
-                      <FontAwesomeIcon
-                        icon={faChevronRight}
-                        color="#18548a"
-                        width={16}
-                      />
-                    </span>
-                  </button>
-                </div>
-                <div class="col-lg-6">
-                  <img
-                    class="img-fluid header-right-image"
-                    src="img/graduates.png"
-                    alt=""
+            <div class="hero-container row align-items-center p-0 m-0 d-flex">
+              <div class="col-lg-6 col-md-12 hero-left d-flex flex-column align-items-start flex-grow-1">
+                {isRunning ? (
+                  <Confetti
+                    style={{
+                      position: "absolute",
+                      width: "100%",
+                      height: "100%",
+                    }}
+                    drawShape={(ctx) => {
+                      ctx.drawImage(icon, -10, -10, 30, 30);
+                    }}
+                    numberOfPieces={50}
                   />
-                </div>
+                ) : (
+                  <></>
+                )}
+
+                <h3 class="mb-3 hero-sub-title" style={{ color: "#fe3c66" }}>
+                  VXL Education Sri Lanka
+                </h3>
+                <h1
+                  class="display-3 mb-3 text-start hero-title"
+                  style={{ color: "#0a4c7e" }}
+                >
+                  You <span style={{ color: "#fe3c66" }}>Excel</span> With VXL
+                </h1>
+                <p className="text-start hero-para">
+                  Want to study abroad?{" "}
+                  <span style={{ color: "#fe3c66" }}>
+                    Having trouble deciding where or how?
+                  </span>{" "}
+                  We <span style={{ color: "#fe3c66" }}>excel</span> around the
+                  world in helping students achieve their higher education
+                  goals.
+                </p>
+                <button className="hero-button py-2 px-3 mt-2">
+                  Book My Free Session
+                  <span className="bg-white rounded-circle ms-3 ">
+                    <FontAwesomeIcon
+                      icon={faChevronRight}
+                      color="#18548a"
+                      width={16}
+                    />
+                  </span>
+                </button>
+              </div>
+              <div class="col-lg-6 col-md-12 hero-right flex-grow-1">
+                {/* <img
+                  class="img-fluid header-right-image"
+                  src="img/graduates.png"
+                  alt=""
+                /> */}
               </div>
             </div>
           </div>
           {/* <!-- Header End --> */}
 
           {/* <!-- About Start --> */}
-          <div className="container-fluid clients-container p-0 m-0 d-flex flex-row">
+          <div className="container-fluid clients-container p-0 m-0 d-flex flex-row user-select-none">
             <div className="clients-container-left m-0 p-0"></div>
             <div className="clients-container-right m-0 d-flex flex-column justify-content-center">
               <h1 className="p-0 mb-3 wow fadeInUp" data-bs-wow-delay="0.1s">
@@ -355,23 +314,75 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="testimonial-container w-100 h-auto p-5 d-flex flex-column align-items-center">
+          <div className="testimonial-container w-100 h-auto p-5 d-flex flex-column align-items-center user-select-none">
             <h1 className="wow fadeInUp" data-bs-wow-delay="0.1s">
               They <span style={{ color: "#fe3c66" }}>Excelled</span> with VXL
             </h1>
 
             <div className="testimonial-carousel mt-3 d-flex flex-row justify-content-between align-items-center w-100">
-              <button>
+              <button
+                style={{
+                  transform: clickedLeft ? `scale(0.7)` : `scale(1)`,
+                  boxShadow: clickedLeft
+                    ? `rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px`
+                    : `rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px`,
+                }}
+                onMouseDown={() => handleMouseDown(scrollLeft, "left")}
+                onMouseUp={handleMouseUp}
+                onMouseLeave={handleMouseUp}
+              >
                 <FontAwesomeIcon icon={faChevronLeft} color="#FFB1B1" />
               </button>
-              <div className="testimonial-slider"></div>
-              <button>
+              <div
+                className="testimonial-slider d-flex flex-row"
+                ref={scrollRef}
+              >
+                {testimonials.map((item, index) => {
+                  return (
+                    <div
+                      key={index}
+                      className="testimonial-item d-fex flex-column p-3"
+                    >
+                      <div className="d-flex flex-row h-auto align-items-center justify-content-start align-items-center">
+                        <div
+                          className="testimonial-image m-0 p-0"
+                          style={{ backgroundImage: `url(${item.image})` }}
+                        ></div>
+                        <h1 className="ms-3">{item.name}</h1>
+                      </div>
+                      <p className="mt-3">
+                        {'"'}
+                        {item.description}
+                        {'"'}
+                      </p>
+                    </div>
+                  );
+                })}
+              </div>
+              <button
+                style={{
+                  transform: clickedRight ? `scale(0.7)` : `scale(1)`,
+                  boxShadow: clickedRight
+                    ? `rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px`
+                    : `rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px`,
+                }}
+                onMouseDown={() => handleMouseDown(scrollRight, "right")}
+                onMouseUp={handleMouseUp}
+                onMouseLeave={handleMouseUp}
+              >
                 <FontAwesomeIcon icon={faChevronRight} color="#FFB1B1" />
               </button>
             </div>
           </div>
 
-          <div className="d-flex flex-column faq-container p-5">
+          <div className="track-record-container d-flex flex-column w-100 h-auto p-5 justify-content-center align-items-center">
+            <h1 className="wow fadeInUp" data-bs-wow-delay="0.1s">
+              We <span style={{ color: "#fe3c66" }}>Excel</span> around the
+              world
+            </h1>
+          </div>
+
+          {/* <div className="d-flex flex-column faq-container p-5 user-select-none">
             <div className="faq-wrapper d-flex flex-column align-items-center">
               <h1 className="wow fadeInUp" data-bs-wow-delay="0.1s">
                 How We Can <span style={{ color: "#fe3c66" }}>Assist</span>
@@ -399,7 +410,7 @@ const Home = () => {
                 })}
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* <!-- Service Start --> */}
           {/* <div class="container-fluid bg-light my-5 py-6" id="service">
@@ -633,70 +644,6 @@ const Home = () => {
             </div>
           </div> */}
           {/* <!-- Team End --> */}
-
-          {/* <!-- Testimonial Start --> */}
-          {/* <div class="container-fluid bg-light py-5 my-5" id="testimonial">
-                <div class="container-fluid py-5">
-                    <h1 class="display-5 text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">Testimonial</h1>
-                    <div class="row justify-content-center">
-                        <div class="col-lg-3 d-none d-lg-block">
-                            <div class="testimonial-left h-100">
-                                <img class="img-fluid wow fadeIn" data-wow-delay="0.1s" src="img/testimonial-1.jpg" alt="" />
-                                <img class="img-fluid wow fadeIn" data-wow-delay="0.3s" src="img/testimonial-2.jpg" alt="" />
-                                <img class="img-fluid wow fadeIn" data-wow-delay="0.5s" src="img/testimonial-3.jpg" alt="" />
-                            </div>
-                        </div>
-                        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                            <div class="about_active owl-carousel testimonial-carousel">
-                                <div class="testimonial-item text-center">
-                                    <div class="position-relative mb-5">
-                                        <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="img/testimonial-1.jpg" alt="" />
-                                        <div class="testimonial-icon">
-                                            <i class="fa fa-quote-left text-primary"></i>
-                                        </div>
-                                    </div>
-                                    <p class="fs-5 fst-italic">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
-                                    <hr class="w-25 mx-auto" />
-                                    <h5>Client Name</h5>
-                                    <span>Profession</span>
-                                </div>
-                                <div class="testimonial-item text-center">
-                                    <div class="position-relative mb-5">
-                                        <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="img/testimonial-2.jpg" alt="" />
-                                        <div class="testimonial-icon">
-                                            <i class="fa fa-quote-left text-primary"></i>
-                                        </div>
-                                    </div>
-                                    <p class="fs-5 fst-italic">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
-                                    <hr class="w-25 mx-auto" />
-                                    <h5>Client Name</h5>
-                                    <span>Profession</span>
-                                </div>
-                                <div class="testimonial-item text-center">
-                                    <div class="position-relative mb-5">
-                                        <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="img/testimonial-3.jpg" alt="" />
-                                        <div class="testimonial-icon">
-                                            <i class="fa fa-quote-left text-primary"></i>
-                                        </div>
-                                    </div>
-                                    <p class="fs-5 fst-italic">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
-                                    <hr class="w-25 mx-auto" />
-                                    <h5>Client Name</h5>
-                                    <span>Profession</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 d-none d-lg-block">
-                            <div class="testimonial-right h-100">
-                                <img class="img-fluid wow fadeIn" data-wow-delay="0.1s" src="img/testimonial-1.jpg" alt="" />
-                                <img class="img-fluid wow fadeIn" data-wow-delay="0.3s" src="img/testimonial-2.jpg" alt="" />
-                                <img class="img-fluid wow fadeIn" data-wow-delay="0.5s" src="img/testimonial-3.jpg" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> */}
-          {/* <!-- Testimonial End --> */}
 
           {/* <!-- Contact Start --> */}
           {/* <div class="container-xxl pb-5" id="contact">
