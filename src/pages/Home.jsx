@@ -14,9 +14,15 @@ import {
   faChevronLeft,
   faChevronRight,
   faEarthAmericas,
+  faGlobe,
+  faGraduationCap,
+  faHandsHoldingCircle,
   faLightbulb,
+  faLocationDot,
+  faNewspaper,
   faPlaneDeparture,
   faUserGraduate,
+  faUsers,
 } from "@fortawesome/free-solid-svg-icons";
 import logo from "../images/VXL_new_logo.png";
 import Navbar from "../components/Navbar";
@@ -24,6 +30,7 @@ import Footer from "../components/Footer";
 import { TypeAnimation } from "react-type-animation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import signature from "../images/signature.png";
+import about_bg from "../images/about_bg.png";
 
 const clients = [
   { active: true, image: "img/family.jpg" },
@@ -128,6 +135,15 @@ const testimonials = [
     description:
       "VXL's focus on practical skills and real-world experience prepared me for success in my field.",
   },
+];
+
+const trackrecords = [
+  { image: faHandsHoldingCircle, subcontent: "Establised", content: "2019" },
+  { image: faUsers, subcontent: "Satisfied Clients", content: "1234+" },
+  { image: faNewspaper, subcontent: "Visa Grants", content: "567+" },
+  { image: faGraduationCap, subcontent: "Sccholarships", content: "89+" },
+  { image: faLocationDot, subcontent: "Global Offices", content: "14" },
+  { image: faGlobe, subcontent: "Global Locations", content: "4" },
 ];
 
 const Home = () => {
@@ -280,7 +296,9 @@ const Home = () => {
 
           {/* <!-- About Start --> */}
           <div className="container-fluid clients-container p-0 m-0 d-flex flex-row user-select-none">
-            <div className="clients-container-left m-0 p-0"></div>
+            <div className="clients-container-left m-0 p-0">
+              {/* <img className="m-0 p-0" src={about_bg} alt="about" /> */}
+            </div>
             <div className="clients-container-right m-0 d-flex flex-column justify-content-center">
               <h1 className="p-0 mb-3 wow fadeInUp" data-bs-wow-delay="0.1s">
                 We Excel <span style={{ color: "#18548A" }}>When</span> You
@@ -315,12 +333,13 @@ const Home = () => {
           </div>
 
           <div className="testimonial-container w-100 h-auto p-5 d-flex flex-column align-items-center user-select-none">
-            <h1 className="wow fadeInUp" data-bs-wow-delay="0.1s">
+            <h1 className="wow fadeInUp text-center" data-bs-wow-delay="0.1s">
               They <span style={{ color: "#fe3c66" }}>Excelled</span> with VXL
             </h1>
 
             <div className="testimonial-carousel mt-3 d-flex flex-row justify-content-between align-items-center w-100">
               <button
+                className="testimonial-btn-left"
                 style={{
                   transform: clickedLeft ? `scale(0.7)` : `scale(1)`,
                   boxShadow: clickedLeft
@@ -360,6 +379,7 @@ const Home = () => {
                 })}
               </div>
               <button
+                className="testimonial-btn-right"
                 style={{
                   transform: clickedRight ? `scale(0.7)` : `scale(1)`,
                   boxShadow: clickedRight
@@ -376,10 +396,44 @@ const Home = () => {
           </div>
 
           <div className="track-record-container d-flex flex-column w-100 h-auto p-5 justify-content-center align-items-center">
-            <h1 className="wow fadeInUp" data-bs-wow-delay="0.1s">
+            <h1 className="wow fadeInUp text-center" data-bs-wow-delay="0.1s">
               We <span style={{ color: "#fe3c66" }}>Excel</span> around the
               world
             </h1>
+            <div className="track-record-wrapper d-flex flex-row justify-content-center mt-3">
+              {trackrecords.map((record, index) => {
+                return (
+                  <div
+                    key={index}
+                    className="track-record-item p-3 d-flex flex-column justify-content-center align-items-center"
+                  >
+                    <FontAwesomeIcon
+                      icon={record.image}
+                      style={{ width: "40px", height: "40px" }}
+                      color="#18548A"
+                    />
+                    <h1 className="mt-3">{record.content}</h1>
+                    <p className="m-0 text-center">{record.subcontent}</p>
+                  </div>
+                );
+              })}
+            </div>
+            <p className="mt-3">
+              It took years for us to get where we are today. Over the years we
+              have perfected our processes, checks ​and due-diligence to bring
+              you a <span>true experience of excellence</span>.<br />
+              Talk to us today. <span>You Excel with VXL</span>.
+            </p>
+            <button className="hero-button py-2 px-3 mt-2">
+              Experience Excellence
+              <span className="bg-white rounded-circle ms-3 ">
+                <FontAwesomeIcon
+                  icon={faChevronRight}
+                  color="#18548a"
+                  width={16}
+                />
+              </span>
+            </button>
           </div>
 
           {/* <div className="d-flex flex-column faq-container p-5 user-select-none">
