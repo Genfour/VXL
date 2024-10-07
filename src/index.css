@@ -138,7 +138,8 @@ textarea:focus {
 
 .clients-container-left {
   width: 520px;
-  height: 380px;
+  height: auto;
+  flex-grow: 1;
   background-image: url("/public/img/about_bg.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -163,6 +164,11 @@ textarea:focus {
   font-size: 0.8rem;
   text-align: start;
   color: white;
+}
+
+.clients-container-right img {
+  width: 120px;
+  transform: rotate(-15deg);
 }
 
 .slider {
@@ -330,71 +336,27 @@ textarea:focus {
   max-height: 0;
 }
 
-/* Track Record */
-.track-record-container,
-.track-record-item {
-  width: auto;
-  height: auto;
+/* Testimonials */
+.testimonial-container {
+  background-color: #ffefef;
 }
 
-.track-record-container {
-  gap: 7rem;
+.testimonial-container h1 {
+  color: #18548a;
 }
 
-.track-record-wrapper {
-  margin-top: 100px;
-  margin-bottom: 100px;
+.testimonial-slider {
+  width: 90%;
+  height: 300px;
+  border: 1px solid #ee3457;
 }
 
-.track-record-wrapper h1 {
-  font-size: 2.5rem;
-  color: #0a4c7e !important;
-}
-
-.track-record-item {
-  border-style: solid;
-  border-width: 0px 0px 2px 0px;
-}
-
-.track-circle {
+.testimonial-carousel button {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
-}
-
-.track-space-bar {
-  height: 70px;
-  width: 5px;
-}
-
-.track-record-item-wrapper {
-  width: 150px;
-}
-
-.mind-map-container {
-  width: 100%;
-  height: auto;
-  margin-top: 50px;
-}
-
-.mind-map-item {
-  display: flex;
-  flex-grow: 1;
-  height: 150px;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
-}
-
-.mind-map-item p {
-  margin-top: 1rem;
-  width: 250px;
-}
-
-.milestone-border {
-  border: 1px solid #0a4c7e;
-  padding: 2px;
-  border-radius: 50%;
+  background-color: #ffefef;
+  border: 3px solid #ffb1b1;
 }
 
 /* About */

@@ -813,7 +813,7 @@
   display: flex;
   opacity: 1;
 }
-/*** Testimonial ***/
+/* ** Testimonial **
 .testimonial-left,
 .testimonial-right {
   position: relative;
@@ -907,7 +907,7 @@
 
 .testimonial-carousel .owl-dot.active::after {
   background: var(--primary);
-}
+} */
 
 .contact-form {
   width: 100%;

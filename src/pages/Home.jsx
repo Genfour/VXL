@@ -11,6 +11,7 @@ import iconImage from "../images/mortarboard.png";
 import TrackRecord from "../components/TrackRecord";
 import {
   faArrowRight,
+  faChevronLeft,
   faChevronRight,
   faEarthAmericas,
   faLightbulb,
@@ -22,6 +23,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { TypeAnimation } from "react-type-animation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import signature from "../images/signature.png";
 
 const clients = [
   { active: true, image: "img/family.jpg" },
@@ -326,435 +328,48 @@ const Home = () => {
                 Excel
               </h1>
               <p lassName="wow fadeInUp" data-bs-wow-delay="0.5s">
-                At VXL Education Sri Lanka, we put your dreams first. We want to
-                see you excel in turning your migration and higher studies
-                dreams into reality.
-                <br />
-                <br />
-                With personalized guidance for accessing top universities,
-                tailored solutions and exceptional visa and counselling support
-                from the VXL team, your success is our promise.
+                At VXL Education Sri Lanka, we put your dreams first.{" "}
+                <span style={{ color: "#18548A" }}>
+                  We want to see you excel in turning your migration and higher
+                  studies dreams into reality.
+                  <br />
+                  <br />
+                  With personalized guidance for accessing top universities,
+                  tailored solutions and exceptional visa and counselling
+                  support from the VXL team, your success is our promise.
+                </span>
                 <br />
                 <br />
                 Our 99% visa success rate is a testament to our brand promise.
               </p>
-              <p className="text-end mt-3">
-                Ayodhya Kodagoda (AK)
+              <img src={signature} alt="signature" />
+              <p className="text-start mt-3">
+                <span style={{ color: "#18548A" }}>
+                  <strong>Ayodhya Kodagoda</strong>
+                </span>
                 <br />
-                <i>Managing Director</i>
+                Global COO
                 <br />
-                <i>VXL Educational Consultancy Sri Lanka</i>
+                VXL Education and Migration Consultants
               </p>
             </div>
           </div>
-          {/* <div class="container-xxl py-6" id="about">
-            <div class="container">
-              <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                  <div class="d-flex align-items-center mb-5">
-                    <div class="years flex-shrink-0 text-center me-4">
-                      <h1 class="display-1 mb-0">15</h1>
-                      <h5 class="mb-0">Years</h5>
-                    </div>
-                    <h3 class="lh-base mb-0">
-                      Stet no et lorem dolor et diam, amet duo ut dolore vero
-                      eos.
-                    </h3>
-                  </div>
-                  <p class="mb-4">
-                    Stet no et lorem dolor et diam, amet duo ut dolore vero eos.
-                    No stet est diam rebum amet diam ipsum. Clita clita labore,
-                    dolor duo nonumy clita sit at, sed sit sanctus dolor eos.
-                  </p>
-                  <p class="mb-3">
-                    <i class="far fa-check-circle text-primary me-3"></i>Stet no
-                    et lorem dolor
-                  </p>
-                  <p class="mb-3">
-                    <i class="far fa-check-circle text-primary me-3"></i>Stet no
-                    et lorem dolor
-                  </p>
-                  <p class="mb-3">
-                    <i class="far fa-check-circle text-primary me-3"></i>Stet no
-                    et lorem dolor
-                  </p>
-                  <a class="btn btn-primary py-3 px-5 mt-3" href="">
-                    Read More
-                  </a>
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                  <div class="row g-3 mb-4">
-                    <div class="col-sm-6">
-                      <img
-                        class="img-fluid rounded"
-                        src="img/about-1.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div class="col-sm-6">
-                      <img
-                        class="img-fluid rounded"
-                        src="img/about-2.jpg"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <div class="d-flex align-items-center mb-3">
-                    <h5 class="border-end pe-3 me-3 mb-0">Happy Clients</h5>
-                    <h2
-                      class="text-primary fw-bold mb-0"
-                      data-toggle="counter-up"
-                    >
-                      1234
-                    </h2>
-                  </div>
-                  <p class="mb-4">
-                    Stet no et lorem dolor et diam, amet duo ut dolore vero eos.
-                    No stet est diam amet diam ipsum clita labore dolor duo
-                    clita.
-                  </p>
-                  <div class="d-flex align-items-center mb-3">
-                    <h5 class="border-end pe-3 me-3 mb-0">
-                      Projects Completed
-                    </h5>
-                    <h2
-                      class="text-primary fw-bold mb-0"
-                      data-toggle="counter-up"
-                    >
-                      1234
-                    </h2>
-                  </div>
-                  <p class="mb-0">
-                    Stet no et lorem dolor et diam, amet duo ut dolore vero eos.
-                    No stet est diam amet diam ipsum clita labore dolor duo
-                    clita.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div> */}
-          {/* <!-- About End --> */}
 
-          {/* <!-- Expertise Start --> */}
-          {/* <div class="container-xxl py-6 pb-5" id="skill">
-                <div class="container">
-                    <div class="row g-5">
-                        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                            <h1 class="display-5 mb-5">Skills & Experience</h1>
-                            <p class="mb-4">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam rebum amet diam ipsum clita dolor duo clita sit.</p>
-                            <h3 class="mb-4">My Skills</h3>
-                            <div class="row align-items-center">
-                                <div class="col-md-6">
-                                    <div class="skill mb-4">
-                                        <div class="d-flex justify-content-between">
-                                            <h6 class="font-weight-bold">HTML</h6>
-                                            <h6 class="font-weight-bold">95%</h6>
-                                        </div>
-                                        <div class="progress">
-                                            <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-                                    <div class="skill mb-4">
-                                        <div class="d-flex justify-content-between">
-                                            <h6 class="font-weight-bold">CSS</h6>
-                                            <h6 class="font-weight-bold">85%</h6>
-                                        </div>
-                                        <div class="progress">
-                                            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-                                    <div class="skill mb-4">
-                                        <div class="d-flex justify-content-between">
-                                            <h6 class="font-weight-bold">PHP</h6>
-                                            <h6 class="font-weight-bold">90%</h6>
-                                        </div>
-                                        <div class="progress">
-                                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="skill mb-4">
-                                        <div class="d-flex justify-content-between">
-                                            <h6 class="font-weight-bold">Javascript</h6>
-                                            <h6 class="font-weight-bold">90%</h6>
-                                        </div>
-                                        <div class="progress">
-                                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-                                    <div class="skill mb-4">
-                                        <div class="d-flex justify-content-between">
-                                            <h6 class="font-weight-bold">Angular JS</h6>
-                                            <h6 class="font-weight-bold">95%</h6>
-                                        </div>
-                                        <div class="progress">
-                                            <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-                                    <div class="skill mb-4">
-                                        <div class="d-flex justify-content-between">
-                                            <h6 class="font-weight-bold">Wordpress</h6>
-                                            <h6 class="font-weight-bold">85%</h6>
-                                        </div>
-                                        <div class="progress">
-                                            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                            <ul class="nav nav-pills rounded border border-2 border-primary mb-5">
-                                <li class="nav-item w-50">
-                                    <button class="nav-link w-100 py-3 fs-5 active" data-bs-toggle="pill" href="#tab-1">Experience</button>
-                                </li>
-                                <li class="nav-item w-50">
-                                    <button class="nav-link w-100 py-3 fs-5" data-bs-toggle="pill" href="#tab-2">Education</button>
-                                </li>
-                            </ul>
-                            <div class="tab-content">
-                                <div id="tab-1" class="tab-pane fade show p-0 active">
-                                    <div class="row gy-5 gx-4">
-                                        <div class="col-sm-6">
-                                            <h5>UI Designer</h5>
-                                            <hr class="text-primary my-2" />
-                                            <p class="text-primary mb-1">2000 - 2045</p>
-                                            <h6 class="mb-0">Apex Software Inc</h6>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <h5>Product Designer</h5>
-                                            <hr class="text-primary my-2" />
-                                            <p class="text-primary mb-1">2000 - 2045</p>
-                                            <h6 class="mb-0">Apex Software Inc</h6>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <h5>Web Designer</h5>
-                                            <hr class="text-primary my-2" />
-                                            <p class="text-primary mb-1">2000 - 2045</p>
-                                            <h6 class="mb-0">Apex Software Inc</h6>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <h5>Apps Designer</h5>
-                                            <hr class="text-primary my-2" />
-                                            <p class="text-primary mb-1">2000 - 2045</p>
-                                            <h6 class="mb-0">Apex Software Inc</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="tab-2" class="tab-pane fade show p-0">
-                                    <div class="row gy-5 gx-4">
-                                        <div class="col-sm-6">
-                                            <h5>UI Design Course</h5>
-                                            <hr class="text-primary my-2" />
-                                            <p class="text-primary mb-1">2000 - 2045</p>
-                                            <h6 class="mb-0">Cambridge University</h6>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <h5>IOS Development</h5>
-                                            <hr class="text-primary my-2" />
-                                            <p class="text-primary mb-1">2000 - 2045</p>
-                                            <h6 class="mb-0">Cambridge University</h6>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <h5>Web Design</h5>
-                                            <hr class="text-primary my-2" />
-                                            <p class="text-primary mb-1">2000 - 2045</p>
-                                            <h6 class="mb-0">Cambridge University</h6>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <h5>Apps Design</h5>
-                                            <hr class="text-primary my-2" />
-                                            <p class="text-primary mb-1">2000 - 2045</p>
-                                            <h6 class="mb-0">Cambridge University</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> */}
-          {/* <!-- Expertise End --> */}
-
-          {/* <div
-            className={`carousel-container ${isDragging ? "dragging" : ""} `}
-            ref={carouselRef}
-            onMouseDown={handleMouseDown}
-            onMouseMove={handleMouseMove}
-            onMouseUp={handleMouseUp}
-            onMouseLeave={handleMouseLeave}
-          >
-            <div className="carousel p-3 mx-3">
-              {items.map((item, index) => (
-                <div
-                  key={index}
-                  className="carousel-item p-5 d-flex flex-column"
-                >
-                  <p>"{item.text}"</p>
-                  <h1 className="mt-3">{item.name}</h1>
-                </div>
-              ))}
-            </div>
-          </div> */}
-
-          {/* <div className="track-record-wrapper d-flex flex-column">
+          <div className="testimonial-container w-100 h-auto p-5 d-flex flex-column align-items-center">
             <h1 className="wow fadeInUp" data-bs-wow-delay="0.1s">
-              Our Global Track <span style={{ color: "#fe3c66" }}>Record</span>
+              They <span style={{ color: "#fe3c66" }}>Excelled</span> with VXL
             </h1>
-            <div className="track-record-container d-flex flex-row container-fluid mt-5">
-              <TrackRecord
-                icon={faLightbulb}
-                color={"#0a4c7e"}
-                count={2009}
-                heading={"Established"}
-              />
-              <TrackRecord
-                icon={faUserGraduate}
-                color={"#fe3c66"}
-                count={25000}
-                heading={"Satisfied Clients"}
-              />
-              <TrackRecord
-                icon={faPlaneDeparture}
-                color={"#0a4c7e"}
-                count={23000}
-                heading={"Visas"}
-              />
-              <TrackRecord
-                icon={faEarthAmericas}
-                color={"#fe3c66"}
-                count={14}
-                heading={"Global Offices"}
-              />
-            </div>
-            <div className="d-flex flex-row mind-map-container">
-              <div className="mind-map-item" style={{ marginTop: "8px" }}>
-                <div className="d-flex flex-row" style={{ width: "100%" }}>
-                  <div
-                    style={{
-                      backgroundColor: "#0a4c7e",
-                      height: "1px",
-                      width: "100%",
-                    }}
-                  ></div>
-                </div>
-              </div>
-              <div className="mind-map-item">
-                <div
-                  className="d-flex flex-row align-items-center"
-                  style={{ width: "100%" }}
-                >
-                  <div
-                    style={{
-                      backgroundColor: "#0a4c7e",
-                      height: "1px",
-                      width: "50%",
-                    }}
-                  ></div>
 
-                  <div className="milestone-border">
-                    <div className="fade-effect-pink">
-                      <div
-                        style={{
-                          backgroundColor: "#fe3c66",
-                          width: "11px",
-                          height: "11px",
-                          borderRadius: "50%",
-                          position: "relative",
-                          zIndex: 2,
-                        }}
-                      ></div>
-                    </div>
-                  </div>
-
-                  <div
-                    style={{
-                      backgroundColor: "#0a4c7e",
-                      height: "1px",
-                      width: "50%",
-                    }}
-                  ></div>
-                </div>
-                <p className="text-center">
-                  We are willing to go the additional mile for our clients, and
-                  provide the greatest service.
-                </p>
-              </div>
-              <div className="mind-map-item" style={{ marginTop: "8px" }}>
-                <div className="d-flex flex-row" style={{ width: "100%" }}>
-                  <div
-                    style={{
-                      backgroundColor: "#0a4c7e",
-                      height: "1px",
-                      width: "100%",
-                    }}
-                  ></div>
-                </div>
-              </div>
-              <div className="mind-map-item">
-                <div
-                  className="d-flex flex-row align-items-center"
-                  style={{ width: "100%" }}
-                >
-                  <div
-                    style={{
-                      backgroundColor: "#0a4c7e",
-                      height: "1px",
-                      width: "50%",
-                    }}
-                  ></div>
-                  <div className="milestone-border">
-                    <div className="fade-effect-blue">
-                      <div
-                        style={{
-                          backgroundColor: "#0a4c7e",
-                          width: "11px",
-                          height: "11px",
-                          borderRadius: "50%",
-                          position: "relative",
-                          zIndex: 2,
-                        }}
-                      ></div>
-                    </div>
-                  </div>
-                  <div
-                    style={{
-                      backgroundColor: "#0a4c7e",
-                      height: "1px",
-                      width: "50%",
-                    }}
-                  ></div>
-                </div>
-                <p className="text-center">
-                  We promise 100% client satisfaction and understand that the
-                  contentment of our clients is the most critical indicator of
-                  our company's success.
-                </p>
-              </div>
-              <div className="mind-map-item" style={{ marginTop: "8px" }}>
-                <div className="d-flex flex-row" style={{ width: "100%" }}>
-                  <div
-                    style={{
-                      backgroundColor: "#0a4c7e",
-                      height: "1px",
-                      width: "100%",
-                    }}
-                  ></div>
-                </div>
-              </div>
+            <div className="testimonial-carousel mt-3 d-flex flex-row justify-content-between align-items-center w-100">
+              <button>
+                <FontAwesomeIcon icon={faChevronLeft} color="#FFB1B1" />
+              </button>
+              <div className="testimonial-slider"></div>
+              <button>
+                <FontAwesomeIcon icon={faChevronRight} color="#FFB1B1" />
+              </button>
             </div>
-          </div> */}
-
-          {/* <div class="video-background-container">
-            <video autoplay muted loop class="video-background">
-              <source src="your-video.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            <div class="content">
-              <h1>Your Text Here</h1>
-            </div>
-          </div> */}
+          </div>
 
           <div className="d-flex flex-column faq-container p-5">
             <div className="faq-wrapper d-flex flex-column align-items-center">
