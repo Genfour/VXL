@@ -1,12 +1,21 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import logo from "../images/VXL_new_logo.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faSearch, faXmark } from "@fortawesome/free-solid-svg-icons";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [dropdownVisible, setDropdownVisible] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [mobileView, setMobileView] = useState(false);
+
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+
+  useEffect(() => {
+    console.log(isMobileMenuOpen);
+  }, [isMobileMenuOpen]);
 
   const handleMouseEnter = () => {
     if (window.innerWidth > 992) {
@@ -29,18 +38,29 @@ export default function Navbar() {
     }
   };
 
+  useEffect(() => {
+    windowWidth <= 768 ? setMobileView(true) : setMobileView(false);
+  }, [windowWidth]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <>
-      {/* <!-- Navbar Start --> */}
-      <nav
+      {/* <nav
         style={{ backgroundColor: "#FAFAFB" }}
-        /*#422f2f*/
         className="navbar-expand-lg navbar-container navbar-light fixed-top shadow py-lg-0 px-4 px-lg-5 wow fadeIn"
         data-wow-delay="0.1s"
       >
-        {/* <a href="/" className="navbar-brand d-block d-lg-none">
-        <h1 className="text-primary fw-bold m-0">VXL</h1>
-      </a> */}
         <button
           type="button"
           className="navbar-toggler"
@@ -55,41 +75,38 @@ export default function Navbar() {
           ></span>
         </button>
         <div
-          className={`collapse navbar-collapse justify-content-between py-4 py-lg-0 ${
+          className={`collapse navbar-collapse justify-content-between py-2 ${
             isMobileMenuOpen ? "show" : ""
           }`}
           id="navbarCollapse"
         >
-          <div className="navbar-nav ms-auto py-0">
-            <a
-              href="/"
-              className="nav-item nav-link"
-              // style={{ color: "#fff" }}
-            >
+          <div className="navbar-nav m-0 p-0">
+            <img
+              className="brand-logo"
+              src={logo}
+              style={{ width: "auto", height: "50px" }}
+              alt="brand-logo"
+              loading="lazy"
+            />
+
+            <a href="/" className="nav-item nav-link">
               Home
             </a>
-            <a
-              href="/about"
-              className="nav-item nav-link"
-              // style={{ color: "#fff" }}
-            >
+            <a href="/about" className="nav-item nav-link">
               About
             </a>
 
-            {/* Services Dropdown */}
             <div
               className="nav-item nav-link"
               style={{
-                // color: "#fff",
                 position: "relative",
                 cursor: "pointer",
               }}
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
-              onClick={handleDropdownClick} // Toggle dropdown on click for mobile
+              onClick={handleDropdownClick}
             >
               Services
-              {/* Dropdown Menu */}
               {dropdownVisible && (
                 <div
                   className="dropdown-menu show"
@@ -116,52 +133,63 @@ export default function Navbar() {
               )}
             </div>
           </div>
-          <img
-            className="m-3 brand-logo"
-            src={logo}
-            style={{ width: "auto", height: "70px" }}
-            alt="brand-logo"
-            loading="lazy"
-          />
-          {/* <a
-          href="/"
-          className="navbar-brand py-3 px-4 mx-3 d-none d-lg-block"
-        >
-          <h1 className="text-primary fw-bold m-0">VXL</h1>
-        </a> */}
           <div className="navbar-nav me-auto py-0">
-            <a
-              href="#project"
-              className="nav-item nav-link"
-              // style={{ color: "#fff" }}
-            >
+            <a href="#project" className="nav-item nav-link">
               Institutions
             </a>
-            <a
-              href="#blog"
-              className="nav-item nav-link"
-              // style={{ color: "#fff" }}
-            >
+            <a href="#blog" className="nav-item nav-link">
               Blog
             </a>
-            {/* <a
-            href="#team"
-            className="nav-item nav-link"
-            style={{ color: "#fff" }}
-          >
-            Team
-          </a> */}
-            <a
-              href="/contact"
-              className="nav-item nav-link"
-              // style={{ color: "#fff" }}
-            >
+            <a href="/contact" className="nav-item nav-link">
               Contact
             </a>
           </div>
         </div>
-      </nav>
-      {/* <!-- Navbar End --> */}
+      </nav> */}
+
+      <div
+        className="d-flex flex-row shadow-sm py-3 px-5 w-100 h-auto align-items-center justify-content-between fixed-top bg-white z-100"
+        style={{ height: "70px" }}
+      >
+        <div className="d-flex flex-row">
+          <img
+            className="brand-logo"
+            src={logo}
+            style={{ width: "auto", height: "40px", marginRight: "50px" }}
+            alt="brand-logo"
+            loading="lazy"
+          />
+          <ul
+            className={`navbar-link-list ${
+              mobileView && isMobileMenuOpen ? `mobile` : ``
+            } flex-row p-0 m-0 show me-auto`}
+          >
+            <li>
+              <a>Study Aborad</a>
+            </li>
+            <li>Visa Services</li>
+            <li>Global Partners</li>
+            <li>Global Presence</li>
+            <li>Contact</li>
+            <li className="navbar-search-bar">
+              <input type="text" placeholder="Search..." />
+              <button>
+                <FontAwesomeIcon icon={faSearch} color="white" />
+              </button>
+            </li>
+          </ul>
+        </div>
+        <button
+          className="bg-white navbar-mobile-menu-btn hide"
+          onClick={() => toggleMobileMenu()}
+        >
+          <FontAwesomeIcon
+            icon={isMobileMenuOpen ? faXmark : faBars}
+            height={35}
+            color="#5a5a5a"
+          />
+        </button>
+      </div>
     </>
   );
 }
