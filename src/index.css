@@ -761,6 +761,36 @@ footer {
   word-break: "break-word";
 }
 
+/* Partners */
+.partner-container {
+  background-color: white;
+}
+
+.partner-container h1 {
+  color: #18548a;
+  font-size: 3rem;
+  text-align: start;
+  font-weight: 400 !important;
+}
+
+.partner-container p {
+  width: 70%;
+  text-align: justify;
+  text-align-last: center;
+  font-weight: normal;
+  line-height: "1";
+  word-break: "break-word";
+}
+
+.partner-container p span {
+  color: #eb3678;
+}
+
+.partner-carousel {
+  width: 100%;
+  overflow-x: auto;
+}
+
 /* Media Querry */
 @media screen and(max-width:1120px) {
   #home {
