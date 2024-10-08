@@ -763,7 +763,7 @@ footer {
 
 /* Partners */
 .partner-container {
-  background-color: #e1f7f5;
+  background-color: #eef7ff;
 }
 
 .partner-container h1 {
@@ -793,13 +793,25 @@ footer {
 
 .partner-item {
   width: auto;
-  height: 200px;
+  height: 120px;
   background-color: white;
   border: 1px solid #7aa2e3;
 }
 
 .partner-item img {
-  width: 150px !important;
+  width: 100px !important;
+}
+
+/* Team */
+.team-container {
+  background-color: #eeeded;
+}
+
+.team-container h1 {
+  color: #18548a;
+  font-size: 3rem;
+  text-align: start;
+  font-weight: 400 !important;
 }
 
 /* Media Querry */

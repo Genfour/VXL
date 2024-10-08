@@ -322,6 +322,34 @@ const Home = () => {
     },
   };
 
+  const brandsOptions = {
+    items: 4,
+    loop: true,
+    // nav: true,
+    // navText: [
+    //   "<i class='fa fa-angle-left'></i>",
+    //   "<i class='fa fa-angle-right'></i>",
+    // ],
+    dots: true,
+    autoplay: true,
+    autoplayTimeout: 5000,
+    smartSpeed: 1000,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      700: {
+        items: 2,
+      },
+      1000: {
+        items: 3,
+      },
+      1300: {
+        items: 6,
+      },
+    },
+  };
+
   useEffect(() => {
     window.$(".about_active").owlCarousel({
       loop: true,
@@ -681,16 +709,41 @@ const Home = () => {
           </div>
 
           <div className="partner-container d-flex flex-column w-100 h-auto p-5 justify-content-center align-items-center">
-            <h1 className="wow fadeInUp text-center" data-bs-wow-delay="0.1s">
+            <h1
+              className="wow fadeInUp text-center mb-4"
+              data-bs-wow-delay="0.1s"
+            >
               <span style={{ color: "#fe3c66" }}>Excel</span>lence in Global
               <br />
               ​Partnerships
             </h1>
-            <p className="partner-container-desc"></p>
-            <div className="partner-carousel">
+            <p className="partner-container-desc">
+              VXL is partnered with a vast global network of prestigious
+              educational institutes. Our network spans{" "}
+              <span style={{ color: "#fe3c66" }}>
+                ​Australia, UK, Canada, USA, France, Germany, Spain, Malta, UAE,
+                Singapore and Malaysia.
+              </span>
+              <br />
+              <br />
+              This extensive global network ensures that our clients get
+              unparalleled access to the best universities ​and institutes,
+              facilitating well-informed decisions for their academic and
+              professional aspirations.
+              <br />
+              <br />
+              Our commitment to excellence extends beyond guidance, providing
+              you with the resources and ​expertise necessary to transform your
+              educational aspirations into reality.
+              <br />
+              <br />
+              We excel in helping you navigate the world of higher education.
+              <span style={{ color: "#fe3c66" }}>You Excel with VXL.</span>
+            </p>
+            <div className="partner-carousel mt-4">
               <OwlCarousel
                 className="carousel-cause owl-carousel d-flex g-0"
-                {...options}
+                {...brandsOptions}
               >
                 {partners.map((partner, index) => {
                   return (
@@ -704,6 +757,34 @@ const Home = () => {
                 })}
               </OwlCarousel>
             </div>
+          </div>
+
+          <div className="team-container d-flex flex-column w-100 h-auto p-5 justify-content-center align-items-center m-0">
+            <h1
+              className="wow fadeInUp text-center mb-4"
+              data-bs-wow-delay="0.1s"
+            >
+              Meet the Team
+            </h1>
+            <p>
+              We excel in providing exceptional assistance through all aspects
+              of the student journey all the way from getting a thorough
+              understanding of the career outcomes linked to the courses they
+              select, entry requirements and how to meet them, collecting the
+              right information and presenting it the right way for the
+              applications and most importantly- preparing for the journey in a
+              new country.
+            </p>
+            <button className="hero-button py-2 px-3 mt-3">
+              Meet the Team
+              <span className="bg-white rounded-circle ms-3 ">
+                <FontAwesomeIcon
+                  icon={faChevronRight}
+                  color="#18548a"
+                  width={16}
+                />
+              </span>
+            </button>
           </div>
 
           {/* <div className="d-flex flex-column faq-container p-5 user-select-none">
