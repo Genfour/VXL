@@ -166,6 +166,9 @@ const services = [
     description:
       "VXL is an authorized registration centre for British Council IELTS – and we provide training sessions specifically tailored to you. Convenient timing, easy to reach location, virtual learning portal access, face-to-face personalized coaching sessions are just some of the reasons which make IELTS with VXL such an easy decision. Please click here for more information.",
   },
+];
+
+const onshoreServices = [
   {
     title: "Your <span style='color: #EE3457;'>OSHC/Insurance</span>",
     image: "img/853.jpg",
@@ -241,7 +244,7 @@ const Home = () => {
       0: {
         items: 1,
       },
-      600: {
+      700: {
         items: 2,
       },
       1000: {
@@ -565,6 +568,49 @@ const Home = () => {
                   );
                 })}
               </OwlCarousel>
+            </div>
+            <div className="service-onshore-container p-5">
+              <h1 className="wow fadeInUp text-center" data-bs-wow-delay="0.1s">
+                How you <span style={{ color: "#fe3c66" }}>Excel</span> Onshore
+              </h1>
+              <div
+                className="w-100 d-flex flex-column mt-5"
+                style={{ rowGap: "50px" }}
+              >
+                {onshoreServices.map((service, index) => {
+                  return (
+                    <div className="onshore-service-item d-flex">
+                      <div
+                        className="onshore-service-left"
+                        style={{ backgroundImage: `url(${service.image})` }}
+                      ></div>
+                      <div className="onshore-service-right ms-5 d-flex">
+                        <h1
+                          className="text-start"
+                          dangerouslySetInnerHTML={{
+                            __html: service.title,
+                          }}
+                        />
+                        <p
+                          dangerouslySetInnerHTML={{
+                            __html: service.description,
+                          }}
+                        />
+                        <button className="hero-button py-2 px-3 mt-3 me-auto">
+                          Book my free session
+                          <span className="bg-white rounded-circle ms-3 ">
+                            <FontAwesomeIcon
+                              icon={faChevronRight}
+                              color="#18548a"
+                              width={16}
+                            />
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
 

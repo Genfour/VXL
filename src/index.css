@@ -683,7 +683,7 @@ footer {
 }
 
 .service-item {
-  width: 300px;
+  /* min-width: 300px; */
   min-height: 680px;
   height: auto;
   flex-grow: 1;
@@ -703,7 +703,7 @@ footer {
   height: 150px;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: top;
 }
 
 .service-item .service-para-wrapper {
@@ -715,6 +715,50 @@ footer {
 .service-item .service-para-wrapper p {
   width: 100%;
   font-size: 0.9rem;
+}
+
+.service-onshore-container {
+  height: auto;
+}
+
+.onshore-service-item {
+  width: 100%;
+  height: auto;
+  min-height: 250px;
+  flex-direction: row;
+}
+
+.onshore-service-item .onshore-service-left {
+  width: 500px;
+  min-height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.onshore-service-item .onshore-service-right {
+  width: calc(100% - 500px);
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.onshore-service-right h1 {
+  min-height: 40px;
+  color: #18548a;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: bold !important;
+}
+
+.onshore-service-right p {
+  width: 100%;
+  text-align: justify;
+  text-align-last: start;
+  font-weight: normal;
+  line-height: "1";
+  word-break: "break-word";
 }
 
 /* Media Querry */
@@ -768,6 +812,19 @@ footer {
   .clients-container-left {
     width: 700px;
   }
+
+  .service-onshore-container {
+    padding-left: 0% !important;
+    padding-right: 0% !important;
+  }
+
+  .onshore-service-item .onshore-service-left {
+    width: 300px;
+  }
+
+  .onshore-service-item .onshore-service-right {
+    width: calc(100% - 300px);
+  }
 }
 
 @media (max-width: 768px) {
@@ -780,6 +837,23 @@ footer {
   .clients-container-right {
     width: 100%;
     padding: 30px !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .onshore-service-item {
+    flex-direction: column;
+  }
+
+  .onshore-service-item .onshore-service-left {
+    width: 100%;
+    background-position: top;
+  }
+
+  .onshore-service-item .onshore-service-right {
+    width: 100%;
+    margin-left: 0% !important;
+    margin-top: 20px !important;
   }
 }
 
