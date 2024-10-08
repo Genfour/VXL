@@ -4,6 +4,9 @@ import "jquery";
 import "owl.carousel/dist/assets/owl.carousel.min.css";
 import "owl.carousel/dist/assets/owl.theme.default.min.css";
 import "owl.carousel";
+import OwlCarousel from "react-owl-carousel";
+import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel/dist/assets/owl.theme.default.css";
 import Faq from "../components/Faq";
 import ConfettiComponent from "../components/ConfettiComponent";
 import Confetti from "react-confetti";
@@ -137,6 +140,46 @@ const testimonials = [
   },
 ];
 
+const services = [
+  {
+    title:
+      "Your <span style='color: #EE3457;'>Courses and Career Counseling</span>",
+    image: "img/2149325446.jpg",
+    description:
+      "VXL provides excellent guidance on navigating the vast landscape of options to find the one that aligns best with your academic and career aspirations, and your financial capabilities. <br/><br/>Our guidance is tailored to empower you with the knowledge and resources needed to make informed decisions ensuring that your educational journey is fulfilling and successful.",
+  },
+  {
+    title: "Your <span style='color: #EE3457;'>University Applications</span>",
+    image: "img/2148950541.jpg",
+    description:
+      "Our meticulous approach to document gathering in managing applications is designed to maximize your chances of excelling in achieving your dreams. We leave no stone unturned to ensure your application is in impeccable order, providing you with the best shot at securing admission to your desired academic institution.",
+  },
+  {
+    title: "Your <span style='color: #EE3457;'>Visa Applications</span>",
+    image: "img/2149117765.jpg",
+    description:
+      "The VXL team has built a solid reputation with a 99% success rate – and that’s no easy feat. We do our due diligence to make sure that your application is successful, and we provide guidance for visit visas, student visas and even subsequent-entrant/dependent visas. For a full list of the supported countries and the visa categories, please click here.",
+  },
+  {
+    title: "<span style='color: #EE3457;'>IELTS and PTE</span> for You",
+    image: "img/14155.jpg",
+    description:
+      "VXL is an authorized registration centre for British Council IELTS – and we provide training sessions specifically tailored to you. Convenient timing, easy to reach location, virtual learning portal access, face-to-face personalized coaching sessions are just some of the reasons which make IELTS with VXL such an easy decision. Please click here for more information.",
+  },
+  {
+    title: "Your <span style='color: #EE3457;'>OSHC/Insurance</span>",
+    image: "img/853.jpg",
+    description:
+      "The student health insurance process is tricky as is – this is why we have partnered with two of the largest OSHC providers to help you access expert guidance plus exclusive access to the best rates and features to ensure the best of health and well-being for you during your academic journey.",
+  },
+  {
+    title: "<span style='color: #EE3457;'>Accommodation</span>",
+    image: "img/2148925877.jpg",
+    description:
+      "VXL is committed to providing the most comprehensive and long-term support for you. This is why we have partnered with third parties to facilitate access to a network of properties spanning across Australia. We are dedicated to ensuring that your accommodation needs are met with excellence throughout your academic journey.",
+  },
+];
+
 const trackrecords = [
   { image: faHandsHoldingCircle, subcontent: "Establised", content: "2019" },
   { image: faUsers, subcontent: "Satisfied Clients", content: "1234+" },
@@ -158,19 +201,19 @@ const Home = () => {
 
   const scrollLeft = () => {
     if (scrollRef.current) {
-      scrollRef.current.scrollLeft -= 50;
+      scrollRef.current.scrollLeft -= 200;
     }
   };
 
   const scrollRight = () => {
     if (scrollRef.current) {
-      scrollRef.current.scrollLeft += 50;
+      scrollRef.current.scrollLeft += 200;
     }
   };
 
   const handleMouseDown = (scrollFunc, dir) => {
     dir === "left" ? setClickedLeft(true) : setClickedRight(true);
-    const interval = setInterval(scrollFunc, 50);
+    const interval = setInterval(scrollFunc, 100);
     setScrollInterval(interval);
   };
 
@@ -180,6 +223,34 @@ const Home = () => {
     if (scrollInterval) {
       clearInterval(scrollInterval);
     }
+  };
+
+  const options = {
+    items: 4,
+    loop: true,
+    // nav: true,
+    // navText: [
+    //   "<i class='fa fa-angle-left'></i>",
+    //   "<i class='fa fa-angle-right'></i>",
+    // ],
+    dots: true,
+    autoplay: true,
+    autoplayTimeout: 5000,
+    smartSpeed: 1000,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      600: {
+        items: 2,
+      },
+      1000: {
+        items: 3,
+      },
+      1300: {
+        items: 4,
+      },
+    },
   };
 
   useEffect(() => {
@@ -434,6 +505,67 @@ const Home = () => {
                 />
               </span>
             </button>
+          </div>
+
+          <div className="services-container d-flex flex-column w-100 h-auto p-5 justify-content-center align-items-center">
+            <h1 className="wow fadeInUp text-center" data-bs-wow-delay="0.1s">
+              We <span style={{ color: "#fe3c66" }}>Excel</span> around the
+              world
+            </h1>
+            <p className="services-container-desc">
+              VXL is your one-stop partner during every step of your educational
+              journey.
+              <br />
+              <br />
+              We guide you with everything from the eligibility assessments to
+              course and university selections, prepare you for IELTS/PTE
+              success, streamline applications and simplify visa processes with
+              expert assistance, and even provide on-shore assistance – all so
+              that you can focus on realizing your dreams.
+              <br />
+              <br />
+              We also have a ready-to-use network to assist in ticket bookings
+              and accommodation.
+            </p>
+            <div className="services-carousel">
+              <OwlCarousel
+                className="carousel-cause owl-carousel d-flex g-0"
+                {...options}
+              >
+                {services.map((service, index) => {
+                  return (
+                    <div className="service-item d-flex flex-column py-4">
+                      <h1
+                        className="px-4"
+                        dangerouslySetInnerHTML={{ __html: service.title }}
+                      />
+                      <div
+                        className="service-item-image"
+                        style={{ backgroundImage: `url(${service.image})` }}
+                      ></div>
+                      <div className="service-para-wrapper d-flex flex-column justify-content-between">
+                        <p
+                          className="px-4 pt-3"
+                          dangerouslySetInnerHTML={{
+                            __html: service.description,
+                          }}
+                        />
+                        <button className="hero-button py-2 px-3 my-3 mx-auto">
+                          Book my free session
+                          <span className="bg-white rounded-circle ms-3 ">
+                            <FontAwesomeIcon
+                              icon={faChevronRight}
+                              color="#18548a"
+                              width={16}
+                            />
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                  );
+                })}
+              </OwlCarousel>
+            </div>
           </div>
 
           {/* <div className="d-flex flex-column faq-container p-5 user-select-none">
