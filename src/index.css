@@ -763,7 +763,7 @@ footer {
 
 /* Partners */
 .partner-container {
-  background-color: white;
+  background-color: #e1f7f5;
 }
 
 .partner-container h1 {
@@ -789,6 +789,17 @@ footer {
 .partner-carousel {
   width: 100%;
   overflow-x: auto;
+}
+
+.partner-item {
+  width: auto;
+  height: 200px;
+  background-color: white;
+  border: 1px solid #7aa2e3;
+}
+
+.partner-item img {
+  width: 150px !important;
 }
 
 /* Media Querry */

@@ -192,6 +192,72 @@ const trackrecords = [
   { image: faGlobe, subcontent: "Global Locations", content: "4" },
 ];
 
+const partners = [
+  "img/partners/p1.png",
+  "img/partners/p2.png",
+  "img/partners/p3.png",
+  "img/partners/p4.png",
+  "img/partners/p5.jpg",
+  "img/partners/p6.png",
+  "img/partners/p7.jpg",
+  "img/partners/p8.jpg",
+  "img/partners/p9.jpg",
+  "img/partners/p10.jpg",
+  "img/partners/p11.png",
+  "img/partners/p12.png",
+  "img/partners/p13.png",
+  "img/partners/p14.jpg",
+  "img/partners/p15.png",
+  "img/partners/p16.jpeg",
+  "img/partners/p17.jpg",
+  "img/partners/p18.png",
+  "img/partners/p19.jpg",
+  "img/partners/p20.jpg",
+  "img/partners/p21.jpg",
+  "img/partners/p22.jpg",
+  "img/partners/p23.png",
+  "img/partners/p24.png",
+  "img/partners/p25.png",
+  "img/partners/p26.png",
+  "img/partners/p27.png",
+  "img/partners/p28.jpg",
+  "img/partners/p29.jpg",
+  "img/partners/p30.jpg",
+  "img/partners/p31.png",
+  "img/partners/p32.jpg",
+  "img/partners/p33.jpg",
+  "img/partners/p34.png",
+  "img/partners/p35.jpg",
+  "img/partners/p36.png",
+  "img/partners/p37.png",
+  "img/partners/p38.jpg",
+  "img/partners/p39.jpg",
+  "img/partners/p40.jpg",
+  "img/partners/p41.png",
+  "img/partners/p42.jpg",
+  "img/partners/p43.jpg",
+  "img/partners/p44.png",
+  "img/partners/p45.png",
+  "img/partners/p46.jpg",
+  "img/partners/p47.jpg",
+  "img/partners/p48.png",
+  "img/partners/p49.jpg",
+  "img/partners/p50.jpg",
+  "img/partners/p51.jpg",
+  "img/partners/p52.jpg",
+  "img/partners/p53.png",
+  "img/partners/p54.png",
+  "img/partners/p55.png",
+  "img/partners/p56.jpg",
+  "img/partners/p57.png",
+  "img/partners/p58.png",
+  "img/partners/p59.jpg",
+  "img/partners/p60.png",
+  "img/partners/p61.jpg",
+  "img/partners/p62.jpg",
+  "img/partners/p63.png",
+];
+
 const Home = () => {
   const icon = new Image();
   icon.src = iconImage;
@@ -611,6 +677,32 @@ const Home = () => {
                   );
                 })}
               </div>
+            </div>
+          </div>
+
+          <div className="partner-container d-flex flex-column w-100 h-auto p-5 justify-content-center align-items-center">
+            <h1 className="wow fadeInUp text-center" data-bs-wow-delay="0.1s">
+              <span style={{ color: "#fe3c66" }}>Excel</span>lence in Global
+              <br />
+              ​Partnerships
+            </h1>
+            <p className="partner-container-desc"></p>
+            <div className="partner-carousel">
+              <OwlCarousel
+                className="carousel-cause owl-carousel d-flex g-0"
+                {...options}
+              >
+                {partners.map((partner, index) => {
+                  return (
+                    <div
+                      key={index}
+                      className="partner-item d-flex flex-column p-4 align-items-center justify-content-center"
+                    >
+                      <img src={`${partner}`} alt="partner-logo" />
+                    </div>
+                  );
+                })}
+              </OwlCarousel>
             </div>
           </div>
 
