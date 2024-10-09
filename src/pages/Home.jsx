@@ -262,7 +262,7 @@ const Home = () => {
   const icon = new Image();
   icon.src = iconImage;
   const [loading, setLoading] = useState(false);
-  const [isRunning, setIsRunning] = useState(true);
+  const [isRunning, setIsRunning] = useState(false);
   const scrollRef = useRef(null);
   const [scrollInterval, setScrollInterval] = useState(null);
   const [clickedLeft, setClickedLeft] = useState(false);
@@ -371,10 +371,10 @@ const Home = () => {
       },
     });
 
-    const timer = setTimeout(() => {
-      setIsRunning(false);
-    }, 5000);
-    return () => clearTimeout(timer);
+    // const timer = setTimeout(() => {
+    //   setIsRunning(false);
+    // }, 5000);
+    // return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -400,7 +400,7 @@ const Home = () => {
 
           {/* <!-- Header Start --> */}
           <div
-            class="container-fluid bg-light user-select-none"
+            class="container-fluid bg-light user-select-none px-0"
             id="home"
             style={{ marginTop: "70px" }}
           >
@@ -775,16 +775,18 @@ const Home = () => {
               applications and most importantly- preparing for the journey in a
               new country.
             </p>
-            <button className="hero-button py-2 px-3 mt-3">
-              Meet the Team
-              <span className="bg-white rounded-circle ms-3 ">
-                <FontAwesomeIcon
-                  icon={faChevronRight}
-                  color="#18548a"
-                  width={16}
-                />
-              </span>
-            </button>
+            <a href="/team">
+              <button className="hero-button py-2 px-3 mt-3">
+                Meet the Team
+                <span className="bg-white rounded-circle ms-3 ">
+                  <FontAwesomeIcon
+                    icon={faChevronRight}
+                    color="#18548a"
+                    width={16}
+                  />
+                </span>
+              </button>
+            </a>
           </div>
 
           {/* <div className="d-flex flex-column faq-container p-5 user-select-none">

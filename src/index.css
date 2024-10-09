@@ -147,7 +147,7 @@ textarea:focus {
   background-image: url(/public/img/hero_bg.png);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left;
 }
 
 /* Clients */
@@ -428,7 +428,7 @@ textarea:focus {
   border-radius: 50%;
   background-color: #ffefef;
   border: 3px solid #ffb1b1;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.1s ease-in-out;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
@@ -555,7 +555,7 @@ footer {
   justify-content: space-between;
   padding: 0 20px;
   width: 80%;
-  max-width: 1200px;
+  max-width: 1368px;
   margin: 0 auto;
 }
 
@@ -862,7 +862,7 @@ footer {
 
 /* Team */
 .team-container {
-  background-color: #eeeded;
+  background-color: #f1f6f9;
   overflow-x: hidden;
 }
 
@@ -1027,6 +1027,44 @@ footer {
 }
 
 /* Media Querry */
+@media (min-width: 1400px) and (max-width: 1980px) {
+  .hero-container {
+    height: 500px;
+  }
+
+  .hero-para {
+    width: 80%;
+  }
+
+  .service-item .service-item-image {
+    height: 250px;
+  }
+}
+
+@media (min-width: 1368px) and (max-width: 1399px) {
+  .hero-container {
+    height: 550px;
+  }
+
+  .hero-para {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1367px) {
+  .hero-left {
+    width: 45%;
+  }
+
+  .hero-right {
+    width: 55%;
+  }
+
+  .hero-para {
+    width: 80%;
+  }
+}
+
 @media screen and(max-width:1120px) {
   #home {
     margin-top: 5vh !important;
