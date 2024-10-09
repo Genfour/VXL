@@ -94,10 +94,9 @@ export default function Team() {
                   style={{ backgroundImage: "url(img/staff/team3.png)" }}
                 ></div>
                 <div className="directors-details-container d-flex flex-column align-items-start justify-content-center py-3 ps-5 pe-3 my-auto">
-                  <h1 className="text-start m-0">Ayodhya Kodagoda</h1>
+                  <h1 className="text-start m-0">Surani Fernando</h1>
                   <p className="text-start p-0 m-0">
-                    Chief Operating Officer (Global) / Country Director - Sri
-                    Lanka
+                    Head of Visas - VXL Education Sri Lanka
                   </p>
                 </div>
               </div>
@@ -107,8 +106,10 @@ export default function Team() {
                   style={{ backgroundImage: "url(img/staff/team4.png)" }}
                 ></div>
                 <div className="directors-details-container d-flex flex-column align-items-start justify-content-center py-3 ps-5 pe-3 my-auto">
-                  <h1 className="text-start m-0">Nihal Kodagoda</h1>
-                  <p className="text-start p-0 m-0">Chief Financial Officer</p>
+                  <h1 className="text-start m-0">Sithira Kumarapperuma</h1>
+                  <p className="text-start p-0 m-0">
+                    Student Counsellor - VXL Education Sri Lanka
+                  </p>
                 </div>
               </div>
             </div>
@@ -119,10 +120,9 @@ export default function Team() {
                   style={{ backgroundImage: "url(img/staff/team5.png)" }}
                 ></div>
                 <div className="directors-details-container d-flex flex-column align-items-start justify-content-center py-3 ps-5 pe-3 my-auto">
-                  <h1 className="text-start m-0">Ayodhya Kodagoda</h1>
+                  <h1 className="text-start m-0">Damayanthi Wijenayake</h1>
                   <p className="text-start p-0 m-0">
-                    Chief Operating Officer (Global) / Country Director - Sri
-                    Lanka
+                    Head of Admissions - VXL Education Sri Lanka
                   </p>
                 </div>
               </div>
@@ -132,9 +132,82 @@ export default function Team() {
                   style={{ backgroundImage: "url(img/staff/team6.png)" }}
                 ></div>
                 <div className="directors-details-container d-flex flex-column align-items-start justify-content-center py-3 ps-5 pe-3 my-auto">
-                  <h1 className="text-start m-0">Nihal Kodagoda</h1>
-                  <p className="text-start p-0 m-0">Chief Financial Officer</p>
+                  <h1 className="text-start m-0">Hasintha Munasinghe</h1>
+                  <p className="text-start p-0 m-0">
+                    Visa Counsellor - VXL Education Sri Lanka
+                  </p>
                 </div>
+              </div>
+            </div>
+            <div className="directors-row d-flex flex-row">
+              <div className="directors-left-container d-flex flex-row align-items-center justify-content-start position-relative">
+                <div
+                  className="director-image"
+                  style={{ backgroundImage: "url(img/staff/team7.png)" }}
+                ></div>
+                <div className="directors-details-container d-flex flex-column align-items-start justify-content-center py-3 ps-5 pe-3 my-auto">
+                  <h1 className="text-start m-0">Iroshini Rupasinghe</h1>
+                  <p className="text-start p-0 m-0">
+                    Chief Operating Officer (Global) / Country Director - Sri
+                    Lanka
+                  </p>
+                </div>
+              </div>
+              <div className="directors-right-container d-flex flex-row align-items-center justify-content-start position-relative">
+                <div
+                  className="director-image"
+                  style={{
+                    backgroundImage: "url(img/girl.png)",
+                    borderRadius: "50%",
+                    backgroundColor: "#eeeded",
+                    border: "5px solid #EE3457",
+                    boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+                  }}
+                ></div>
+                <div className="directors-details-container d-flex flex-column align-items-start justify-content-center py-3 ps-5 pe-3 my-auto">
+                  <h1 className="text-start m-0">Rashmika Sewwandi</h1>
+                  <p className="text-start p-0 m-0">
+                    Junior Executive - Student Placements VXL Education Sri
+                    Lanka
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="directors-row d-flex flex-row">
+              <div className="directors-left-container d-flex flex-row align-items-center justify-content-start position-relative">
+                <div
+                  className="director-image"
+                  style={{
+                    backgroundImage: "url(img/boy.png)",
+                    borderRadius: "50%",
+                    backgroundColor: "#eeeded",
+                    border: "5px solid #EE3457",
+                    boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+                  }}
+                ></div>
+                <div className="directors-details-container d-flex flex-column align-items-start justify-content-center py-3 ps-5 pe-3 my-auto">
+                  <h1 className="text-start m-0">Omar Anees</h1>
+                  <p className="text-start p-0 m-0">
+                    Business Development Manager - VXL Education Sri Lanka
+                  </p>
+                </div>
+              </div>
+              <div className="directors-right-container d-flex flex-row align-items-center justify-content-start position-relative">
+                {/* <div
+                  className="director-image shadow-sm"
+                  style={{
+                    backgroundImage: "url(img/woman.png)",
+                    borderRadius: "50%",
+                    backgroundColor: "#eeeded",
+                  }}
+                ></div>
+                <div className="directors-details-container d-flex flex-column align-items-start justify-content-center py-3 ps-5 pe-3 my-auto">
+                  <h1 className="text-start m-0">Rashmika Sewwandi</h1>
+                  <p className="text-start p-0 m-0">
+                    Junior Executive - Student Placements VXL Education Sri
+                    Lanka
+                  </p>
+                </div> */}
               </div>
             </div>
           </div>
