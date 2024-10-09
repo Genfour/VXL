@@ -1299,6 +1299,26 @@ footer {
     margin-top: 20px !important;
   }
 
+  .a-team-container {
+    min-height: 400px;
+  }
+
+  .a-team-right-container {
+    display: none !important;
+  }
+
+  .director-image {
+    width: 120px;
+    height: 110px;
+  }
+
+  .directors-details-container {
+    width: calc(100% - 80px);
+    left: 0;
+    margin-right: 0px !important;
+    margin-left: 80px;
+  }
+
   .directors-details-container h1 {
     font-size: 1.2rem;
   }
