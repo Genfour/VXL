@@ -103,37 +103,37 @@ const items = [
 
 const testimonials = [
   {
-    image: "img/team1.png",
+    image: "img/boy.png",
     name: "John Doe",
     description:
       "VXL provided excellent guidance and resources, helping me achieve my career goals.",
   },
   {
-    image: "img/team2.png",
+    image: "img/girl.png",
     name: "Jane Smith",
     description:
       "The instructors at VXL were knowledgeable and supportive, creating a positive learning environment.",
   },
   {
-    image: "img/team3.png",
+    image: "img/girl.png",
     name: "Alice Johnson",
     description:
       "I highly recommend VXL for their comprehensive courses and personalized attention.",
   },
   {
-    image: "img/team4.png",
+    image: "img/boy.png",
     name: "Bob Brown",
     description:
       "VXL's flexible learning options and industry partnerships were invaluable to my professional development.",
   },
   {
-    image: "img/team5.png",
+    image: "img/girl.png",
     name: "Emily Davis",
     description:
       "The career counseling at VXL helped me identify the right path and land my dream job.",
   },
   {
-    image: "img/team6.png",
+    image: "img/boy.png",
     name: "Charlie Baker",
     description:
       "VXL's focus on practical skills and real-world experience prepared me for success in my field.",

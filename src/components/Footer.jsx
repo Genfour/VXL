@@ -91,20 +91,6 @@ export default function Footer() {
                 />
               </div>
             </div>
-            {/* <div class="d-flex pt-2">
-              <a class="btn btn-square btn-primary me-2" href="">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a class="btn btn-square btn-primary me-2" href="">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a class="btn btn-square btn-primary me-2" href="">
-                <i class="fab fa-youtube"></i>
-              </a>
-              <a class="btn btn-square btn-primary me-2" href="">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-            </div> */}
           </div>
         </div>
         <div class="footer-bottom d-flex flex-row">
@@ -118,15 +104,6 @@ export default function Footer() {
               </span>
             </p>
           </div>
-          {/* <p>
-            &copy; 2024 VXL Education Sri Lanka, All Right Reserved. Designed By{" "}
-            <a
-              class="border-bottom text-secondary"
-              href="https://loopyholdings.com"
-            >
-              Loopy Holdings
-            </a>
-          </p> */}
         </div>
       </footer>
       {/* <!-- Back to Top --> */}

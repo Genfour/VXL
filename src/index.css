@@ -404,6 +404,7 @@ textarea:focus {
   width: 80px;
   height: 80px;
   border-radius: 50%;
+  border: 3px solid #ee3457;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1108,6 +1109,57 @@ footer {
   }
 }
 
+@media (max-width: 1200px) {
+  .a-team-container {
+    flex-direction: column !important;
+    height: auto;
+  }
+
+  .a-team-left-container,
+  .a-team-right-container {
+    width: 100%;
+  }
+
+  .a-team-right-container {
+    height: 400px;
+  }
+
+  .a-team-right-container .a-team-image-1 {
+    width: 500px;
+  }
+
+  .a-team-right-container .a-team-image-2 {
+    width: 350px;
+    right: 15%;
+    top: -50px;
+  }
+
+  .a-team-right-container .a-team-image-3 {
+    width: 350px;
+    height: 200px;
+    left: 15%;
+  }
+
+  .a-team-right-container .a-team-image-4 {
+    width: 400px;
+    right: 5%;
+    bottom: -50px;
+  }
+
+  .directors-container {
+    row-gap: 0px;
+  }
+
+  .directors-row {
+    flex-direction: column !important;
+  }
+
+  .directors-left-container,
+  .directors-right-container {
+    width: 100%;
+  }
+}
+
 @media screen and(max-width:1120px) {
   #home {
     margin-top: 5vh !important;
@@ -1185,6 +1237,27 @@ footer {
   }
 }
 
+@media (max-width: 800px) {
+  .quote-container {
+    flex-direction: column !important;
+    height: auto;
+  }
+
+  .quote-left-container,
+  .quote-right-container {
+    width: 100%;
+  }
+
+  .quote-right-container {
+    height: 300px;
+  }
+
+  .quote-left-container h1 {
+    width: 100%;
+    text-align: center !important;
+  }
+}
+
 @media (max-width: 768px) {
   .clients-container-left {
     /* width: 100%;
@@ -1225,6 +1298,10 @@ footer {
     margin-left: 0% !important;
     margin-top: 20px !important;
   }
+
+  .directors-details-container h1 {
+    font-size: 1.2rem;
+  }
 }
 
 @media (max-width: 600px) {
@@ -1252,17 +1329,17 @@ footer {
     padding: 35px !important;
   }
 
-  .clients-container-right h1 {
+  /* .clients-container-right h1 {
     font-size: 2.5rem !important;
-  }
+  } */
 
   .testimonial-container {
     padding: 60px 30px !important;
   }
 
-  .testimonial-container h1 {
+  /* .testimonial-container h1 {
     font-size: 2rem;
-  }
+  } */
 
   .testimonial-carousel {
     position: relative;
@@ -1289,8 +1366,39 @@ footer {
     min-width: 300px;
   }
 
+  .partner-container h1,
+  .services-container h1,
+  .track-record-container h1,
+  .testimonial-container h1,
+  .clients-container-right h1 {
+    font-size: 2.5rem;
+  }
+
+  .onshore-service-right h1,
+  .service-item h1 {
+    font-size: 1.5rem;
+  }
+
   .footer-brand-container {
     flex-direction: column !important;
+  }
+
+  .footer-bottom img {
+    margin-right: 0px;
+    margin-bottom: 25px !important;
+  }
+
+  .track-record-item {
+    width: 100%;
+  }
+
+  .hero-para,
+  .track-record-container p,
+  .services-container p,
+  .partner-container p,
+  .team-container p {
+    width: 100%;
+    max-width: 100%;
   }
 }
 
