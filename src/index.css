@@ -763,7 +763,7 @@ footer {
 
 /* Partners */
 .partner-container {
-  background-color: #e1f7f5;
+  background-color: #eef7ff;
 }
 
 .partner-container h1 {
@@ -793,13 +793,99 @@ footer {
 
 .partner-item {
   width: auto;
-  height: 200px;
+  height: 120px;
   background-color: white;
   border: 1px solid #7aa2e3;
 }
 
 .partner-item img {
-  width: 150px !important;
+  width: 100px !important;
+}
+
+/* Team */
+.team-container {
+  background-color: #eeeded;
+  overflow-x: hidden;
+}
+
+.team-container h1 {
+  color: #18548a;
+  font-size: 3rem;
+  text-align: start;
+  font-weight: 400 !important;
+}
+
+.team-page-container {
+  background-color: white;
+}
+
+.a-team-container {
+  min-height: 100vh;
+  background-color: white;
+}
+
+.a-team-left-container {
+  width: 45%;
+}
+
+.a-team-right-container {
+  width: 55%;
+  overflow: hidden;
+}
+
+.a-team-right-container .a-team-image-1,
+.a-team-right-container .a-team-image-2,
+.a-team-right-container .a-team-image-3,
+.a-team-right-container .a-team-image-4 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+}
+
+.a-team-right-container .a-team-image-1 {
+  background-image: url(/public/img/1ef6959ba9fbf52c0f3b4e66559edd16.jpg);
+  width: 450px;
+  height: 350px;
+  left: 30px;
+  top: 80px;
+  z-index: 1;
+  transform: rotate(10deg);
+}
+
+.a-team-right-container .a-team-image-2 {
+  background-image: url(/public/img/806140d1aa40d26f0af170ea10979bbc.jpg);
+  width: 350px;
+  height: 250px;
+  right: 25px;
+  top: 100px;
+  z-index: 1;
+  transform: rotate(-10deg);
+}
+
+.a-team-right-container .a-team-image-3 {
+  background-image: url(/public/img/99380bf5d13c8f7de48afcbe7cae6a6a.jpg);
+  width: 400px;
+  height: 250px;
+  left: 50px;
+  bottom: -15px;
+  z-index: 1;
+  transform: rotate(-12deg);
+}
+
+.a-team-right-container .a-team-image-4 {
+  background-image: url(/public/img/6bfad96150c9faefbc1bfdc02a6cae06.jpg);
+  width: 350px;
+  height: 250px;
+  right: 50px;
+  bottom: -5px;
+  z-index: 1;
+  transform: rotate(0deg);
+}
+
+.quote-container {
+  min-height: 100vh;
+  background-color: #7aa2e3;
 }
 
 /* Media Querry */
