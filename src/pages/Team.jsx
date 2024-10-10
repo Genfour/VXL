@@ -10,16 +10,24 @@ export default function Team() {
       <div className="team-page-container w-100 h-auto container-fluid user-select-none d-flex flex-column p-0 m-0">
         <div className="a-team-container w-100 d-flex flex-row">
           <div className="a-team-left-container d-flex flex-column align-items-start justify-content-center p-5">
-            <h3 class="mb-3 hero-sub-title" style={{ color: "#fe3c66" }}>
+            <h3
+              class="wow fadeInUp mb-3 hero-sub-title"
+              style={{ color: "#fe3c66" }}
+              data-bs-wow-delay="0.1s"
+            >
               VXL Education Sri Lanka
             </h3>
             <h1
-              class="display-3 mb-3 text-start hero-title"
+              class="wow fadeInUp display-3 mb-3 text-start hero-title"
               style={{ color: "#0a4c7e" }}
+              data-bs-wow-delay="0.2s"
             >
               The <span style={{ color: "#fe3c66" }}>A</span> Team
             </h1>
-            <p className="text-start hero-para">
+            <p
+              className="wow fadeInUp text-start hero-para"
+              data-bs-wow-delay="0.3s"
+            >
               Want to study abroad?{" "}
               <span style={{ color: "#fe3c66" }}>
                 Having trouble deciding where or how?
@@ -27,7 +35,10 @@ export default function Team() {
               VXL is ready to help you along every step of your study abroad
               ​journey. Meet the team behind the scenes.
             </p>
-            <button className="hero-button py-2 px-3 mt-2 me-auto">
+            <button
+              className="wow fadeInUp hero-button py-2 px-3 mt-2 me-auto"
+              data-bs-wow-delay="0.5s"
+            >
               Who is VXL?
               <span className="bg-white rounded-circle ms-3 ">
                 <FontAwesomeIcon
@@ -39,10 +50,22 @@ export default function Team() {
             </button>
           </div>
           <div className="a-team-right-container d-flex flex-column position-relative">
-            <div className="a-team-image-1"></div>
-            <div className="a-team-image-2"></div>
-            <div className="a-team-image-3"></div>
-            <div className="a-team-image-4"></div>
+            <div
+              className="wow fadeInUp a-team-image-1"
+              data-bs-wow-delay="0.1s"
+            ></div>
+            <div
+              className="wow fadeInUp a-team-image-2"
+              data-bs-wow-delay="0.2s"
+            ></div>
+            <div
+              className="wow fadeInUp a-team-image-3"
+              data-bs-wow-delay="0.3s"
+            ></div>
+            <div
+              className="wow fadeInUp a-team-image-4"
+              data-bs-wow-delay="0.4s"
+            ></div>
           </div>
         </div>
         <div className="quote-container w-100 d-flex flex-row">
@@ -173,7 +196,7 @@ export default function Team() {
                 </div>
               </div>
             </div>
-            <div className="directors-row d-flex flex-row">
+            {/* <div className="directors-row d-flex flex-row">
               <div className="directors-left-container d-flex flex-row align-items-center justify-content-start position-relative">
                 <div
                   className="director-image"
@@ -192,24 +215,8 @@ export default function Team() {
                   </p>
                 </div>
               </div>
-              <div className="directors-right-container d-flex flex-row align-items-center justify-content-start position-relative">
-                {/* <div
-                  className="director-image shadow-sm"
-                  style={{
-                    backgroundImage: "url(img/woman.png)",
-                    borderRadius: "50%",
-                    backgroundColor: "#eeeded",
-                  }}
-                ></div>
-                <div className="directors-details-container d-flex flex-column align-items-start justify-content-center py-3 ps-5 pe-3 my-auto">
-                  <h1 className="text-start m-0">Rashmika Sewwandi</h1>
-                  <p className="text-start p-0 m-0">
-                    Junior Executive - Student Placements VXL Education Sri
-                    Lanka
-                  </p>
-                </div> */}
-              </div>
-            </div>
+              <div className="directors-right-container d-flex flex-row align-items-center justify-content-start position-relative"></div>
+            </div> */}
           </div>
         </div>
 

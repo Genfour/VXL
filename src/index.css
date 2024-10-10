@@ -1420,6 +1420,38 @@ footer {
     width: 100%;
     max-width: 100%;
   }
+
+  .staff-container h1 {
+    text-align: center !important;
+  }
+
+  .directors-row {
+    row-gap: 40px;
+  }
+
+  .directors-left-container,
+  .directors-right-container {
+    flex-direction: column !important;
+    min-height: 200px;
+  }
+
+  .directors-details-container {
+    border-radius: 50px;
+    width: 100%;
+    margin-left: 0px !important;
+    margin-top: 120px !important;
+    align-items: center !important;
+    padding-left: 1rem !important;
+  }
+
+  .directors-details-container p,
+  .directors-details-container h1 {
+    text-align: center !important;
+  }
+
+  .directors-details-container p {
+    max-width: 80%;
+  }
 }
 
 @media (min-width: 375px) {
