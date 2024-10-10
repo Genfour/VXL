@@ -1340,14 +1340,27 @@ footer {
     font-size: 3rem !important;
   }
 
+  .hero-left,
+  .clients-container-right,
+  .a-team-left-container,
+  .quote-left-container,
+  .staff-container,
+  .join-container,
+  .track-record-container,
+  .services-container,
+  .partner-container,
+  .team-container {
+    padding: 50px 20px !important;
+  }
+
   .clients-container-left,
   .clients-container-right {
     width: 100%;
   }
 
-  .clients-container-right {
+  /* .clients-container-right {
     padding: 35px !important;
-  }
+  } */
 
   /* .clients-container-right h1 {
     font-size: 2.5rem !important;
