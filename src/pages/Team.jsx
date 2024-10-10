@@ -242,10 +242,6 @@ export default function Team() {
             className="wow fadeInUp text-start hero-para"
             data-bs-wow-delay="0.2s"
           >
-            Want to study abroad?{" "}
-            <span style={{ color: "#fe3c66" }}>
-              Having trouble deciding where or how?
-            </span>{" "}
             We are always on the lookout for people with the drive to{" "}
             <span style={{ color: "#fe3c66" }}>excel</span>. Talk to us about
             how you could be a part of ​one of Sri Lanka’s best study

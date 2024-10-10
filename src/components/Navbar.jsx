@@ -166,13 +166,21 @@ export default function Navbar() {
               mobileView && isMobileMenuOpen ? `mobile` : ``
             } flex-row p-0 m-0 show me-auto`}
           >
-            <li>
-              <a>Study Aborad</a>
-            </li>
-            <li>Visa Services</li>
-            <li>Global Partners</li>
-            <li>Global Presence</li>
-            <li>Contact</li>
+            <a href="#study-abroad" className="m-0 p-0">
+              <li>Study Abroad</li>
+            </a>
+            <a href="#visa-services" className="m-0 p-0">
+              <li>Visa Services</li>
+            </a>
+            <a href="#partners" className="m-0 p-0">
+              <li>Global Partners</li>
+            </a>
+            <a href="#presence" className="m-0 p-0">
+              <li>Global Presence</li>
+            </a>
+            <a href="#footer" className="m-0 p-0">
+              <li>Contact</li>
+            </a>
             <li className="navbar-search-bar">
               <input type="text" placeholder="Search..." />
               <button>

@@ -68,7 +68,7 @@ const faqs = [
       "Navigating the complexities of student health insurance can indeed be a costly affair. However, the good news is, as a trusted partner of not just one, but two of the largest OSHC providers, we’ve got your back. This means that when you choose VXL Educational Consultancy Sri Lanka, you’re not only getting access to expert guidance but also exclusive access to the best rates and the utmost value for every hard-earned buck you invest in your health and well-being during your academic journey.",
   },
   {
-    question: "Accommodation",
+    question: "Your Accommodation",
     answer:
       "At BMW Educational Consultancy Sri Lanka, our commitment to providing the most comprehensive and long-term support for our clients is unwavering. One prime example is our unique access to an extensive network of student accommodation properties spanning across Australia, courtesy of our esteemed partner providers. This means that when you partner with us, you’re not only securing competitive rental rates but also gaining access to a vast selection of accommodations tailored to your preferences. From prime locations to unparalleled facilities, we’re dedicated to ensuring that your accommodation needs are met with excellence throughout your academic journey. Your comfort and convenience are our priorities.",
   },
@@ -176,7 +176,7 @@ const onshoreServices = [
       "The student health insurance process is tricky as is – this is why we have partnered with two of the largest OSHC providers to help you access expert guidance plus exclusive access to the best rates and features to ensure the best of health and well-being for you during your academic journey.",
   },
   {
-    title: "<span style='color: #EE3457;'>Accommodation</span>",
+    title: "Your <span style='color: #EE3457;'>Accommodation</span>",
     image: "img/2148925877.jpg",
     description:
       "VXL is committed to providing the most comprehensive and long-term support for you. This is why we have partnered with third parties to facilitate access to a network of properties spanning across Australia. We are dedicated to ensuring that your accommodation needs are met with excellence throughout your academic journey.",
@@ -578,7 +578,10 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="track-record-container d-flex flex-column w-100 h-auto p-5 justify-content-center align-items-center">
+          <div
+            id="presence"
+            className="track-record-container d-flex flex-column w-100 h-auto p-5 justify-content-center align-items-center"
+          >
             <h1 className="wow fadeInUp text-center" data-bs-wow-delay="0.1s">
               We <span style={{ color: "#fe3c66" }}>Excel</span> around the
               world
@@ -625,10 +628,12 @@ const Home = () => {
             </button>
           </div>
 
-          <div className="services-container d-flex flex-column w-100 h-auto p-5 justify-content-center align-items-center">
+          <div
+            id="visa-services"
+            className="services-container d-flex flex-column w-100 h-auto p-5 justify-content-center align-items-center"
+          >
             <h1 className="wow fadeInUp text-center" data-bs-wow-delay="0.1s">
-              We <span style={{ color: "#fe3c66" }}>Excel</span> around the
-              world
+              How we help you <span style={{ color: "#fe3c66" }}>Excel</span>
             </h1>
             <p
               className="wow fadeInUp services-container-desc"
@@ -690,7 +695,7 @@ const Home = () => {
                 })}
               </OwlCarousel>
             </div>
-            <div className="service-onshore-container p-5">
+            <div id="study-abroad" className="service-onshore-container p-5">
               <h1 className="wow fadeInUp text-center" data-bs-wow-delay="0.1s">
                 How you <span style={{ color: "#fe3c66" }}>Excel</span> Onshore
               </h1>
@@ -739,7 +744,10 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="partner-container d-flex flex-column w-100 h-auto p-5 justify-content-center align-items-center">
+          <div
+            id="partners"
+            className="partner-container d-flex flex-column w-100 h-auto p-5 justify-content-center align-items-center"
+          >
             <h1
               className="wow fadeInUp text-center mb-4"
               data-bs-wow-delay="0.1s"
