@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     <>
       <footer>
-        <div class="footer-container">
+        <div id="footer" class="footer-container">
           <div class="footer-section footer-section-1 d-flex flex-column justify-content-start">
             <h3 className="me-auto">
               Our

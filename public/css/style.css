@@ -91,6 +91,12 @@
   display: none;
 }
 
+.navbar-link-list a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
 .navbar-link-list li {
   position: relative;
   color: #18548a !important;
