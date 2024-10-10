@@ -152,13 +152,15 @@ export default function Navbar() {
         style={{ height: "70px" }}
       >
         <div className="d-flex flex-row">
-          <img
-            className="brand-logo"
-            src={logo}
-            style={{ width: "auto", height: "40px", marginRight: "50px" }}
-            alt="brand-logo"
-            loading="lazy"
-          />
+          <a href="/">
+            <img
+              className="brand-logo"
+              src={logo}
+              style={{ width: "auto", height: "40px", marginRight: "50px" }}
+              alt="brand-logo"
+              loading="lazy"
+            />
+          </a>
           <ul
             className={`navbar-link-list ${
               mobileView && isMobileMenuOpen ? `mobile` : ``

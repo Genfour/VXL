@@ -103,37 +103,37 @@ const items = [
 
 const testimonials = [
   {
-    image: "img/team1.png",
+    image: "img/boy.png",
     name: "John Doe",
     description:
       "VXL provided excellent guidance and resources, helping me achieve my career goals.",
   },
   {
-    image: "img/team2.png",
+    image: "img/girl.png",
     name: "Jane Smith",
     description:
       "The instructors at VXL were knowledgeable and supportive, creating a positive learning environment.",
   },
   {
-    image: "img/team3.png",
+    image: "img/girl.png",
     name: "Alice Johnson",
     description:
       "I highly recommend VXL for their comprehensive courses and personalized attention.",
   },
   {
-    image: "img/team4.png",
+    image: "img/boy.png",
     name: "Bob Brown",
     description:
       "VXL's flexible learning options and industry partnerships were invaluable to my professional development.",
   },
   {
-    image: "img/team5.png",
+    image: "img/girl.png",
     name: "Emily Davis",
     description:
       "The career counseling at VXL helped me identify the right path and land my dream job.",
   },
   {
-    image: "img/team6.png",
+    image: "img/boy.png",
     name: "Charlie Baker",
     description:
       "VXL's focus on practical skills and real-world experience prepared me for success in my field.",
@@ -262,7 +262,7 @@ const Home = () => {
   const icon = new Image();
   icon.src = iconImage;
   const [loading, setLoading] = useState(false);
-  const [isRunning, setIsRunning] = useState(true);
+  const [isRunning, setIsRunning] = useState(false);
   const scrollRef = useRef(null);
   const [scrollInterval, setScrollInterval] = useState(null);
   const [clickedLeft, setClickedLeft] = useState(false);
@@ -371,10 +371,10 @@ const Home = () => {
       },
     });
 
-    const timer = setTimeout(() => {
-      setIsRunning(false);
-    }, 5000);
-    return () => clearTimeout(timer);
+    // const timer = setTimeout(() => {
+    //   setIsRunning(false);
+    // }, 5000);
+    // return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -400,7 +400,7 @@ const Home = () => {
 
           {/* <!-- Header Start --> */}
           <div
-            class="container-fluid bg-light user-select-none"
+            class="container-fluid bg-light user-select-none px-0"
             id="home"
             style={{ marginTop: "70px" }}
           >
@@ -422,16 +422,24 @@ const Home = () => {
                   <></>
                 )}
 
-                <h3 class="mb-3 hero-sub-title" style={{ color: "#fe3c66" }}>
+                <h3
+                  class="wow fadeInUp mb-3 hero-sub-title"
+                  style={{ color: "#fe3c66" }}
+                  data-bs-wow-delay="0.1s"
+                >
                   VXL Education Sri Lanka
                 </h3>
                 <h1
-                  class="display-3 mb-3 text-start hero-title"
+                  class="wow fadeInUp display-3 mb-3 text-start hero-title"
                   style={{ color: "#0a4c7e" }}
+                  data-bs-wow-delay="0.2s"
                 >
                   You <span style={{ color: "#fe3c66" }}>Excel</span> With VXL
                 </h1>
-                <p className="text-start hero-para">
+                <p
+                  className="wow fadeInUp text-start hero-para"
+                  data-bs-wow-delay="0.3s"
+                >
                   Want to study abroad?{" "}
                   <span style={{ color: "#fe3c66" }}>
                     Having trouble deciding where or how?
@@ -440,7 +448,10 @@ const Home = () => {
                   world in helping students achieve their higher education
                   goals.
                 </p>
-                <button className="hero-button py-2 px-3 mt-2">
+                <button
+                  className="wow fadeInUp hero-button py-2 px-3 mt-2"
+                  data-bs-wow-delay="0.5s"
+                >
                   Book My Free Session
                   <span className="bg-white rounded-circle ms-3 ">
                     <FontAwesomeIcon
@@ -451,7 +462,10 @@ const Home = () => {
                   </span>
                 </button>
               </div>
-              <div class="col-lg-6 col-md-12 hero-right flex-grow-1">
+              <div
+                class="wow fadeInUp col-lg-6 col-md-12 hero-right flex-grow-1"
+                data-bs-wow-delay="0.1s"
+              >
                 {/* <img
                   class="img-fluid header-right-image"
                   src="img/graduates.png"
@@ -521,8 +535,9 @@ const Home = () => {
                 <FontAwesomeIcon icon={faChevronLeft} color="#FFB1B1" />
               </button>
               <div
-                className="testimonial-slider d-flex flex-row"
+                className="wow fadeInUp testimonial-slider d-flex flex-row"
                 ref={scrollRef}
+                data-bs-wow-delay="0.2s"
               >
                 {testimonials.map((item, index) => {
                   return (
@@ -568,7 +583,10 @@ const Home = () => {
               We <span style={{ color: "#fe3c66" }}>Excel</span> around the
               world
             </h1>
-            <div className="track-record-wrapper d-flex flex-row justify-content-center mt-3">
+            <div
+              className="wow fadeInUp track-record-wrapper d-flex flex-row justify-content-center mt-3"
+              data-bs-wow-delay="0.2s"
+            >
               {trackrecords.map((record, index) => {
                 return (
                   <div
@@ -586,13 +604,16 @@ const Home = () => {
                 );
               })}
             </div>
-            <p className="mt-3">
+            <p className="wow fadeInUp mt-3" data-bs-wow-delay="0.3s">
               It took years for us to get where we are today. Over the years we
               have perfected our processes, checks ​and due-diligence to bring
               you a <span>true experience of excellence</span>.<br />
               Talk to us today. <span>You Excel with VXL</span>.
             </p>
-            <button className="hero-button py-2 px-3 mt-2">
+            <button
+              className="wow fadeInUp hero-button py-2 px-3 mt-2"
+              data-bs-wow-delay="0.5s"
+            >
               Experience Excellence
               <span className="bg-white rounded-circle ms-3 ">
                 <FontAwesomeIcon
@@ -609,7 +630,10 @@ const Home = () => {
               We <span style={{ color: "#fe3c66" }}>Excel</span> around the
               world
             </h1>
-            <p className="services-container-desc">
+            <p
+              className="wow fadeInUp services-container-desc"
+              data-bs-wow-delay="0.2s"
+            >
               VXL is your one-stop partner during every step of your educational
               journey.
               <br />
@@ -624,7 +648,10 @@ const Home = () => {
               We also have a ready-to-use network to assist in ticket bookings
               and accommodation.
             </p>
-            <div className="services-carousel">
+            <div
+              className="wow fadeInUp services-carousel"
+              data-bs-wow-delay="0.3s"
+            >
               <OwlCarousel
                 className="carousel-cause owl-carousel d-flex g-0"
                 {...options}
@@ -673,7 +700,11 @@ const Home = () => {
               >
                 {onshoreServices.map((service, index) => {
                   return (
-                    <div className="onshore-service-item d-flex">
+                    <div
+                      key={index}
+                      className="wow fadeInUp onshore-service-item d-flex"
+                      data-bs-wow-delay={`0.${index + 1}s`}
+                    >
                       <div
                         className="onshore-service-left"
                         style={{ backgroundImage: `url(${service.image})` }}
@@ -717,7 +748,10 @@ const Home = () => {
               <br />
               ​Partnerships
             </h1>
-            <p className="partner-container-desc">
+            <p
+              className="wow fadeInUp partner-container-desc"
+              data-bs-wow-delay="0.2s"
+            >
               VXL is partnered with a vast global network of prestigious
               educational institutes. Our network spans{" "}
               <span style={{ color: "#fe3c66" }}>
@@ -740,7 +774,10 @@ const Home = () => {
               We excel in helping you navigate the world of higher education.
               <span style={{ color: "#fe3c66" }}>You Excel with VXL.</span>
             </p>
-            <div className="partner-carousel mt-4">
+            <div
+              className="wow fadeInUp partner-carousel mt-4"
+              data-bs-wow-delay="0.3s"
+            >
               <OwlCarousel
                 className="carousel-cause owl-carousel d-flex g-0"
                 {...brandsOptions}
@@ -766,7 +803,7 @@ const Home = () => {
             >
               Meet the Team
             </h1>
-            <p>
+            <p className="wow fadeInUp" data-bs-wow-delay="0.2s">
               We excel in providing exceptional assistance through all aspects
               of the student journey all the way from getting a thorough
               understanding of the career outcomes linked to the courses they
@@ -775,442 +812,23 @@ const Home = () => {
               applications and most importantly- preparing for the journey in a
               new country.
             </p>
-            <button className="hero-button py-2 px-3 mt-3">
-              Meet the Team
-              <span className="bg-white rounded-circle ms-3 ">
-                <FontAwesomeIcon
-                  icon={faChevronRight}
-                  color="#18548a"
-                  width={16}
-                />
-              </span>
-            </button>
+            <a href="/team">
+              <button
+                className="wow fadeInUp hero-button py-2 px-3 mt-3"
+                data-bs-wow-delay="0.5s"
+              >
+                Meet the Team
+                <span className="bg-white rounded-circle ms-3 ">
+                  <FontAwesomeIcon
+                    icon={faChevronRight}
+                    color="#18548a"
+                    width={16}
+                  />
+                </span>
+              </button>
+            </a>
           </div>
 
-          {/* <div className="d-flex flex-column faq-container p-5 user-select-none">
-            <div className="faq-wrapper d-flex flex-column align-items-center">
-              <h1 className="wow fadeInUp" data-bs-wow-delay="0.1s">
-                How We Can <span style={{ color: "#fe3c66" }}>Assist</span>
-              </h1>
-              <p className="mt-3 wow fadeInUp" data-bs-wow-delay="0.5s">
-                VXL Educational Consultancy Sri Lanka is your all-in-one partner
-                in your educational journey. From eligibility assessments to
-                course and university selection, we guide you. We prepare you
-                for IELTS/PTE success. We streamline applications and simplify
-                visa processes with expert support. Our vast network helps with
-                ticket bookings and accommodation.
-              </p>
-              <div
-                className="question-wrapper d-flex flex-column container justify-content-center mt-5 wow fadeInUp"
-                data-bs-wow-delay="0.8s"
-              >
-                {faqs.map((faq, index) => {
-                  return (
-                    <Faq
-                      key={index}
-                      question={faq.question}
-                      answer={faq.answer}
-                    />
-                  );
-                })}
-              </div>
-            </div>
-          </div> */}
-
-          {/* <!-- Service Start --> */}
-          {/* <div class="container-fluid bg-light my-5 py-6" id="service">
-            <div class="container">
-              <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="col-lg-6">
-                  <h1 class="display-5 mb-0">Our Services</h1>
-                </div>
-                <div class="col-lg-6 text-lg-end">
-                  <a class="btn btn-primary py-3 px-5" href="">
-                    Hire Us
-                  </a>
-                </div>
-              </div>
-              <div class="row g-4">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                  <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
-                    <div class="bg-icon flex-shrink-0 mb-3">
-                      <i class="fa fa-crop-alt fa-2x text-dark"></i>
-                    </div>
-                    <div class="ms-sm-4">
-                      <h4 class="mb-3">Study Counselling</h4>
-                      <h6 class="mb-3">
-                        Start from <span class="text-primary">$199</span>
-                      </h6>
-                      <span>
-                        Stet lorem dolor diam amet vero eos. No stet est diam
-                        amet diam ipsum. Clita dolor duo clita sit sed sit dolor
-                        eos.
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                  <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
-                    <div class="bg-icon flex-shrink-0 mb-3">
-                      <i class="fa fa-code-branch fa-2x text-dark"></i>
-                    </div>
-                    <div class="ms-sm-4">
-                      <h4 class="mb-3">Visa Assistance</h4>
-                      <h6 class="mb-3">
-                        Start from <span class="text-primary">$199</span>
-                      </h6>
-                      <span>
-                        Stet lorem dolor diam amet vero eos. No stet est diam
-                        amet diam ipsum. Clita dolor duo clita sit sed sit dolor
-                        eos.
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                  <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
-                    <div class="bg-icon flex-shrink-0 mb-3">
-                      <i class="fa fa-code fa-2x text-dark"></i>
-                    </div>
-                    <div class="ms-sm-4">
-                      <h4 class="mb-3">Skilled Migration</h4>
-                      <h6 class="mb-3">
-                        Start from <span class="text-primary">$199</span>
-                      </h6>
-                      <span>
-                        Stet lorem dolor diam amet vero eos. No stet est diam
-                        amet diam ipsum. Clita dolor duo clita sit sed sit dolor
-                        eos.
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                  <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
-                    <div class="bg-icon flex-shrink-0 mb-3">
-                      <i class="fa fa-laptop-code fa-2x text-dark"></i>
-                    </div>
-                    <div class="ms-sm-4">
-                      <h4 class="mb-3">Career Counselling</h4>
-                      <h6 class="mb-3">
-                        Start from <span class="text-primary">$199</span>
-                      </h6>
-                      <span>
-                        Stet lorem dolor diam amet vero eos. No stet est diam
-                        amet diam ipsum. Clita dolor duo clita sit sed sit dolor
-                        eos.
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> */}
-          {/* <!-- Service End --> */}
-
-          {/* <!-- Projects Start --> */}
-          {/* <div class="container-xxl py-6 pt-5" id="project">
-            <div class="container">
-              <div
-                class="row g-5 mb-5 align-items-center wow fadeInUp"
-                data-wow-delay="0.1s"
-              >
-                <div class="col-lg-6">
-                  <h1 class="display-5 mb-0">Our Projects</h1>
-                </div>
-                <div class="col-lg-6 text-lg-end">
-                  <ul class="list-inline mx-n3 mb-0" id="portfolio-flters">
-                    <li
-                      className={`mx-3 ${filter === "*" ? "active" : ""}`}
-                      onClick={() => handleFilterChange("*")}
-                    >
-                      All Projects
-                    </li>
-
-                    <li
-                      className={`mx-3 ${
-                        filter === "UI/UX Design" ? "active" : ""
-                      }`}
-                      onClick={() => handleFilterChange("UI/UX Design")}
-                    >
-                      category 1
-                    </li>
-
-                    <li
-                      className={`mx-3 ${
-                        filter === "Graphic Design" ? "active" : ""
-                      }`}
-                      onClick={() => handleFilterChange("Graphic Design")}
-                    >
-                      category 2
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div
-                class="row g-4 portfolio-container wow fadeInUp"
-                data-wow-delay="0.1s"
-              >
-                <TransitionGroup component={null}>
-                  {filteredItems.map((item) => (
-                    <CSSTransition
-                      key={item.id}
-                      timeout={500}
-                      classNames="fade"
-                    >
-                      <div class="col-lg-4 col-md-6 portfolio-item first">
-                        <div class="portfolio-img rounded overflow-hidden">
-                          <img class="img-fluid" src={item.imgSrc} alt="" />
-                          <div class="portfolio-btn">
-                            <a
-                              class="btn btn-lg-square btn-outline-secondary border-2 mx-1"
-                              href="img/project-1.jpg"
-                              data-lightbox="portfolio"
-                            >
-                              <i class="fa fa-eye"></i>
-                            </a>
-                            <a
-                              class="btn btn-lg-square btn-outline-secondary border-2 mx-1"
-                              href=""
-                            >
-                              <i class="fa fa-link"></i>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </CSSTransition>
-                  ))}
-                </TransitionGroup>
-              </div>
-            </div>
-          </div> */}
-          {/* <!-- Projects End --> */}
-
-          {/* <!-- Team Start --> */}
-          {/* <div class="container-xxl py-6 pb-5" id="team">
-            <div class="container">
-              <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="col-lg-6">
-                  <h1 class="display-5 mb-0">Team Members</h1>
-                </div>
-                <div class="col-lg-6 text-lg-end">
-                  <a class="btn btn-primary py-3 px-5" href="">
-                    Contact Us
-                  </a>
-                </div>
-              </div>
-              <div class="row g-4">
-                <div
-                  class="col-lg-4 col-md-6 wow fadeInUp"
-                  data-wow-delay="0.1s"
-                >
-                  <div class="team-item position-relative">
-                    <img class="img-fluid rounded" src="img/dummy.jpg" alt="" />
-                    <div class="team-text bg-white rounded-end p-4">
-                      <div>
-                        <h5>Full Name</h5>
-                        <span>Designation</span>
-                      </div>
-                      <i class="fa fa-arrow-right fa-2x text-primary"></i>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="col-lg-4 col-md-6 wow fadeInUp"
-                  data-wow-delay="0.3s"
-                >
-                  <div class="team-item position-relative">
-                    <img class="img-fluid rounded" src="img/dummy.jpg" alt="" />
-                    <div class="team-text bg-white rounded-end p-4">
-                      <div>
-                        <h5>Full Name</h5>
-                        <span>Designation</span>
-                      </div>
-                      <i class="fa fa-arrow-right fa-2x text-primary"></i>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="col-lg-4 col-md-6 wow fadeInUp"
-                  data-wow-delay="0.5s"
-                >
-                  <div class="team-item position-relative">
-                    <img class="img-fluid rounded" src="img/dummy.jpg" alt="" />
-                    <div class="team-text bg-white rounded-end p-4">
-                      <div>
-                        <h5>Full Name</h5>
-                        <span>Designation</span>
-                      </div>
-                      <i class="fa fa-arrow-right fa-2x text-primary"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> */}
-          {/* <!-- Team End --> */}
-
-          {/* <!-- Contact Start --> */}
-          {/* <div class="container-xxl pb-5" id="contact">
-            <div class="container py-5">
-              <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="col-lg-6">
-                  <h1 class="display-5 mb-0">Let's Work Together</h1>
-                </div>
-              </div>
-              <div class="row g-5">
-                <div
-                  class="col-lg-5 col-md-6 wow fadeInUp"
-                  data-wow-delay="0.1s"
-                >
-                  <p class="mb-2">My office:</p>
-                  <h3 class="fw-bold">123 Street, New York, USA</h3>
-                  <hr class="w-100" />
-                  <p class="mb-2">Call me:</p>
-                  <h3 class="fw-bold">+012 345 6789</h3>
-                  <hr class="w-100" />
-                  <p class="mb-2">Mail me:</p>
-                  <h3 class="fw-bold">info@example.com</h3>
-                  <hr class="w-100" />
-                </div>
-                <div
-                  class="col-lg-7 col-md-6 wow fadeInUp"
-                  data-wow-delay="0.5s"
-                >
-                  <p class="mb-4">The contact form is currently inactive.</p>
-                  <form>
-                    <div class="row g-3">
-                      <div class="col-md-6">
-                        <div class="form-floating">
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="name"
-                            placeholder="Your Name"
-                          />
-                          <label for="name">Your Name</label>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="form-floating">
-                          <input
-                            type="email"
-                            class="form-control"
-                            id="email"
-                            placeholder="Your Email"
-                          />
-                          <label for="email">Your Email</label>
-                        </div>
-                      </div>
-                      <div class="col-12">
-                        <div class="form-floating">
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="subject"
-                            placeholder="Subject"
-                          />
-                          <label for="subject">Subject</label>
-                        </div>
-                      </div>
-                      <div class="col-12">
-                        <div class="form-floating">
-                          <textarea
-                            class="form-control"
-                            placeholder="Leave a message here"
-                            id="message"
-                            style={{ height: "100px" }}
-                          ></textarea>
-                          <label for="message">Message</label>
-                        </div>
-                      </div>
-                      <div class="col-12">
-                        <button class="btn btn-primary py-3 px-5" type="submit">
-                          Send Message
-                        </button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div> */}
-          {/* <!-- Contact End --> */}
-
-          {/* <!-- Map Start --> */}
-          {/* <div
-            class="container-xxl pt-5 px-0 wow fadeInUp"
-            data-wow-delay="0.1s"
-          >
-            <div class="container-xxl pt-5 pb-5 px-0">
-              <div class="bg-dark">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m19!1m8!1m3!1d31688.763831189957!2d79.8911059!3d6.8791639!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x8182fa4d3bb55987%3A0xcceb2b744ad3617!2sVXL%20Education%20Sri%20Lanka%20-%20Study%2FVisa%20for%20Australia%2C%20Canada%2C%20UK%2C%20USA%2C%20NZ%2C%20Malaysia%2C%20Malta%2C%20Germany%2C%20France%2C%20Spain%2C%20UAE%20Level%206%20Nugegoda%20Business%20Centre%20(RDB%20Building%2C%2080%20Nawala%20Rd%20Nugegoda%2010250!3m2!1d6.8791639!2d79.8911059!5e0!3m2!1sen!2slk!4v1724744005710!5m2!1sen!2slk"
-                  width="600"
-                  height="450"
-                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
-                  frameborder="0"
-                  style={{ width: "100%", height: "450px", border: "0" }}
-                  allowfullscreen=""
-                  aria-hidden="false"
-                  tabindex="0"
-                ></iframe>
-              </div>
-            </div>
-          </div> */}
-          {/* Map Ends */}
-
-          {/* <!-- Copyright Start --> */}
-          {/* <footer>
-            <div class="footer-container">
-              <div class="footer-section">
-                <h3>Company</h3>
-                <p>About us</p>
-                <p>Careers</p>
-                <p>Contact</p>
-              </div>
-              <div class="footer-section">
-                <h3>Quick Links</h3>
-                <p>Home</p>
-                <p>Services</p>
-                <p>Blog</p>
-              </div>
-              <div class="footer-section">
-                <h3>Follow Us</h3>
-                <div class="d-flex pt-2">
-                  <a class="btn btn-square btn-primary me-2" href="">
-                    <i class="fab fa-twitter"></i>
-                  </a>
-                  <a class="btn btn-square btn-primary me-2" href="">
-                    <i class="fab fa-facebook-f"></i>
-                  </a>
-                  <a class="btn btn-square btn-primary me-2" href="">
-                    <i class="fab fa-youtube"></i>
-                  </a>
-                  <a class="btn btn-square btn-primary me-2" href="">
-                    <i class="fab fa-linkedin-in"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="footer-bottom">
-              <p>
-                &copy; 2024 VXL Education Sri Lanka, All Right Reserved.
-                Designed By{" "}
-                <a
-                  class="border-bottom text-secondary"
-                  href="https://loopyholdings.com"
-                >
-                  Loopy Holdings
-                </a>
-              </p>
-            </div>
-          </footer> */}
-          {/* <!-- Back to Top --> */}
-          {/* <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top">
-            <i class="bi bi-arrow-up"></i>
-          </a> */}
           <Footer />
         </>
       )}

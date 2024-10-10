@@ -11,7 +11,7 @@ export default function Footer() {
     <>
       <footer>
         <div class="footer-container">
-          <div class="footer-section d-flex flex-column justify-content-start">
+          <div class="footer-section footer-section-1 d-flex flex-column justify-content-start">
             <h3 className="me-auto">
               Our
               <br />
@@ -26,7 +26,7 @@ export default function Footer() {
               <li>Onshore Accommodation</li>
             </ul>
           </div>
-          <div class="footer-section d-flex flex-column justify-content-start">
+          <div class="footer-section footer-section-2 d-flex flex-column justify-content-start">
             <h3 className="me-auto">
               Global
               <br />
@@ -45,7 +45,7 @@ export default function Footer() {
               <li>Malaysia</li>
             </ul>
           </div>
-          <div class="footer-section">
+          <div class="footer-section footer-section-3 d-flex flex-column justify-content-start">
             <h3>Reach out to us: 0117 699 749</h3>
             <div class="flex-grow-1 d-flex flex-row footer-maps-container">
               <div class="d-flex flex-column flex-grow-1">
@@ -65,47 +65,36 @@ export default function Footer() {
                 </p>
               </div>
 
-              <div class="d-flex flex-column" style={{ gap: "10px" }}>
+              <div
+                class="d-flex flex-column footer-social-container"
+                style={{ gap: "10px" }}
+              >
                 <FontAwesomeIcon
                   icon={faFacebookSquare}
                   color="white"
-                  style={{ width: "25px", height: "25px" }}
+                  style={{ width: "25px", height: "25px", cursor: "pointer" }}
                 />
                 <FontAwesomeIcon
                   icon={faInstagramSquare}
                   color="white"
-                  style={{ width: "25px", height: "25px" }}
+                  style={{ width: "25px", height: "25px", cursor: "pointer" }}
                 />
                 <FontAwesomeIcon
                   icon={faTiktok}
                   color="white"
-                  style={{ width: "25px", height: "25px" }}
+                  style={{ width: "25px", height: "25px", cursor: "pointer" }}
                 />
                 <FontAwesomeIcon
                   icon={faLinkedin}
                   color="white"
-                  style={{ width: "25px", height: "25px" }}
+                  style={{ width: "25px", height: "25px", cursor: "pointer" }}
                 />
               </div>
             </div>
-            {/* <div class="d-flex pt-2">
-              <a class="btn btn-square btn-primary me-2" href="">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a class="btn btn-square btn-primary me-2" href="">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a class="btn btn-square btn-primary me-2" href="">
-                <i class="fab fa-youtube"></i>
-              </a>
-              <a class="btn btn-square btn-primary me-2" href="">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-            </div> */}
           </div>
         </div>
         <div class="footer-bottom d-flex flex-row">
-          <div className="d-flex flex-row align-items-center justify-content-center p-3 w-100">
+          <div className="footer-brand-container d-flex flex-row align-items-center justify-content-center p-3 w-100">
             <img src="img/VXL_new_logo.png" className="my-0 py-0" alt="logo" />
             <p className="text-center">
               Copyright © 2024 VXL Education Sri Lanka
@@ -115,15 +104,6 @@ export default function Footer() {
               </span>
             </p>
           </div>
-          {/* <p>
-            &copy; 2024 VXL Education Sri Lanka, All Right Reserved. Designed By{" "}
-            <a
-              class="border-bottom text-secondary"
-              href="https://loopyholdings.com"
-            >
-              Loopy Holdings
-            </a>
-          </p> */}
         </div>
       </footer>
       {/* <!-- Back to Top --> */}
