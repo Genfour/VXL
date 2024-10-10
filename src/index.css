@@ -893,6 +893,10 @@ footer {
 .a-team-right-container {
   width: 55%;
   overflow: hidden;
+  background-image: url(/public/img/team_bg_cropped.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .a-team-right-container .a-team-image-1,

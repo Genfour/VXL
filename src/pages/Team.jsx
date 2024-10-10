@@ -50,7 +50,7 @@ export default function Team() {
             </button>
           </div>
           <div className="a-team-right-container d-flex flex-column position-relative">
-            <div
+            {/* <div
               className="wow fadeInUp a-team-image-1"
               data-bs-wow-delay="0.1s"
             ></div>
@@ -65,7 +65,7 @@ export default function Team() {
             <div
               className="wow fadeInUp a-team-image-4"
               data-bs-wow-delay="0.4s"
-            ></div>
+            ></div> */}
           </div>
         </div>
         <div className="quote-container w-100 d-flex flex-row">
