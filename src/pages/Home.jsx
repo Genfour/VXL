@@ -208,7 +208,7 @@ const partners = [
   "img/partners/p13.png",
   "img/partners/p14.jpg",
   "img/partners/p15.png",
-  "img/partners/p16.jpeg",
+  "img/partners/p16.jpg",
   "img/partners/p17.jpg",
   "img/partners/p18.png",
   "img/partners/p19.jpg",
