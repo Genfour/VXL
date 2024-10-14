@@ -477,7 +477,7 @@ const Home = () => {
           {/* <!-- Header End --> */}
 
           {/* <!-- About Start --> */}
-          <div className="container-fluid clients-container p-0 m-0 d-flex flex-row user-select-none">
+          <div className="clients-container p-0 m-0 d-flex flex-row user-select-none">
             <div className="clients-container-left m-0 p-0">
               {/* <img className="m-0 p-0" src={about_bg} alt="about" /> */}
             </div>
@@ -514,12 +514,12 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="testimonial-container w-100 h-auto p-5 d-flex flex-column align-items-center user-select-none">
+          <div className="testimonial-container w-100 h-auto px-5 d-flex flex-column align-items-center user-select-none">
             <h1 className="wow fadeInUp text-center" data-bs-wow-delay="0.1s">
               They <span style={{ color: "#fe3c66" }}>Excelled</span> with VXL
             </h1>
 
-            <div className="testimonial-carousel mt-3 d-flex flex-row justify-content-between align-items-center w-100">
+            <div className="testimonial-carousel d-flex flex-row justify-content-between align-items-center w-100">
               <button
                 className="testimonial-btn-left"
                 style={{
@@ -550,7 +550,9 @@ const Home = () => {
                           className="testimonial-image m-0 p-0"
                           style={{ backgroundImage: `url(${item.image})` }}
                         ></div>
-                        <h1 className="ms-3">{item.name}</h1>
+                        <h1 className="ms-3 testimonial-customer-name">
+                          {item.name}
+                        </h1>
                       </div>
                       <p className="mt-3">
                         {'"'}
@@ -580,14 +582,14 @@ const Home = () => {
 
           <div
             id="presence"
-            className="track-record-container d-flex flex-column w-100 h-auto p-5 justify-content-center align-items-center"
+            className="track-record-container d-flex flex-column w-100 h-auto px-5 justify-content-center align-items-center"
           >
             <h1 className="wow fadeInUp text-center" data-bs-wow-delay="0.1s">
               We <span style={{ color: "#fe3c66" }}>Excel</span> around the
               world
             </h1>
             <div
-              className="wow fadeInUp track-record-wrapper d-flex flex-row justify-content-center mt-3"
+              className="wow fadeInUp track-record-wrapper d-flex flex-row justify-content-center"
               data-bs-wow-delay="0.2s"
             >
               {trackrecords.map((record, index) => {
@@ -601,13 +603,18 @@ const Home = () => {
                       style={{ width: "40px", height: "40px" }}
                       color="#18548A"
                     />
-                    <h1 className="mt-3">{record.content}</h1>
+                    <h1 className="mt-3 track-record-numbers">
+                      {record.content}
+                    </h1>
                     <p className="m-0 text-center">{record.subcontent}</p>
                   </div>
                 );
               })}
             </div>
-            <p className="wow fadeInUp mt-3" data-bs-wow-delay="0.3s">
+            <p
+              className="wow fadeInUp track-record-para"
+              data-bs-wow-delay="0.3s"
+            >
               It took years for us to get where we are today. Over the years we
               have perfected our processes, checks ​and due-diligence to bring
               you a <span>true experience of excellence</span>.<br />
@@ -630,7 +637,7 @@ const Home = () => {
 
           <div
             id="visa-services"
-            className="services-container d-flex flex-column w-100 h-auto p-5 justify-content-center align-items-center"
+            className="services-container d-flex flex-column w-100 h-auto px-5 justify-content-center align-items-center"
           >
             <h1 className="wow fadeInUp text-center" data-bs-wow-delay="0.1s">
               How we help you <span style={{ color: "#fe3c66" }}>Excel</span>
@@ -653,7 +660,49 @@ const Home = () => {
               We also have a ready-to-use network to assist in ticket bookings
               and accommodation.
             </p>
+
             <div
+              className="wow fadeInUp services-carousel"
+              data-bs-wow-delay="0.3s"
+            >
+              <OwlCarousel
+                className="carousel-cause owl-carousel d-flex g-0"
+                {...options}
+              >
+                {services.map((service, index) => (
+                  <div className="service-item">
+                    <h1
+                      className="px-4 py-4 service-item-title"
+                      dangerouslySetInnerHTML={{ __html: service.title }}
+                    />
+                    <div
+                      className="service-item-image"
+                      style={{ backgroundImage: `url(${service.image})` }}
+                    ></div>
+                    <div className="service-para-wrapper">
+                      <p
+                        className="px-4 pt-3"
+                        dangerouslySetInnerHTML={{
+                          __html: service.description,
+                        }}
+                      />
+                      <button className="hero-button py-2 px-3 my-3 mx-auto">
+                        Book my free session
+                        <span className="bg-white rounded-circle ms-3 ">
+                          <FontAwesomeIcon
+                            icon={faChevronRight}
+                            color="#18548a"
+                            width={16}
+                          />
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </OwlCarousel>
+            </div>
+
+            {/* <div
               className="wow fadeInUp services-carousel"
               data-bs-wow-delay="0.3s"
             >
@@ -694,9 +743,12 @@ const Home = () => {
                   );
                 })}
               </OwlCarousel>
-            </div>
-            <div id="study-abroad" className="service-onshore-container p-5">
-              <h1 className="wow fadeInUp text-center" data-bs-wow-delay="0.1s">
+            </div> */}
+            <div id="study-abroad" className="service-onshore-container px-5">
+              <h1
+                className="wow fadeInUp text-center service-onshore-title"
+                data-bs-wow-delay="0.1s"
+              >
                 How you <span style={{ color: "#fe3c66" }}>Excel</span> Onshore
               </h1>
               <div
@@ -716,7 +768,7 @@ const Home = () => {
                       ></div>
                       <div className="onshore-service-right ms-5 d-flex">
                         <h1
-                          className="text-start"
+                          className="text-start onshore-service-item-title"
                           dangerouslySetInnerHTML={{
                             __html: service.title,
                           }}
@@ -746,7 +798,7 @@ const Home = () => {
 
           <div
             id="partners"
-            className="partner-container d-flex flex-column w-100 h-auto p-5 justify-content-center align-items-center"
+            className="partner-container d-flex flex-column w-100 h-auto px-5 justify-content-center align-items-center"
           >
             <h1
               className="wow fadeInUp text-center mb-4"
@@ -804,7 +856,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="team-container d-flex flex-column w-100 h-auto p-5 justify-content-center align-items-center m-0">
+          <div className="team-container d-flex flex-column w-100 h-auto px-5 justify-content-center align-items-center m-0">
             <h1
               className="wow fadeInUp text-center mb-4"
               data-bs-wow-delay="0.1s"

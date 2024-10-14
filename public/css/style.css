@@ -9,9 +9,24 @@
 .back-to-top {
   position: fixed;
   display: none;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  color: white;
   right: 45px;
   bottom: 45px;
   z-index: 99;
+  background-color: #fe3c66;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.back-to-top:hover {
+  color: white !important;
+  transform: scale(1.1);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .my-6 {
@@ -92,16 +107,19 @@
 }
 
 .navbar-link-list a {
-  display: flex;
-  align-items: center;
+  /* display: flex;
+  align-items: center; */
   text-decoration: none;
+  color: #18548a !important;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .navbar-link-list li {
   position: relative;
-  color: #18548a !important;
+  /* color: #18548a !important;
   transition: 0.5s ease-in-out;
-  cursor: pointer;
+  cursor: pointer; */
   display: flex;
   align-items: center;
 }
@@ -154,7 +172,11 @@
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
-.navbar-link-list li:hover {
+/* .navbar-link-list li:hover {
+  color: #ee3457 !important;
+} */
+
+.navbar-link-list a:hover {
   color: #ee3457 !important;
 }
 
@@ -242,6 +264,7 @@
   align-items: center;
   background-color: #18548a;
   border-radius: 30px;
+  margin-top: 30px !important;
   border: none !important;
   outline: none !important;
 }
@@ -672,7 +695,7 @@
 }
 
 .team-container p {
-  max-width: 60%;
+  max-width: 70%;
   font-size: 1rem;
 }
 
@@ -1124,6 +1147,7 @@
   }
 
   .navbar-link-list li {
+    width: 100%;
     padding: 20px 0px !important;
     border-style: solid;
     border-width: 0px 0px 1px 0px;

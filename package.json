@@ -23,6 +23,7 @@
     "react-flickity-component": "^4.0.7",
     "react-owl-carousel": "^2.3.3",
     "react-router-dom": "^6.26.1",
+    "react-router-hash-link": "^2.4.3",
     "react-scripts": "5.0.1",
     "react-slick": "^0.30.2",
     "react-transition-group": "^4.4.5",

@@ -49,7 +49,10 @@ export default function Team() {
               </span>
             </button>
           </div>
-          <div className="a-team-right-container d-flex flex-column position-relative">
+          <div
+            className="a-team-right-container wow fadeInUp d-flex flex-column position-relative"
+            data-bs-wow-delay="0.5s"
+          >
             {/* <div
               className="wow fadeInUp a-team-image-1"
               data-bs-wow-delay="0.1s"
@@ -86,8 +89,11 @@ export default function Team() {
             data-bs-wow-delay="0.2s"
           ></div>
         </div>
-        <div className="staff-container d-flex flex-column p-5 w-100 h-auto">
-          <h1 className="wow fadeInUp text-start mb-4" data-bs-wow-delay="0.1s">
+        <div className="staff-container d-flex flex-column px-5 w-100 h-auto">
+          <h1
+            className="wow fadeInUp text-start mb-4 staff-container-title"
+            data-bs-wow-delay="0.1s"
+          >
             <span style={{ color: "#fe3c66" }}>VXL</span> Education Sri Lanka
           </h1>
           <div
@@ -229,7 +235,7 @@ export default function Team() {
           </div>
         </div>
 
-        <div className="join-container d-flex flex-column p-5 w-100 h-auto">
+        <div className="join-container d-flex flex-column px-5 w-100 h-auto">
           <h1
             class="wow fadeInUp display-3 mb-3 text-start"
             style={{ color: "#0a4c7e" }}
