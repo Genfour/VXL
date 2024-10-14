@@ -94,13 +94,13 @@ export default function Footer() {
           </div>
         </div>
         <div class="footer-bottom d-flex flex-row">
-          <div className="footer-brand-container d-flex flex-row align-items-center justify-content-center p-3 w-100">
+          <div className="footer-brand-container d-flex flex-column align-items-center justify-content-center p-4 w-100">
             <img src="img/VXL_new_logo.png" className="my-0 py-0" alt="logo" />
-            <p className="text-center">
+            <p className="text-center mt-4">
               Copyright © 2024 VXL Education Sri Lanka
               <br />
               <span style={{ fontSize: "0.8rem", color: "#EE3457" }}>
-                Powered by Loopy Holdings
+                Development by LOOPY Holdings
               </span>
             </p>
           </div>

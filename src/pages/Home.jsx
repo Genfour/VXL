@@ -550,7 +550,9 @@ const Home = () => {
                           className="testimonial-image m-0 p-0"
                           style={{ backgroundImage: `url(${item.image})` }}
                         ></div>
-                        <h1 className="ms-3">{item.name}</h1>
+                        <h1 className="ms-3 testimonial-customer-name">
+                          {item.name}
+                        </h1>
                       </div>
                       <p className="mt-3">
                         {'"'}
@@ -601,7 +603,9 @@ const Home = () => {
                       style={{ width: "40px", height: "40px" }}
                       color="#18548A"
                     />
-                    <h1 className="mt-3">{record.content}</h1>
+                    <h1 className="mt-3 track-record-numbers">
+                      {record.content}
+                    </h1>
                     <p className="m-0 text-center">{record.subcontent}</p>
                   </div>
                 );
@@ -653,7 +657,49 @@ const Home = () => {
               We also have a ready-to-use network to assist in ticket bookings
               and accommodation.
             </p>
+
             <div
+              className="wow fadeInUp services-carousel"
+              data-bs-wow-delay="0.3s"
+            >
+              <OwlCarousel
+                className="carousel-cause owl-carousel d-flex g-0"
+                {...options}
+              >
+                {services.map((service, index) => (
+                  <div className="service-item">
+                    <h1
+                      className="px-4 py-4"
+                      dangerouslySetInnerHTML={{ __html: service.title }}
+                    />
+                    <div
+                      className="service-item-image"
+                      style={{ backgroundImage: `url(${service.image})` }}
+                    ></div>
+                    <div className="service-para-wrapper">
+                      <p
+                        className="px-4 pt-3"
+                        dangerouslySetInnerHTML={{
+                          __html: service.description,
+                        }}
+                      />
+                      <button className="hero-button py-2 px-3 my-3 mx-auto">
+                        Book my free session
+                        <span className="bg-white rounded-circle ms-3 ">
+                          <FontAwesomeIcon
+                            icon={faChevronRight}
+                            color="#18548a"
+                            width={16}
+                          />
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </OwlCarousel>
+            </div>
+
+            {/* <div
               className="wow fadeInUp services-carousel"
               data-bs-wow-delay="0.3s"
             >
@@ -694,7 +740,7 @@ const Home = () => {
                   );
                 })}
               </OwlCarousel>
-            </div>
+            </div> */}
             <div id="study-abroad" className="service-onshore-container p-5">
               <h1 className="wow fadeInUp text-center" data-bs-wow-delay="0.1s">
                 How you <span style={{ color: "#fe3c66" }}>Excel</span> Onshore

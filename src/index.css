@@ -138,6 +138,14 @@ textarea:focus {
   padding: 80px 30px 80px 60px !important;
 }
 
+.hero-para {
+  text-align: justify;
+  text-align-last: start;
+  font-weight: normal;
+  line-height: "1";
+  word-break: "break-word";
+}
+
 .hero-right {
   width: 50%;
   height: 100%;
@@ -183,8 +191,13 @@ textarea:focus {
 .clients-container-right p {
   width: 95%;
   font-size: 0.8rem;
-  text-align: start;
+  /* text-align: start; */
   color: white;
+  text-align: justify;
+  text-align-last: start;
+  font-weight: normal;
+  line-height: "1";
+  word-break: "break-word";
 }
 
 .clients-container-right img {
@@ -454,6 +467,7 @@ textarea:focus {
   width: 90%;
   height: auto;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .track-record-item {
@@ -461,6 +475,10 @@ textarea:focus {
   height: auto;
   background-color: white;
   border: 1px solid #ffebd4;
+}
+
+.track-record-wrapper > .track-record-item {
+  align-self: stretch;
 }
 
 .track-record-item h1 {
@@ -619,7 +637,7 @@ footer {
 
 .footer-bottom img {
   height: 70px;
-  margin-right: 100px;
+  /* margin-right: 100px; */
 }
 
 .footer-bottom p {
@@ -736,13 +754,12 @@ footer {
   color: #eb3678;
 }
 
-.services-carousel {
+/* .services-carousel {
   width: 100%;
   overflow-x: auto;
 }
 
 .service-item {
-  /* min-width: 300px; */
   min-height: 680px;
   height: auto;
   flex-grow: 1;
@@ -769,6 +786,66 @@ footer {
   width: 100%;
   height: auto;
   flex-grow: 1;
+}
+
+.service-item .service-para-wrapper p {
+  width: 100%;
+  font-size: 0.9rem;
+} */
+
+.services-carousel {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.carousel-cause {
+  display: flex; /* Use flexbox for the carousel */
+  flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+.services-carousel .owl-carousel .owl-stage-outer .owl-stage {
+  display: flex !important;
+}
+
+.services-carousel .owl-carousel .owl-stage-outer .owl-stage .owl-item {
+  display: flex !important;
+  flex-grow: 1;
+}
+
+.service-item {
+  /* min-width: 300px; */
+  /* min-height: 680px; */
+  flex-grow: 1;
+  border: 1px solid #ffebd4;
+  display: flex; /* Make service-item a flex container */
+  flex-direction: column; /* Align items vertically */
+}
+
+.service-item h1 {
+  min-height: 150px;
+  color: #18548a;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: bold !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-item .service-item-image {
+  width: 100%;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+.service-item .service-para-wrapper {
+  flex-grow: 1; /* Allow this section to grow */
+  display: flex; /* Make para-wrapper a flex container */
+  flex-direction: column; /* Align items vertically */
+  justify-content: space-between; /* Space between paragraphs and button */
 }
 
 .service-item .service-para-wrapper p {
@@ -872,6 +949,14 @@ footer {
   font-size: 3rem;
   text-align: start;
   font-weight: 400 !important;
+}
+
+.team-container p {
+  text-align: justify;
+  text-align-last: center;
+  font-weight: normal;
+  line-height: "1";
+  word-break: "break-word";
 }
 
 .team-page-container {
@@ -1053,14 +1138,11 @@ footer {
   }
 
   .service-item .service-item-image {
-    height: 250px;
+    height: 150px;
   }
 
   .a-team-container {
     min-height: 500px;
-  }
-
-  .a-team-left-container {
   }
 
   .a-team-right-container .a-team-image-1 {
@@ -1274,6 +1356,10 @@ footer {
     padding: 30px !important;
   }
 
+  .service-item .service-item-image {
+    height: 200px;
+  }
+
   .footer-container {
     align-items: start;
   }
@@ -1362,6 +1448,10 @@ footer {
     width: 100%;
   }
 
+  .clients-container-right p {
+    width: 100%;
+  }
+
   /* .clients-container-right {
     padding: 35px !important;
   } */
@@ -1388,16 +1478,17 @@ footer {
   }
 
   .testimonial-carousel button {
-    position: absolute;
+    display: none;
+    /* position: absolute; */
   }
 
-  .testimonial-carousel .testimonial-btn-left {
+  /* .testimonial-carousel .testimonial-btn-left {
     left: 0;
   }
 
   .testimonial-carousel .testimonial-btn-right {
     right: 0;
-  }
+  } */
 
   .testimonial-item {
     min-width: 300px;
@@ -1411,9 +1502,25 @@ footer {
     font-size: 2.5rem;
   }
 
+  .track-record-numbers {
+    font-size: 2rem !important;
+  }
+
+  .testimonial-customer-name {
+    font-size: 1.5rem !important;
+  }
+
   .onshore-service-right h1,
   .service-item h1 {
     font-size: 1.5rem;
+  }
+
+  .service-item h1 {
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .footer-brand-container {
@@ -1422,7 +1529,7 @@ footer {
 
   .footer-bottom img {
     margin-right: 0px;
-    margin-bottom: 25px !important;
+    /* margin-bottom: 25px !important; */
   }
 
   .track-record-item {
