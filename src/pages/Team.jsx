@@ -49,7 +49,10 @@ export default function Team() {
               </span>
             </button>
           </div>
-          <div className="a-team-right-container d-flex flex-column position-relative">
+          <div
+            className="a-team-right-container wow fadeInUp d-flex flex-column position-relative"
+            data-bs-wow-delay="0.5s"
+          >
             {/* <div
               className="wow fadeInUp a-team-image-1"
               data-bs-wow-delay="0.1s"

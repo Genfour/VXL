@@ -166,10 +166,11 @@ textarea:focus {
 }
 
 .clients-container-left {
-  min-width: 550px;
+  /* min-width: 550px; */
+  min-width: 600px;
   height: auto;
   flex-grow: 1;
-  background-image: url("/public/img/about_bg.png");
+  background-image: url("/public/img/team_bg_resized.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1245,6 +1246,12 @@ footer {
 
   .hero-para {
     width: 80%;
+  }
+}
+
+@media (min-width: 1268px) and (max-width: 1315px) {
+  .clients-container-left {
+    min-width: 750px;
   }
 }
 
