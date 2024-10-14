@@ -477,7 +477,7 @@ const Home = () => {
           {/* <!-- Header End --> */}
 
           {/* <!-- About Start --> */}
-          <div className="container-fluid clients-container p-0 m-0 d-flex flex-row user-select-none">
+          <div className="clients-container p-0 m-0 d-flex flex-row user-select-none">
             <div className="clients-container-left m-0 p-0">
               {/* <img className="m-0 p-0" src={about_bg} alt="about" /> */}
             </div>
