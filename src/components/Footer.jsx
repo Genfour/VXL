@@ -107,8 +107,8 @@ export default function Footer() {
         </div>
       </footer>
       {/* <!-- Back to Top --> */}
-      <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top">
-        <i class="bi bi-arrow-up"></i>
+      <a href="#" class="btn btn-lg back-to-top">
+        <i class="bi bi-arrow-up m-auto"></i>
       </a>
     </>
   );

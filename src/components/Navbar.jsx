@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import logo from "../images/VXL_new_logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faSearch, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { HashLink } from "react-router-hash-link";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -152,7 +153,7 @@ export default function Navbar() {
         style={{ height: "70px" }}
       >
         <div className="d-flex flex-row">
-          <a href="/">
+          <HashLink smooth to="/">
             <img
               className="brand-logo"
               src={logo}
@@ -160,27 +161,47 @@ export default function Navbar() {
               alt="brand-logo"
               loading="lazy"
             />
-          </a>
+          </HashLink>
           <ul
             className={`navbar-link-list ${
               mobileView && isMobileMenuOpen ? `mobile` : ``
             } flex-row p-0 m-0 show me-auto`}
           >
-            <a href="#study-abroad" className="m-0 p-0">
-              <li>Study Abroad</li>
-            </a>
-            <a href="#visa-services" className="m-0 p-0">
-              <li>Visa Services</li>
-            </a>
-            <a href="#partners" className="m-0 p-0">
-              <li>Global Partners</li>
-            </a>
-            <a href="#presence" className="m-0 p-0">
-              <li>Global Presence</li>
-            </a>
-            <a href="#footer" className="m-0 p-0">
-              <li>Contact</li>
-            </a>
+            {/* <a href="/#study-abroad" className="m-0 p-0"> */}
+            <li>
+              <HashLink smooth to="/#study-abroad">
+                Study Abroad
+              </HashLink>
+            </li>
+            {/* </a> */}
+            {/* <a href="/#visa-services" className="m-0 p-0"> */}
+            <li>
+              <HashLink smooth to="/#visa-services">
+                Visa Services
+              </HashLink>
+            </li>
+            {/* </a> */}
+            {/* <a href="/#partners" className="m-0 p-0"> */}
+            <li>
+              <HashLink smooth to="/#partners">
+                Global Partners
+              </HashLink>
+            </li>
+            {/* </a> */}
+            {/* <a href="/#presence" className="m-0 p-0"> */}
+            <li>
+              <HashLink smooth to="/#presence">
+                Global Presence
+              </HashLink>
+            </li>
+            {/* </a> */}
+            {/* <a href="/#footer" className="m-0 p-0"> */}
+            <li>
+              <HashLink smooth to="/#footer">
+                Contact
+              </HashLink>
+            </li>
+            {/* </a> */}
             <li className="navbar-search-bar">
               <input type="text" placeholder="Search..." />
               <button>
