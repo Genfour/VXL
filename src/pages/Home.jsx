@@ -101,42 +101,81 @@ const items = [
   },
 ];
 
+// const testimonials = [
+//   {
+//     image: "img/boy.png",
+//     name: "John Doe",
+//     description:
+//       "VXL provided excellent guidance and resources, helping me achieve my career goals.",
+//   },
+//   {
+//     image: "img/girl.png",
+//     name: "Jane Smith",
+//     description:
+//       "The instructors at VXL were knowledgeable and supportive, creating a positive learning environment.",
+//   },
+//   {
+//     image: "img/girl.png",
+//     name: "Alice Johnson",
+//     description:
+//       "I highly recommend VXL for their comprehensive courses and personalized attention.",
+//   },
+//   {
+//     image: "img/boy.png",
+//     name: "Bob Brown",
+//     description:
+//       "VXL's flexible learning options and industry partnerships were invaluable to my professional development.",
+//   },
+//   {
+//     image: "img/girl.png",
+//     name: "Emily Davis",
+//     description:
+//       "The career counseling at VXL helped me identify the right path and land my dream job.",
+//   },
+//   {
+//     image: "img/boy.png",
+//     name: "Charlie Baker",
+//     description:
+//       "VXL's focus on practical skills and real-world experience prepared me for success in my field.",
+//   },
+// ];
+
 const testimonials = [
   {
     image: "img/boy.png",
     name: "John Doe",
     description:
-      "VXL provided excellent guidance and resources, helping me achieve my career goals.",
+      "Ayodhya and his team have been ​super helpful and accommodating. ​The team is always friendly, and the ​quality of their work is exceptional. ​They might miss a few calls, but they ​will make sure to call back as soon as ​they can.",
   },
   {
     image: "img/girl.png",
     name: "Jane Smith",
     description:
-      "The instructors at VXL were knowledgeable and supportive, creating a positive learning environment.",
+      "Ayodhya and his team have been ​super helpful and accommodating. ​The team is always friendly, and the ​quality of their work is exceptional. ​They might miss a few calls, but they ​will make sure to call back as soon as ​they can.",
   },
   {
     image: "img/girl.png",
     name: "Alice Johnson",
     description:
-      "I highly recommend VXL for their comprehensive courses and personalized attention.",
+      "Ayodhya and his team have been ​super helpful and accommodating. ​The team is always friendly, and the ​quality of their work is exceptional. ​They might miss a few calls, but they ​will make sure to call back as soon as ​they can.",
   },
   {
     image: "img/boy.png",
     name: "Bob Brown",
     description:
-      "VXL's flexible learning options and industry partnerships were invaluable to my professional development.",
+      "Ayodhya and his team have been ​super helpful and accommodating. ​The team is always friendly, and the ​quality of their work is exceptional. ​They might miss a few calls, but they ​will make sure to call back as soon as ​they can.",
   },
   {
     image: "img/girl.png",
     name: "Emily Davis",
     description:
-      "The career counseling at VXL helped me identify the right path and land my dream job.",
+      "Ayodhya and his team have been ​super helpful and accommodating. ​The team is always friendly, and the ​quality of their work is exceptional. ​They might miss a few calls, but they ​will make sure to call back as soon as ​they can.",
   },
   {
     image: "img/boy.png",
     name: "Charlie Baker",
     description:
-      "VXL's focus on practical skills and real-world experience prepared me for success in my field.",
+      "Ayodhya and his team have been ​super helpful and accommodating. ​The team is always friendly, and the ​quality of their work is exceptional. ​They might miss a few calls, but they ​will make sure to call back as soon as ​they can.",
   },
 ];
 
@@ -318,6 +357,9 @@ const Home = () => {
       },
       1300: {
         items: 4,
+      },
+      1980: {
+        items: 5,
       },
     },
   };
@@ -543,7 +585,7 @@ const Home = () => {
                   return (
                     <div
                       key={index}
-                      className="testimonial-item d-fex flex-column p-3"
+                      className="testimonial-item d-fex flex-column p-4"
                     >
                       <div className="d-flex flex-row h-auto align-items-center justify-content-start align-items-center">
                         <div
@@ -582,7 +624,7 @@ const Home = () => {
 
           <div
             id="presence"
-            className="track-record-container d-flex flex-column w-100 h-auto px-5 justify-content-center align-items-center"
+            className="track-record-container d-flex flex-column w-100 h-auto px-5 justify-content-center align-items-center user-select-none"
           >
             <h1 className="wow fadeInUp text-center" data-bs-wow-delay="0.1s">
               We <span style={{ color: "#fe3c66" }}>Excel</span> around the
@@ -637,7 +679,7 @@ const Home = () => {
 
           <div
             id="visa-services"
-            className="services-container d-flex flex-column w-100 h-auto px-5 justify-content-center align-items-center"
+            className="services-container d-flex flex-column w-100 h-auto px-5 justify-content-center align-items-center user-select-none"
           >
             <h1 className="wow fadeInUp text-center" data-bs-wow-delay="0.1s">
               How we help you <span style={{ color: "#fe3c66" }}>Excel</span>
@@ -798,7 +840,7 @@ const Home = () => {
 
           <div
             id="partners"
-            className="partner-container d-flex flex-column w-100 h-auto px-5 justify-content-center align-items-center"
+            className="partner-container d-flex flex-column w-100 h-auto px-5 justify-content-center align-items-center user-select-none"
           >
             <h1
               className="wow fadeInUp text-center mb-4"
@@ -856,7 +898,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="team-container d-flex flex-column w-100 h-auto px-5 justify-content-center align-items-center m-0">
+          <div className="team-container d-flex flex-column w-100 h-auto px-5 justify-content-center align-items-center m-0 user-select-none">
             <h1
               className="wow fadeInUp text-center mb-4"
               data-bs-wow-delay="0.1s"

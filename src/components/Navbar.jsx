@@ -58,7 +58,7 @@ export default function Navbar() {
   return (
     <>
       <div
-        className="d-flex flex-row navbar-wrapper shadow-sm py-3 px-5 w-100 h-auto align-items-center justify-content-between fixed-top bg-white z-100"
+        className="d-flex flex-row navbar-wrapper shadow-sm py-3 px-5 w-100 h-auto align-items-center justify-content-between fixed-top bg-white z-100 user-select-none"
         style={{ height: "70px" }}
       >
         <div className="d-flex flex-row">
