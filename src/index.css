@@ -1537,6 +1537,18 @@ footer {
     height: 110px;
   }
 
+  .directors-container {
+    row-gap: 20px;
+  }
+
+  .directors-row {
+    row-gap: 20px;
+  }
+
+  .director-image {
+    height: 120px;
+  }
+
   .directors-details-container {
     width: calc(100% - 80px);
     left: 0;
