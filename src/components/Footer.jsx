@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default function Footer() {
   return (
     <>
-      <footer>
+      <footer className="user-select-none">
         <div id="footer" class="footer-container">
           <div class="footer-section footer-section-1 d-flex flex-column justify-content-start">
             <h3 className="me-auto">
