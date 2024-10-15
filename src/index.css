@@ -481,10 +481,19 @@ textarea:focus {
 }
 
 .track-record-wrapper {
-  width: 90%;
+  width: 100%;
   height: auto;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.track-record-wrapper .owl-carousel .owl-stage-outer .owl-stage {
+  display: flex !important;
+}
+
+.track-record-wrapper .owl-carousel .owl-stage-outer .owl-stage .owl-item {
+  display: flex !important;
+  flex-grow: 1;
 }
 
 .track-record-para {
@@ -492,8 +501,9 @@ textarea:focus {
 }
 
 .track-record-item {
+  width: 100%;
   /* min-width: calc(100% / 6); */
-  width: 220px;
+  /* width: 220px; */
   height: auto;
   background-color: white;
   border: 1px solid #ffebd4;
@@ -1196,6 +1206,10 @@ footer {
 @media screen and (min-width: 2559px) {
   .testimonial-item {
     min-width: calc(100% / 6);
+  }
+
+  .track-record-wrapper {
+    width: 90%;
   }
 }
 

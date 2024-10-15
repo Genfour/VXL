@@ -306,6 +306,14 @@ const Home = () => {
   const [scrollInterval, setScrollInterval] = useState(null);
   const [clickedLeft, setClickedLeft] = useState(false);
   const [clickedRight, setClickedRight] = useState(false);
+  const [width, setWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const scrollLeft = () => {
     if (scrollRef.current) {
@@ -331,6 +339,40 @@ const Home = () => {
     if (scrollInterval) {
       clearInterval(scrollInterval);
     }
+  };
+
+  const trackRecordOptions = {
+    items: 6,
+    loop: true,
+    // nav: true,
+    // navText: [
+    //   "<i class='fa fa-angle-left'></i>",
+    //   "<i class='fa fa-angle-right'></i>",
+    // ],
+    dots: true,
+    autoplay: width <= 1300 ? true : false,
+    autoplayTimeout: 5000,
+    smartSpeed: 1000,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      500: {
+        items: 3,
+      },
+      700: {
+        items: 4,
+      },
+      1000: {
+        items: 4,
+      },
+      1300: {
+        items: 6,
+      },
+      1980: {
+        items: 6,
+      },
+    },
   };
 
   const options = {
@@ -634,24 +676,29 @@ const Home = () => {
               className="wow fadeInUp track-record-wrapper d-flex flex-row justify-content-center"
               data-bs-wow-delay="0.2s"
             >
-              {trackrecords.map((record, index) => {
-                return (
-                  <div
-                    key={index}
-                    className="track-record-item p-3 d-flex flex-column justify-content-center align-items-center"
-                  >
-                    <FontAwesomeIcon
-                      icon={record.image}
-                      style={{ width: "40px", height: "40px" }}
-                      color="#18548A"
-                    />
-                    <h1 className="mt-3 track-record-numbers">
-                      {record.content}
-                    </h1>
-                    <p className="m-0 text-center">{record.subcontent}</p>
-                  </div>
-                );
-              })}
+              <OwlCarousel
+                className="carousel-cause owl-carousel d-flex g-0"
+                {...trackRecordOptions}
+              >
+                {trackrecords.map((record, index) => {
+                  return (
+                    <div
+                      key={index}
+                      className="track-record-item p-3 d-flex flex-column justify-content-center align-items-center"
+                    >
+                      <FontAwesomeIcon
+                        icon={record.image}
+                        style={{ width: "40px", height: "40px" }}
+                        color="#18548A"
+                      />
+                      <h1 className="mt-3 track-record-numbers">
+                        {record.content}
+                      </h1>
+                      <p className="m-0 text-center">{record.subcontent}</p>
+                    </div>
+                  );
+                })}
+              </OwlCarousel>
             </div>
             <p
               className="wow fadeInUp track-record-para"
